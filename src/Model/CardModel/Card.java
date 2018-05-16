@@ -3,31 +3,31 @@ package Model.CardModel;
 import Model.PlayerModel.Player;
 
 public class Card {
-    private String suit;
-    private String rank;
+    private Suit suit; // PIK, KARO, HERZ, KREUZ
+    private Rank rank; // BUBE, DAME, KOENIG, ASS
     private String imageURL;
     private Player belongsToPlayer;
     private int strength;
     private int point;
 
-    public Card(String suit, String rank) {
+    public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
 
     public String getSuit() {
-        return suit;
+        return suit.toString();
     }
 
-    public void setSuit(String suit) {
+    public void setSuit(Suit suit) {
         this.suit = suit;
     }
 
     public String getRank() {
-        return rank;
+        return rank.toString();
     }
 
-    public void setRank(String rank) {
+    public void setRank(Rank rank) {
         this.rank = rank;
     }
 

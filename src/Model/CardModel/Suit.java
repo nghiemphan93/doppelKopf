@@ -1,6 +1,6 @@
 package Model.CardModel;
 
-public enum Suit {
+public enum Suit { // Farbe
     PIK("PIK"),
     KARO("KARO"),
     HERZ("HERZ"),

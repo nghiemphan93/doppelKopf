@@ -19,8 +19,8 @@ public class CardsToDeal extends Cards{
 
         for(Suit suit : suits){
             for(Rank rank : ranks){
-                cards.add(new Card(suit.toString(), rank.toString()));
-                cards.add(new Card(suit.toString(), rank.toString()));
+                cards.add(new Card(suit, rank));
+                cards.add(new Card(suit, rank));
             }
         }
 
