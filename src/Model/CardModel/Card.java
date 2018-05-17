@@ -1,12 +1,25 @@
-//
+/*
+    The single Card to play in game
+
+    Attribute:
+        Suit            = PIK | KARO | HERZ | KREUZ
+        Rank            = ZEHN | BUBE | DAME | KOENIG | ASS
+        POINT           = 10   |   2  |  3   |  4    |  11
+        STRENGTH = ???
+        FEHL or TRUMPF  (is determined before dealing in Class CardsToDeal)
+
+    Important Methods:
+        setPoint():     check and set Point automatically according to Rank
+*/
+
 
 package Model.CardModel;
 
 import Model.PlayerModel.Player;
 
 public class Card {
-    private Suit suit; // PIK, KARO, HERZ, KREUZ
-    private Rank rank; // ZEHN, BUBE, DAME, KOENIG, ASS
+    private Suit suit;         // PIK, KARO, HERZ, KREUZ
+    private Rank rank;         // ZEHN, BUBE, DAME, KOENIG, ASS
     private String imageURL;
     private Player belongsToPlayer;
     private int strength;
@@ -18,7 +31,6 @@ public class Card {
         this.suit = suit;
         this.rank = rank;
     }
-
 
     public boolean isFehl() {
         return isFehl;
@@ -35,9 +47,6 @@ public class Card {
     public void setTrumpf(boolean trumpf) {
         isTrumpf = trumpf;
     }
-
-
-
 
     public String getSuit() {
         return suit.toString();
@@ -83,22 +92,72 @@ public class Card {
         return point;
     }
 
+    // Check and set Point according to Rank
     public void setPoint() {
         switch (this.rank){
             case ZEHN:
-
+                this.point = 10;
                 break;
             case BUBEN:
+                this.point = 2;
                 break;
             case DAMEN:
+                this.point = 3;
                 break;
             case KOENIG:
+                this.point = 4;
+                break;
+            case ASS:
+                this.point = 11;
                 break;
         }
     }
 
+    public String suitToUnicode(){
+        String result = "";
+        switch (getSuit()){
+            case "PIK":
+                result = "\u2660";
+                break;
+            case "KARO":
+                result = "\u2663";
+            break;
+            case "HERZ":
+                result = "\u2665";
+            break;
+            case "KREUZ":
+                result = "\u2666";
+            break;
+        }   // end of switch
+
+        return result;
+    }
+
+    public String rankToUnicode(){
+        String result = "";
+        switch (getRank()){
+            case "ZEHN":
+                result = "10";
+                break;
+            case "BUBEN":
+                result = "J";
+                break;
+            case "DAMEN":
+                result = "Q";
+                break;
+            case "KOENIG":
+                result = "K";
+                break;
+            case "ASS":
+                result = "A";
+                break;
+        }   // end of switch
+
+        return result;
+    }
+
     @Override
     public String toString() {
-        return getSuit() + " " + getRank();
+        return suitToUnicode() + rankToUnicode();
     }
 }

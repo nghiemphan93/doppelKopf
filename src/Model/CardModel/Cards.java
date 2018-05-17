@@ -1,3 +1,17 @@
+/*
+    Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon.
+    Attribute:
+        cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
+        numCards:   number of cards at particular moment
+        players:    keeping references to Players
+
+    Important Methods:
+        add, addAll, remove, clear:     manipulate elements in the collection
+        filterFehl:     filter all the FEHL in the collection
+        filterTrumpf:   filter all the TRUMPF in the collection
+
+ */
+
 package Model.CardModel;
 
 import Model.PlayerModel.Player;
@@ -8,11 +22,12 @@ import java.util.Iterator;
 public abstract class Cards{
     private ArrayList<Card> cards;
     private int numCards;
-    private Player player;
+    private ArrayList<Player> players = new ArrayList<>();
 
     public Cards(ArrayList<Card> cards) {
         this.cards = cards;
         this.numCards = this.cards.size();
+        this.numCards = 0;
     }
 
     public Cards() {
@@ -38,10 +53,21 @@ public abstract class Cards{
 
 
     public Card remove(int index) {
-        if(getNumCards() > 0){
+        if(this.cards.contains(index)){
             Card temp = this.cards.remove(index);
             this.numCards--;
             return temp;
+        }else{
+            return null;
+        }
+    }
+
+    public Card remove(Card card){
+        if(cards.contains(card)){
+            cards.remove(card);
+            this.numCards--;
+
+            return card;
         }else{
             return null;
         }
@@ -56,17 +82,20 @@ public abstract class Cards{
         return this.numCards;
     }
 
-    public Player getPlayer() {
-        return player;
+    public ArrayList<Player> getPlayers() {
+        return players;
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
+    public void setPlayers(ArrayList<Player> players) {
+        this.players = players;
     }
 
+    // filter all the FEHL in the card list
     public ArrayList<Card> filterFehl(){
         ArrayList<Card> resultList = new ArrayList<>();
 
+        // walk through all Cards and check out the FEHL ones
+        // set attribute isTrumpf and isFehl accordingly
         Iterator<Card> iterator = this.cards.iterator();
         while (iterator.hasNext()){
             Card temp = iterator.next();
@@ -82,25 +111,19 @@ public abstract class Cards{
                     temp.setFehl(true);
                     temp.setTrumpf(false);
                     resultList.add(temp);
-
-
             }   // end of switch
         }   // end of while
 
         return resultList;
     }
 
+    // Filter all the TRUMPF in the card list
     public ArrayList<Card> filterTrumpf(){
         ArrayList<Card> resultList = new ArrayList<>();
-        ArrayList<Card> fehl = filterFehl();
+        ArrayList<Card> fehl = filterFehl();            // keep all the FEHL
 
-//        Iterator<Card> iterator = fehl.iterator();
-//        while (iterator.hasNext()){
-//            Card temp = iterator.next();
-//            if(!cards.contains(temp)){
-//                resultList.add(temp);
-//            }
-//        }
+        // walk through all Cards and copy the one which is not in FEHL list
+        // set attribute isTrumpf and isFehl accordingly
         for(Card temp : this.cards){
             if(!fehl.contains(temp)){
                 temp.setTrumpf(true);
@@ -112,10 +135,11 @@ public abstract class Cards{
         return resultList;
     }
 
+    //print out all Cards to Console
     public void display(){
         Iterator<Card> iterator = this.cards.iterator();
         while (iterator.hasNext()){
-            System.out.println(iterator.next());
+            System.out.print(iterator.next() + " ");
         }
         System.out.println();
     }

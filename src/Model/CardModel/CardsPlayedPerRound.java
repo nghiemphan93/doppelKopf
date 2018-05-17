@@ -1,3 +1,16 @@
+/*
+    Cards played on table which all players can see
+
+    Attribute:
+        playerSubscribers:  holding references of all players
+
+    Important Methods:
+        register():     subscribe players to get notification when a new card was played
+        unregister():   unsubscibe player => no more notification
+        pushNotify():   notify all players who subscribed that a new card was played
+
+*/
+
 package Model.CardModel;
 
 import Model.ObserverModel.Observable;
@@ -33,4 +46,5 @@ public class CardsPlayedPerRound extends Cards implements Observable {
 
         return super.add(card);
     }
+
 }

@@ -87,9 +87,10 @@ public class MainTest {
             System.out.println(player);
             Sort.sortBySuit(player.getCardsOnHand());
             player.getCardsOnHand().display();
-            System.out.println(player.getCardsOnHand().getNumCards());
+            System.out.println(player.getCardsOnHand().getNumCards() + " cards");
             System.out.println();
         }
+
 
 
 
