@@ -53,6 +53,7 @@ public class CardsToDeal extends Cards{
         for(Player player: getPlayers()){
             for(int i = 0; i<10; i++){
                 Card temp = this.getCards().remove(0);
+                temp.setBelongsToPlayer(player);
                 player.getCardsOnHand().add(temp);
             }
         }

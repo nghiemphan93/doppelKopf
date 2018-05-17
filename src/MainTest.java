@@ -1,11 +1,11 @@
 import Controller.CardsSetup;
+import Controller.GameController;
 import Controller.PlayersSetup;
 import Model.CardModel.*;
 import Model.PlayerModel.Player;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MainTest {
 //    public static ArrayList<String> init(){
@@ -63,32 +63,7 @@ public class MainTest {
 //        return resultList;
 //    }
 
-    public static void main(String[] args) {
-//        CardsToDeal cards = new CardsToDeal();
-//        cards.init();
-//        cards.shuffle();
-//
-//        ArrayList<Card> fehl = cards.filterFehl();
-//        ArrayList<Card> trumpf = cards.filterTrumpf();
-//
-//        System.out.println(fehl.size());
-//        System.out.println(trumpf.size());
-//        System.out.println(cards.getNumCards());
-//
-//        Sort.sortBySuit(cards);
-//        Sort.sortByRank(cards);
-//        cards.display();
-
-
-
-//        for(Player player: cardsSetup.getPlayerSetup().getPlayers()){
-//            System.out.println(player);
-//            Sort.sortBySuit(player.getCardsOnHand());
-//            player.getCardsOnHand().display();
-//            System.out.println(player.getCardsOnHand().getNumCards() + " cards");
-//            System.out.println();
-//        }
-
+    public static void testDeck(){
         CardsToDeal cardsToDeal = new CardsToDeal(null);
         cardsToDeal.init();
         SortHelper.sortByStrength(cardsToDeal);
@@ -101,15 +76,22 @@ public class MainTest {
             }
 
         }
+    }
+
+    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        String temp = sc.next();
+//
+//        System.out.println(temp);
 
 
+//        Player player = gameController.getPlayersSetup().getPlayers().get(0);
+//        CardsOnHand cards = player.getCardsOnHand();
 
-
-
-
-
-
-
+        GameController gameController = new GameController();
+        gameController.gameInit();
+        gameController.startGame();
 
 
 

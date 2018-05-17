@@ -1,3 +1,18 @@
+/*
+Initialize players for a game
+
+Attribute:
+    players:    holding reference to all players
+
+Important Methods:
+    init()          prepare sign up for 4 real players
+    initSeeding():  auto seeding 4 player for Demo purpose
+    addPlayer():    add 1 player to the table
+
+
+
+*/
+
 package Controller;
 
 import Model.PlayerModel.Player;

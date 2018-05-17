@@ -2,14 +2,14 @@
 
 Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon.
 Attribute:
-cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
-numCards:   number of cards at particular moment
-players:    keeping references to Players
+    cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
+    numCards:   number of cards at particular moment
+    players:    keeping references to Players
 
 Important Methods:
-add, addAll, remove, clear:     manipulate elements in the collection
-filterFehl:     filter all the FEHL in the collection
-filterTrumpf:   filter all the TRUMPF in the collection
+    add, addAll, remove, clear:     manipulate elements in the collection
+    filterFehl:     filter all the FEHL in the collection
+    filterTrumpf:   filter all the TRUMPF in the collection
 
 
 */
@@ -55,13 +55,9 @@ public abstract class Cards{
 
 
     public Card remove(int index) {
-        if(this.cards.contains(index)){
             Card temp = this.cards.remove(index);
             this.numCards--;
             return temp;
-        }else{
-            return null;
-        }
     }
 
     public Card remove(Card card){
@@ -129,7 +125,34 @@ public abstract class Cards{
         System.out.println();
     }
 
+//    @Override
+//    public String toString() {
+//        String result = "";
+//        String fehlOrTrumpf = "";
+//
+//        SortHelper.sortByStrength(this);
+//        for(Card card : cards){
+//            if(card.isFehl()){
+//                fehlOrTrumpf = "FEHL";
+//            }else{
+//                fehlOrTrumpf = "TRUMPF";
+//            }
+//
+//            result += String.format("%s %s %s strong %d points : ",
+//                                    card, fehlOrTrumpf, card.getStrength(), card.getPoint());
+//        }
+//
+//        return result;
+//    }
 
 
+    @Override
+    public String toString() {
+        String result = "";
 
+        for (Card card : cards) {
+            result += card + " ";
+        }
+        return result;
+    }
 }

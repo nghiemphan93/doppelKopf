@@ -1,10 +1,10 @@
 package Model.PlayerModel;
 
-import Model.CardModel.CardsOnHand;
-import Model.CardModel.CardsPlayedPerRound;
-import Model.CardModel.CardsWon;
+import Model.CardModel.*;
 import Model.ObserverModel.Observable;
 import Model.ObserverModel.Observer;
+
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Player implements Observer {
     private String name;
@@ -12,6 +12,7 @@ public class Player implements Observer {
     private CardsOnHand cardsOnHand;
     private CardsWon cardsWon;
     private Observable cardsPlayedPerRound;
+    private CardsAllowedToPlay cardsAllowedToPlay;
 
     public Player(String name, String password) {
         this.name = name;
@@ -19,6 +20,7 @@ public class Player implements Observer {
         this.cardsOnHand = new CardsOnHand();
         this.cardsWon = new CardsWon();
         this.cardsPlayedPerRound = new CardsPlayedPerRound();
+        this.cardsAllowedToPlay = new CardsAllowedToPlay();
     }
 
     public String getName() {
@@ -69,5 +71,19 @@ public class Player implements Observer {
     @Override
     public void update() {
 
+    }
+
+    public Card playACard(int index){
+        Card card = this.cardsOnHand.remove(index);
+        return card;
+    }
+
+    public Card playARandomCard(){
+        Card card = null;
+        if(this.cardsOnHand.getNumCards() >= 0){
+             card = this.cardsOnHand.remove(ThreadLocalRandom.current().nextInt(0, this.cardsOnHand.getNumCards()));
+        }
+
+        return card;
     }
 }

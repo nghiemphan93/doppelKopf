@@ -42,4 +42,17 @@ public class CardsOnHand extends Cards {
         return index;
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+
+        for(int i = 0; i<this.getCards().size(); i++){
+            Card card = this.getCards().get(i);
+            result += String.format("%d", i) + card + " ";
+        }
+
+
+        return result;
+    }
+
 }

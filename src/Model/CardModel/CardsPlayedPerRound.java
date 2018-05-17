@@ -23,6 +23,10 @@ import java.util.Iterator;
 public class CardsPlayedPerRound extends Cards implements Observable {
     private ArrayList<Observer> playerSubscribers;
 
+    public CardsPlayedPerRound(){
+        this.playerSubscribers = new ArrayList<>();
+    }
+
     @Override
     public void register(Observer o) {
         this.playerSubscribers.add(o);
