@@ -1,19 +1,43 @@
+//
+
 package Model.CardModel;
 
 import Model.PlayerModel.Player;
 
 public class Card {
     private Suit suit; // PIK, KARO, HERZ, KREUZ
-    private Rank rank; // BUBE, DAME, KOENIG, ASS
+    private Rank rank; // ZEHN, BUBE, DAME, KOENIG, ASS
     private String imageURL;
     private Player belongsToPlayer;
     private int strength;
     private int point;
+    private boolean isFehl;
+    private boolean isTrumpf;
 
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
     }
+
+
+    public boolean isFehl() {
+        return isFehl;
+    }
+
+    public void setFehl(boolean fehl) {
+        isFehl = fehl;
+    }
+
+    public boolean isTrumpf() {
+        return isTrumpf;
+    }
+
+    public void setTrumpf(boolean trumpf) {
+        isTrumpf = trumpf;
+    }
+
+
+
 
     public String getSuit() {
         return suit.toString();
@@ -59,8 +83,18 @@ public class Card {
         return point;
     }
 
-    public void setPoint(int point) {
-        this.point = point;
+    public void setPoint() {
+        switch (this.rank){
+            case ZEHN:
+
+                break;
+            case BUBEN:
+                break;
+            case DAMEN:
+                break;
+            case KOENIG:
+                break;
+        }
     }
 
     @Override

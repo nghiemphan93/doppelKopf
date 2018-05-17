@@ -78,7 +78,12 @@ public abstract class Cards{
                 case "KREUZ KOENIG":
                 case "KREUZ ZEHN":
                 case "HERZ ASS":
-                case "HERZ KOENIG": resultList.add(temp);
+                case "HERZ KOENIG":
+                    temp.setFehl(true);
+                    temp.setTrumpf(false);
+                    resultList.add(temp);
+
+
             }   // end of switch
         }   // end of while
 
@@ -98,6 +103,8 @@ public abstract class Cards{
 //        }
         for(Card temp : this.cards){
             if(!fehl.contains(temp)){
+                temp.setTrumpf(true);
+                temp.setFehl(false);
                 resultList.add(temp);
             }
         }
