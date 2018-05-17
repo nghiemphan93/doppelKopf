@@ -5,11 +5,54 @@
         Suit            = PIK | KARO | HERZ | KREUZ
         Rank            = ZEHN | BUBE | DAME | KOENIG | ASS
         POINT           = 10   |   2  |  3   |  4    |  11
-        STRENGTH = ???
-        FEHL or TRUMPF  (is determined before dealing in Class CardsToDeal)
+        STRENGTH        see below, determined by setStrength()
+        FEHL or TRUMPF  is determined in setFehlAndTrumpf()
 
     Important Methods:
-        setPoint():     check and set Point automatically according to Rank
+        setPoint():             check and set Point automatically according to Rank
+        setFehlAndTrumpf():     check and set isFehl + isTrumpf
+        setStrength():          determine the strength of each card compared to others
+                These are the cards sorted by strength
+                    ♥10 TRUMPF 7 strong 10 points
+                    ♥10 TRUMPF 7 strong 10 points
+                    ♣Q TRUMPF 6D strong 3 points
+                    ♣Q TRUMPF 6D strong 3 points
+                    ♠Q TRUMPF 6C strong 3 points
+                    ♠Q TRUMPF 6C strong 3 points
+                    ♥Q TRUMPF 6B strong 3 points
+                    ♥Q TRUMPF 6B strong 3 points
+                    ♦Q TRUMPF 6A strong 3 points
+                    ♦Q TRUMPF 6A strong 3 points
+                    ♣J TRUMPF 5D strong 2 points
+                    ♣J TRUMPF 5D strong 2 points
+                    ♠J TRUMPF 5C strong 2 points
+                    ♠J TRUMPF 5C strong 2 points
+                    ♥J TRUMPF 5B strong 2 points
+                    ♥J TRUMPF 5B strong 2 points
+                    ♦J TRUMPF 5A strong 2 points
+                    ♦J TRUMPF 5A strong 2 points
+                    ♦A TRUMPF 4C strong 11 points
+                    ♦A TRUMPF 4C strong 11 points
+                    ♦10 TRUMPF 4B strong 10 points
+                    ♦10 TRUMPF 4B strong 10 points
+                    ♦K TRUMPF 4A strong 4 points
+                    ♦K TRUMPF 4A strong 4 points
+                    ♥A FEHL 3C strong 11 points
+                    ♥A FEHL 3C strong 11 points
+                    ♥K FEHL 3A strong 4 points
+                    ♥K FEHL 3A strong 4 points
+                    ♠A FEHL 2C strong 11 points
+                    ♠A FEHL 2C strong 11 points
+                    ♠10 FEHL 2B strong 10 points
+                    ♠10 FEHL 2B strong 10 points
+                    ♠K FEHL 2A strong 4 points
+                    ♠K FEHL 2A strong 4 points
+                    ♣A FEHL 1C strong 11 points
+                    ♣A FEHL 1C strong 11 points
+                    ♣10 FEHL 1B strong 10 points
+                    ♣10 FEHL 1B strong 10 points
+                    ♣K FEHL 1A strong 4 points
+                    ♣K FEHL 1A strong 4 points
 */
 
 
@@ -22,7 +65,7 @@ public class Card {
     private Rank rank;         // ZEHN, BUBE, DAME, KOENIG, ASS
     private String imageURL;
     private Player belongsToPlayer;
-    private int strength;
+    private String strength = "";
     private int point;
     private boolean isFehl;
     private boolean isTrumpf;
@@ -30,6 +73,9 @@ public class Card {
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
+        setFehlAndTrumpf();
+        setPoint();
+        setStrength();
     }
 
     public boolean isFehl() {
@@ -46,6 +92,26 @@ public class Card {
 
     public void setTrumpf(boolean trumpf) {
         isTrumpf = trumpf;
+    }
+
+    // check and set isFehl + isTrumpf in Constructor
+    public void setFehlAndTrumpf(){
+        switch (getSuit() + " " + getRank()){
+            case "PIK ASS":
+            case "PIK KOENIG":
+            case "PIK ZEHN":
+            case "KARO ASS":
+            case "KARO KOENIG":
+            case "KARO ZEHN":
+            case "HERZ ASS":
+            case "HERZ KOENIG":
+                this.setFehl(true);
+                this.setTrumpf(false);
+                break;
+            default:
+                this.setTrumpf(true);
+                this.setFehl(false);
+        }   // end of switch
     }
 
     public String getSuit() {
@@ -80,12 +146,81 @@ public class Card {
         this.belongsToPlayer = belongsToPlayer;
     }
 
-    public int getStrength() {
+    public String getStrength() {
         return strength;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
+    // determine the strength of each card compared to others
+    public void setStrength() {
+        if(isFehl){
+            // Set Strength for FEHL
+            switch (suit){
+                case KARO:
+                    setStrengthHelperAssZehnKoenig("1");
+                    break;
+                case PIK:
+                    setStrengthHelperAssZehnKoenig("2");
+                    break;
+                case HERZ:
+                    setStrengthHelperAssZehnKoenig("3");
+                    break;
+            }
+        }else{
+            // Set Strength for TRUMPF
+            switch (rank){
+                case DAMEN:
+                    strength = "6";
+                    setStrengthHelperDameBuben();
+                    break;
+                case BUBEN:
+                    strength = "5";
+                    setStrengthHelperDameBuben();
+                    break;
+                default:
+                    if(suit == Suit.HERZ){
+                        // the Heart 10
+                        strength = "7";
+                    }else{
+                        // the Kreuz Ass, Zehn, Koenig
+                        setStrengthHelperAssZehnKoenig("4");
+                    }
+
+            }
+        }
+    }
+
+    // help method for setStrength
+    public void setStrengthHelperDameBuben(){
+        switch (suit){
+            case KREUZ:
+                strength += "A";
+                break;
+            case HERZ:
+                strength += "B";
+                break;
+            case PIK:
+                strength += "C";
+                break;
+            case KARO:
+                strength += "D";
+                break;
+        }
+    }
+
+    // help method for setStrength
+    public void setStrengthHelperAssZehnKoenig(String firstLetter){
+        strength = firstLetter;
+        switch (rank){
+            case KOENIG:
+                strength += "A";
+                break;
+            case ZEHN:
+                strength += "B";
+                break;
+            case ASS:
+                strength += "C";
+                break;
+        }
     }
 
     public int getPoint() {
@@ -159,5 +294,9 @@ public class Card {
     @Override
     public String toString() {
         return suitToUnicode() + rankToUnicode();
+    }
+
+    public String display() {
+        return getSuit() + " " + getRank();
     }
 }

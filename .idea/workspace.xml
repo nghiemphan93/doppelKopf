@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Cards.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Cards.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsToDeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsToDeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Sort.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsWon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsWon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/SortHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,32 +24,39 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6969286">
+    <splitter split-orientation="horizontal" split-proportion="0.5721785">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.47424623">
+        <splitter split-orientation="horizontal" split-proportion="0.7528692">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="Card.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="302">
-                      <caret line="160" column="33" lean-forward="true" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="48" />
+                    <state relative-caret-position="1922">
+                      <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
                       <folding>
                         <element signature="e#0#1938#0" expanded="true" />
                         <element signature="method#Card#0;class#Card#0" />
+                        <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
+                        <element signature="method#setStrength#0;class#Card#0" />
+                        <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
+                        <element signature="method#&lt;unnamed&gt;#0;class#Card#0" />
                         <element signature="method#setPoint#0;class#Card#0" />
-                        <element signature="e#3581#3582#0" expanded="true" />
-                        <element signature="e#3622#3623#0" expanded="true" />
+                        <element signature="method#suitToUnicode#0;class#Card#0" />
+                        <element signature="method#rankToUnicode#0;class#Card#0" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Suit.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+              <file leaf-file-name="CardsOnHand.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="271">
-                      <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+                    <state>
+                      <caret selection-end-line="10" selection-end-column="2" />
+                      <folding>
+                        <element signature="e#0#1183#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -67,8 +78,8 @@
               <file leaf-file-name="PlayersSetup.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/Controller/PlayersSetup.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="105">
-                      <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+                    <state relative-caret-position="322">
+                      <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
                       <folding>
                         <element signature="imports" expanded="true" />
                         <element signature="e#203#204#0" expanded="true" />
@@ -80,48 +91,39 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Sort.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Sort.java">
+              <file leaf-file-name="Cards.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="333">
-                      <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="RoundController.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="62">
-                      <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="CardsWon.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsWon.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="403">
-                      <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+                    <state relative-caret-position="434">
+                      <caret line="99" column="8" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
                       <folding>
-                        <element signature="e#0#495#0" expanded="true" />
+                        <element signature="e#0#3884#0" expanded="true" />
+                        <element signature="method#Cards#1;class#Cards#0" />
+                        <element signature="method#addAll#0;class#Cards#0" />
+                        <element signature="method#clear#0;class#Cards#0" />
+                        <element signature="method#filterTrumpf#0;class#Cards#0" />
                       </folding>
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Cards.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
+              <file leaf-file-name="SortHelper.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/SortHelper.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="302">
-                      <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
+                    <state relative-caret-position="217">
+                      <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="CardsToDeal.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="434">
+                      <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
                       <folding>
-                        <element signature="method#Cards#0;class#Cards#0" />
-                        <element signature="method#Cards#1;class#Cards#0" />
-                        <element signature="method#addAll#0;class#Cards#0" />
-                        <element signature="method#clear#0;class#Cards#0" />
-                        <element signature="method#filterFehl#0;class#Cards#0" />
-                        <element signature="method#filterTrumpf#0;class#Cards#0" />
+                        <element signature="e#0#1776#0" expanded="true" />
+                        <element signature="imports" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -131,20 +133,17 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="Suit.java" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+              <file leaf-file-name="Cards.java" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="155">
-                      <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="Rank.java" pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="395">
-                      <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                    <state relative-caret-position="682">
+                      <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+                      <folding>
+                        <element signature="e#0#3884#0" expanded="true" />
+                        <element signature="method#Cards#1;class#Cards#0" />
+                        <element signature="method#addAll#0;class#Cards#0" />
+                        <element signature="method#clear#0;class#Cards#0" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -158,11 +157,20 @@
           <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/MainTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="434">
-                  <caret line="89" column="78" selection-start-line="89" selection-start-column="78" selection-end-line="89" selection-end-column="78" />
+                <state relative-caret-position="707">
+                  <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Suit.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="516">
+                  <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -208,13 +216,14 @@
         <option value="$PROJECT_DIR$/src/Controller/RoundController.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/Suit.java" />
-        <option value="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsWon.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/Cards.java" />
         <option value="$PROJECT_DIR$/src/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/Card.java" />
+        <option value="$PROJECT_DIR$/src/Model/CardModel/SortHelper.java" />
+        <option value="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" />
       </list>
     </option>
   </component>
@@ -382,12 +391,12 @@
       <workItem from="1526416051482" duration="14420000" />
       <workItem from="1526468020093" duration="697000" />
       <workItem from="1526549150116" duration="4555000" />
-      <workItem from="1526564858949" duration="7405000" />
+      <workItem from="1526564858949" duration="14411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27125000" />
+    <option name="totallyTimeSpent" value="34131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -395,32 +404,32 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3283582" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32829374" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3296875" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3296875" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3012959" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10703125" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3315335" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10703125" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,9 +451,13 @@
           <folding>
             <element signature="e#0#1938#0" expanded="true" />
             <element signature="method#Card#0;class#Card#0" />
+            <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
+            <element signature="method#setStrength#0;class#Card#0" />
+            <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
+            <element signature="method#&lt;unnamed&gt;#0;class#Card#0" />
             <element signature="method#setPoint#0;class#Card#0" />
-            <element signature="e#3581#3582#0" expanded="true" />
-            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="method#suitToUnicode#0;class#Card#0" />
+            <element signature="method#rankToUnicode#0;class#Card#0" />
           </folding>
         </state>
       </provider>
@@ -519,11 +532,10 @@
         <state relative-caret-position="1085">
           <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
           <folding>
-            <element signature="method#Cards#0;class#Cards#0" />
+            <element signature="e#0#3884#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
-            <element signature="method#filterFehl#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
           </folding>
         </state>
@@ -541,7 +553,7 @@
         <state relative-caret-position="93">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#495#0" expanded="true" />
+            <element signature="e#0#156#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -553,9 +565,13 @@
           <folding>
             <element signature="e#0#1938#0" expanded="true" />
             <element signature="method#Card#0;class#Card#0" />
+            <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
+            <element signature="method#setStrength#0;class#Card#0" />
+            <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
+            <element signature="method#&lt;unnamed&gt;#0;class#Card#0" />
             <element signature="method#setPoint#0;class#Card#0" />
-            <element signature="e#3581#3582#0" expanded="true" />
-            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="method#suitToUnicode#0;class#Card#0" />
+            <element signature="method#rankToUnicode#0;class#Card#0" />
           </folding>
         </state>
       </provider>
@@ -565,11 +581,10 @@
         <state relative-caret-position="814">
           <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
-            <element signature="method#Cards#0;class#Cards#0" />
+            <element signature="e#0#3884#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
-            <element signature="method#filterFehl#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
           </folding>
         </state>
@@ -580,7 +595,7 @@
         <state relative-caret-position="66">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#495#0" expanded="true" />
+            <element signature="e#0#156#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,11 +638,10 @@
         <state relative-caret-position="555">
           <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
-            <element signature="method#Cards#0;class#Cards#0" />
+            <element signature="e#0#3884#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
-            <element signature="method#filterFehl#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
           </folding>
         </state>
@@ -762,31 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-899">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="53" lean-forward="true" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
-          <folding>
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1209">
@@ -795,6 +784,20 @@
             <element signature="e#0#1223#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -810,80 +813,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsWon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
-            <element signature="e#0#495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Sort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="89" column="78" selection-start-line="89" selection-start-column="78" selection-end-line="89" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="41" selection-end-line="141" selection-end-column="41" />
-          <folding>
-            <element signature="method#Cards#0;class#Cards#0" />
-            <element signature="method#Cards#1;class#Cards#0" />
-            <element signature="method#addAll#0;class#Cards#0" />
-            <element signature="method#clear#0;class#Cards#0" />
-            <element signature="method#filterFehl#0;class#Cards#0" />
-            <element signature="method#filterTrumpf#0;class#Cards#0" />
+            <element signature="e#0#156#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PlayersSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="322">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#203#204#0" expanded="true" />
@@ -894,16 +844,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="99" column="8" lean-forward="true" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#3884#0" expanded="true" />
+            <element signature="method#Cards#1;class#Cards#0" />
+            <element signature="method#addAll#0;class#Cards#0" />
+            <element signature="method#clear#0;class#Cards#0" />
+            <element signature="method#filterTrumpf#0;class#Cards#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#1183#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/SortHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#1776#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="160" column="33" lean-forward="true" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="48" />
+        <state relative-caret-position="1922">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
             <element signature="e#0#1938#0" expanded="true" />
             <element signature="method#Card#0;class#Card#0" />
+            <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
+            <element signature="method#setStrength#0;class#Card#0" />
+            <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
+            <element signature="method#&lt;unnamed&gt;#0;class#Card#0" />
             <element signature="method#setPoint#0;class#Card#0" />
-            <element signature="e#3581#3582#0" expanded="true" />
-            <element signature="e#3622#3623#0" expanded="true" />
+            <element signature="method#suitToUnicode#0;class#Card#0" />
+            <element signature="method#rankToUnicode#0;class#Card#0" />
           </folding>
         </state>
       </provider>

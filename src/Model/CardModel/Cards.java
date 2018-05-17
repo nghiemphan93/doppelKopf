@@ -1,16 +1,18 @@
 /*
-    Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon.
-    Attribute:
-        cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
-        numCards:   number of cards at particular moment
-        players:    keeping references to Players
 
-    Important Methods:
-        add, addAll, remove, clear:     manipulate elements in the collection
-        filterFehl:     filter all the FEHL in the collection
-        filterTrumpf:   filter all the TRUMPF in the collection
+Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon.
+Attribute:
+cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
+numCards:   number of cards at particular moment
+players:    keeping references to Players
 
- */
+Important Methods:
+add, addAll, remove, clear:     manipulate elements in the collection
+filterFehl:     filter all the FEHL in the collection
+filterTrumpf:   filter all the TRUMPF in the collection
+
+
+*/
 
 package Model.CardModel;
 
@@ -95,24 +97,11 @@ public abstract class Cards{
         ArrayList<Card> resultList = new ArrayList<>();
 
         // walk through all Cards and check out the FEHL ones
-        // set attribute isTrumpf and isFehl accordingly
-        Iterator<Card> iterator = this.cards.iterator();
-        while (iterator.hasNext()){
-            Card temp = iterator.next();
-            switch (temp.toString()){
-                case "PIK ASS":
-                case "PIK KOENIG":
-                case "PIK ZEHN":
-                case "KREUZ ASS":
-                case "KREUZ KOENIG":
-                case "KREUZ ZEHN":
-                case "HERZ ASS":
-                case "HERZ KOENIG":
-                    temp.setFehl(true);
-                    temp.setTrumpf(false);
-                    resultList.add(temp);
-            }   // end of switch
-        }   // end of while
+        for(Card card : cards){
+            if(card.isFehl()){
+                resultList.add(card);
+            }
+        }
 
         return resultList;
     }
@@ -120,15 +109,11 @@ public abstract class Cards{
     // Filter all the TRUMPF in the card list
     public ArrayList<Card> filterTrumpf(){
         ArrayList<Card> resultList = new ArrayList<>();
-        ArrayList<Card> fehl = filterFehl();            // keep all the FEHL
 
         // walk through all Cards and copy the one which is not in FEHL list
-        // set attribute isTrumpf and isFehl accordingly
-        for(Card temp : this.cards){
-            if(!fehl.contains(temp)){
-                temp.setTrumpf(true);
-                temp.setFehl(false);
-                resultList.add(temp);
+        for(Card card : cards){
+            if(card.isTrumpf()){
+                resultList.add(card);
             }
         }
 

@@ -79,17 +79,32 @@ public class MainTest {
 //        Sort.sortByRank(cards);
 //        cards.display();
 
-        CardsSetup cardsSetup = new CardsSetup();
 
-        cardsSetup.initCardSetup();
 
-        for(Player player: cardsSetup.getPlayerSetup().getPlayers()){
-            System.out.println(player);
-            Sort.sortBySuit(player.getCardsOnHand());
-            player.getCardsOnHand().display();
-            System.out.println(player.getCardsOnHand().getNumCards() + " cards");
-            System.out.println();
+//        for(Player player: cardsSetup.getPlayerSetup().getPlayers()){
+//            System.out.println(player);
+//            Sort.sortBySuit(player.getCardsOnHand());
+//            player.getCardsOnHand().display();
+//            System.out.println(player.getCardsOnHand().getNumCards() + " cards");
+//            System.out.println();
+//        }
+
+        CardsToDeal cardsToDeal = new CardsToDeal(null);
+        cardsToDeal.init();
+        SortHelper.sortByStrength(cardsToDeal);
+
+        for(Card card : cardsToDeal.getCards()){
+            if(card.isFehl()){
+                System.out.println(card + " FEHL " + card.getStrength() + " strong " + card.getPoint() + " points");
+            }else{
+                System.out.println(card + " TRUMPF "+ card.getStrength() + " strong " + card.getPoint() + " points");
+            }
+
         }
+
+
+
+
 
 
 

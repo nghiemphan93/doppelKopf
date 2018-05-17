@@ -15,6 +15,7 @@ package Model.CardModel;
 
 import Model.PlayerModel.Player;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -67,4 +68,6 @@ public class CardsToDeal extends Cards{
         clear();
         init();
     }
+
 }
+
