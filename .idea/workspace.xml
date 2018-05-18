@@ -2,30 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsAllowedToPlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Controller/CardsSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Controller/CardsSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Controller/PlayersSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Controller/PlayersSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Controller/RoundController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/MainTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Cards.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Cards.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsOnHand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsOnHand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsPlayedPerRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsPlayedPerRound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsToDeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsToDeal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/SortHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/SortHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/PlayerModel/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/PlayerModel/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CardsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CardsSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PlayersSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PlayersSetup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RoundController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/MainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Cards.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsAllowedToPlay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsOnHand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsPlayedPerGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsPlayedPerRound.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsToDeal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/CardsWon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Rank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/SortHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/CardModel/Suit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/ObserverModel/Observable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/ObserverModel/Observer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/Model/PlayerModel/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CardsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PlayersSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsAllowedToPlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerRound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsToDeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/CardsWon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsWon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Rank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/SortHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/SortHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/CardModel/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Suit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ObserverModel/Observable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/ObserverModel/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,155 +49,132 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.55643046">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2542">
-                  <caret line="298" column="29" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
-                  <folding>
-                    <element signature="method#Card#0;class#Card#0" />
-                    <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
-                    <element signature="method#setStrength#0;class#Card#0" />
-                    <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
-                    <element signature="method#setPoint#0;class#Card#0" />
-                    <element signature="method#suitToUnicode#0;class#Card#0" />
-                    <element signature="method#rankToUnicode#0;class#Card#0" />
-                    <element signature="e#8591#8592#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardsOnHand.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1116">
-                  <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardsPlayedPerRound.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardsSetup.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Controller/CardsSetup.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="899">
-                  <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2144#2145#0" expanded="true" />
-                    <element signature="e#2190#2191#0" expanded="true" />
-                    <element signature="e#2249#2250#0" expanded="true" />
-                    <element signature="e#2291#2292#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Controller/GameController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#371#372#0" expanded="true" />
-                    <element signature="e#419#420#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardsAllowedToPlay.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsAllowedToPlay.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/PlayerModel/Player.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="445">
-                  <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Cards.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="868">
-                  <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-                  <folding>
-                    <element signature="method#Cards#1;class#Cards#0" />
-                    <element signature="method#addAll#0;class#Cards#0" />
-                    <element signature="method#clear#0;class#Cards#0" />
-                    <element signature="method#filterTrumpf#0;class#Cards#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SortHelper.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/SortHelper.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1085">
-                  <caret line="47" selection-start-line="47" selection-end-line="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CardsToDeal.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1178">
-                  <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/MainTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
-                  <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="method#Card#0;class#Card#0" />
+                <element signature="method#setPoint#0;class#Card#0" />
+                <element signature="method#rankToUnicode#0;class#Card#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsToDeal.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsToDeal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-544">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsOnHand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#1461#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsSetup.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="248">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
+                <element signature="e#2324#2325#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="182" column="29" lean-forward="true" selection-start-line="182" selection-start-column="29" selection-end-line="182" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsPlayedPerGame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerGame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsAllowedToPlay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CardsPlayedPerRound.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerRound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-56">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+                <element signature="e#1122#1123#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1783#1784#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
+                <element signature="e#2101#2102#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#1659#1660#0" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -229,10 +219,17 @@
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/Cards.java" />
-        <option value="$PROJECT_DIR$/src/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Model/CardModel/CardsAllowedToPlay.java" />
-        <option value="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" />
         <option value="$PROJECT_DIR$/src/Controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java" />
       </list>
     </option>
   </component>
@@ -265,7 +262,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,18 +279,27 @@
               <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="CardModel" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -301,13 +307,7 @@
               <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="ObserverModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelkopfNew" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelkopfNew" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="PlayerModel" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -315,8 +315,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +344,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="MAIN_CLASS_NAME" value="doppelkopf.MainTest" />
       <module name="DoppelKopf(neu)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -410,44 +410,46 @@
       <workItem from="1526468020093" duration="697000" />
       <workItem from="1526549150116" duration="4555000" />
       <workItem from="1526564858949" duration="20012000" />
-      <workItem from="1526586531144" duration="2479000" />
+      <workItem from="1526586531144" duration="3076000" />
+      <workItem from="1526652733410" duration="1007000" />
+      <workItem from="1526673300252" duration="14045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42211000" />
+    <option name="totallyTimeSpent" value="57860000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32829374" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32829374" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3296875" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31209505" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="right" id="Run" order="9" visible="true" weight="0.38671875" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10703125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10703125" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.40064794" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
     </layout>
   </component>
@@ -459,98 +461,19 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlayersSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#1385#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1085">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding>
-            <element signature="method#Cards#1;class#Cards#0" />
-            <element signature="method#addAll#0;class#Cards#0" />
-            <element signature="method#clear#0;class#Cards#0" />
-            <element signature="method#filterTrumpf#0;class#Cards#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsWon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="method#Card#0;class#Card#0" />
-            <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
-            <element signature="method#setStrength#0;class#Card#0" />
-            <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
-            <element signature="method#setPoint#0;class#Card#0" />
-            <element signature="method#suitToUnicode#0;class#Card#0" />
-            <element signature="method#rankToUnicode#0;class#Card#0" />
-            <element signature="e#8591#8592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="814">
           <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
+            <element signature="e#0#3780#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
@@ -558,7 +481,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsWon.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsWon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -568,14 +491,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Rank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsToDeal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
@@ -585,26 +508,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Suit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="18" lean-forward="true" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Suit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
           <folding>
+            <element signature="e#0#3780#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
@@ -612,31 +538,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlayersSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding>
-            <element signature="e#0#1385#0" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsToDeal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
@@ -646,7 +566,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CardsSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
@@ -654,20 +574,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2144#2145#0" expanded="true" />
             <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
             <element signature="e#2291#2292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ObserverModel/Observer.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Rank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
@@ -675,24 +594,33 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/PlayerModel/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#1659#1660#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
           <caret line="89" column="68" selection-start-line="89" selection-start-column="68" selection-end-line="89" selection-end-column="68" />
@@ -708,35 +636,28 @@
     <entry file="file://$PROJECT_DIR$/src/Model/CardModel.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/CardModel/SortInstance.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/PlayerModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/ObserverModel/Observable.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/ObserverModel/Observer.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Rank.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Rank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsWon.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsWon.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
@@ -746,113 +667,346 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PlayersSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="37" column="41" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#1385#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#270#271#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#776#777#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Suit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Game.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsToDeal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1178">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/SortHelper.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/SortHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1085">
           <caret line="47" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Card.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2542">
-          <caret line="298" column="29" selection-start-line="298" selection-start-column="29" selection-end-line="298" selection-end-column="29" />
-          <folding>
-            <element signature="method#Card#0;class#Card#0" />
-            <element signature="method#setFehlAndTrumpf#0;class#Card#0" />
-            <element signature="method#setStrength#0;class#Card#0" />
-            <element signature="method#setStrengthHelperDameBuben#0;class#Card#0" />
-            <element signature="method#setPoint#0;class#Card#0" />
-            <element signature="method#suitToUnicode#0;class#Card#0" />
-            <element signature="method#rankToUnicode#0;class#Card#0" />
-            <element signature="e#8591#8592#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsOnHand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1116">
-          <caret line="50" column="44" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CardsSetup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="899">
-          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        <state relative-caret-position="992">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2144#2145#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
-            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsPlayedPerRound.java">
+    <entry file="jar://C:/Program Files/Java/jdk-10/lib/src.zip!/java.base/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        <state relative-caret-position="663">
+          <caret line="783" column="33" lean-forward="true" selection-start-line="783" selection-start-column="33" selection-end-line="783" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MODULES/mdl-DoppelKopf(neu)">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MODULES</ID>
+          <OriginalElement>mdl-DoppelKopf(neu)</OriginalElement>
+          <nodes>
+            <node x="" y="">mdl-DoppelKopf(neu)</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="86.5" y="14.5" />
+          <SelectedNodes />
+          <Categories />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">java.applet</node>
+            <node x="" y="">java.io.ObjectInputFilter.Config</node>
+            <node x="" y="">java.io.RandomAccessFile</node>
+            <node x="" y="">java.io.SerialCallbackContext</node>
+            <node x="" y="">java.io.BufferedInputStream</node>
+            <node x="" y="">java.io.CharArrayReader</node>
+            <node x="" y="">java.io.PushbackInputStream</node>
+            <node x="" y="">java.io.FilterReader</node>
+            <node x="" y="">java.io.FileDescriptor.FDCleanup</node>
+            <node x="" y="">java.nio</node>
+            <node x="" y="">java.io.ObjectOutputStream.DebugTraceInfoStack</node>
+            <node x="" y="">toolbarButtonGraphics</node>
+            <node x="" y="">java.time</node>
+            <node x="" y="">java.io.DataOutputStream</node>
+            <node x="" y="">java.io.PipedInputStream</node>
+            <node x="" y="">java.io.FilePermission</node>
+            <node x="" y="">java.io.InvalidObjectException</node>
+            <node x="" y="">java.io.ObjectStreamClass.FieldReflectorKey</node>
+            <node x="" y="">javafx</node>
+            <node x="" y="">java.io.ObjectStreamClass.FieldReflector</node>
+            <node x="" y="">java.io.ObjectStreamField</node>
+            <node x="" y="">java.io.PrintWriter</node>
+            <node x="" y="">java.io.ObjectStreamClass.MemberSignature</node>
+            <node x="" y="">java.security</node>
+            <node x="" y="">images</node>
+            <node x="" y="">java.io.StreamCorruptedException</node>
+            <node x="" y="">java.io.Externalizable</node>
+            <node x="" y="">java.io.FileInputStream.AltFinalizer</node>
+            <node x="" y="">java.io.Console.LineReader</node>
+            <node x="" y="">java.io.ObjectInputValidation</node>
+            <node x="" y="">java.io.ObjectOutputStream.Caches</node>
+            <node x="" y="">java.io.FilterOutputStream</node>
+            <node x="" y="">java.io.Reader</node>
+            <node x="" y="">java.io.PipedWriter</node>
+            <node x="" y="">java.io.ObjectInputStream.Caches</node>
+            <node x="" y="">java.io.Serializable</node>
+            <node x="" y="">java.io.ObjectInputStream.PeekInputStream</node>
+            <node x="" y="">java.io.UncheckedIOException</node>
+            <node x="" y="">META-INF</node>
+            <node x="" y="">java.io.SyncFailedException</node>
+            <node x="" y="">java.lang</node>
+            <node x="" y="">groovy</node>
+            <node x="" y="">Controller.PlayersSetup</node>
+            <node x="" y="">groovyjarjarantlr</node>
+            <node x="" y="">java.io.WriteAbortedException</node>
+            <node x="" y="">java.sql</node>
+            <node x="" y="">java.io.PipedReader</node>
+            <node x="" y="">java.io.FilenameFilter</node>
+            <node x="" y="">java.io.ObjectInputStream.ValidationList</node>
+            <node x="" y="">java.util</node>
+            <node x="" y="">netscape</node>
+            <node x="" y="">java.io.ByteArrayOutputStream</node>
+            <node x="" y="">java.io.ObjectStreamClass.WeakClassKey</node>
+            <node x="" y="">java.io.ExpiringCache.Entry</node>
+            <node x="" y="">java.io.ObjectStreamClass.EntryFuture</node>
+            <node x="" y="">java.io.InterruptedIOException</node>
+            <node x="" y="">sun</node>
+            <node x="" y="">java.io.BufferedOutputStream</node>
+            <node x="" y="">MainTest</node>
+            <node x="" y="">java.io.Console</node>
+            <node x="" y="">java.io.ObjectOutputStream</node>
+            <node x="" y="">java.math</node>
+            <node x="" y="">java.io.ObjectInputStream.HandleTable.HandleList</node>
+            <node x="" y="">java.io.ObjectInputStream.FilterValues</node>
+            <node x="" y="">java.io.Flushable</node>
+            <node x="" y="">java.io.DataOutput</node>
+            <node x="" y="">java.io.BufferedWriter</node>
+            <node x="" y="">java.io.StringWriter</node>
+            <node x="" y="">java.io.FileOutputStream</node>
+            <node x="" y="">java.io.IOException</node>
+            <node x="" y="">java.io.PipedOutputStream</node>
+            <node x="" y="">java.io.InputStreamReader</node>
+            <node x="" y="">java.io.File</node>
+            <node x="" y="">java.io.IOError</node>
+            <node x="" y="">java.io.ObjectInputFilter.Status</node>
+            <node x="" y="">java.awt</node>
+            <node x="" y="">jdk</node>
+            <node x="" y="">java.io.ObjectStreamException</node>
+            <node x="" y="">java.text</node>
+            <node x="" y="">java.io.FileFilter</node>
+            <node x="" y="">java.io.StringReader</node>
+            <node x="" y="">java.io.DefaultFileSystem</node>
+            <node x="" y="">Model</node>
+            <node x="" y="">java.io.BufferedReader</node>
+            <node x="" y="">java.io.ObjectInputStream.GetField</node>
+            <node x="" y="">java.rmi</node>
+            <node x="" y="">com</node>
+            <node x="" y="">java.io.File.TempDirectory</node>
+            <node x="" y="">java.beans</node>
+            <node x="" y="">java.io.ObjectOutput</node>
+            <node x="" y="">java.io.ObjectInputStream</node>
+            <node x="" y="">java.io.LineNumberInputStream</node>
+            <node x="" y="">groovyjarjarasm</node>
+            <node x="" y="">java.net</node>
+            <node x="" y="">java.io.ByteArrayInputStream</node>
+            <node x="" y="">javax</node>
+            <node x="" y="">java.io.StreamTokenizer</node>
+            <node x="" y="">java.io.ObjectOutputStream.BlockDataOutputStream</node>
+            <node x="" y="">oracle</node>
+            <node x="" y="">java.io.ObjectStreamClass.Caches</node>
+            <node x="" y="">java.io.WinNTFileSystem</node>
+            <node x="" y="">Controller.CardsSetup</node>
+            <node x="" y="">java.io.LineNumberReader</node>
+            <node x="" y="">java.io.ObjectStreamClass.ClassDataSlot</node>
+            <node x="" y="">java.io.CharArrayWriter</node>
+            <node x="" y="">java.io.EOFException</node>
+            <node x="" y="">java.io.FileNotFoundException</node>
+            <node x="" y="">java.io.ObjectInputFilter.Config.Global</node>
+            <node x="" y="">java.io.FileOutputStream.AltFinalizer</node>
+            <node x="" y="">java.io.FileSystem</node>
+            <node x="" y="">java.io.CharConversionException</node>
+            <node x="" y="">java.io.ObjectInputStream.BlockDataInputStream</node>
+            <node x="" y="">java.io.PushbackReader</node>
+            <node x="" y="">java.io.ObjectInputStream.GetFieldImpl</node>
+            <node x="" y="">java.io.DataInput</node>
+            <node x="" y="">java.io.Writer</node>
+            <node x="" y="">java.io.ObjectInput</node>
+            <node x="" y="">groovyjarjarcommonscli</node>
+            <node x="" y="">java.io.ObjectInputFilter</node>
+            <node x="" y="">java.io.UnsupportedEncodingException</node>
+            <node x="" y="">java.io.UTFDataFormatException</node>
+            <node x="" y="">java.io.DataInputStream</node>
+            <node x="" y="">java.io.ObjectInputStream.ValidationList.Callback</node>
+            <node x="" y="">java.io.File.PathStatus</node>
+            <node x="" y="">java.io.ObjectStreamClass.ExceptionInfo</node>
+            <node x="" y="">java.io.ObjectStreamClass</node>
+            <node x="" y="">java.io.ObjectInputStream.HandleTable</node>
+            <node x="" y="">java.io.StringBufferInputStream</node>
+            <node x="" y="">java.io.ObjectOutputStream.ReplaceTable</node>
+            <node x="" y="">java.io.InvalidClassException</node>
+            <node x="" y="">java.io.SerializablePermission</node>
+            <node x="" y="">java.io.FilterInputStream</node>
+            <node x="" y="">java.io.ObjectOutputStream.HandleTable</node>
+            <node x="" y="">java.io.Bits</node>
+            <node x="" y="">java.io.OutputStreamWriter</node>
+            <node x="" y="">java.io.NotActiveException</node>
+            <node x="" y="">java.io.ObjectInputStream.FieldValues</node>
+            <node x="" y="">java.io.ObjectInputStream.Logging</node>
+            <node x="" y="">java.io.ExpiringCache</node>
+            <node x="" y="">java.io.ObjectOutputStream.PutField</node>
+            <node x="" y="">java.io.OutputStream</node>
+            <node x="" y="">java.io.PrintStream</node>
+            <node x="" y="">org</node>
+            <node x="" y="">java.io.SequenceInputStream</node>
+            <node x="" y="">java.io.FilterWriter</node>
+            <node x="" y="">java.io.OptionalDataException</node>
+            <node x="" y="">java.io.FileWriter</node>
+            <node x="" y="">java.io.FileInputStream</node>
+            <node x="" y="">java.io.NotSerializableException</node>
+            <node x="" y="">Controller.GameController</node>
+            <node x="" y="">java.io.DeleteOnExitHook</node>
+            <node x="" y="">java.io.FileDescriptor</node>
+            <node x="" y="">java.io.Closeable</node>
+            <node x="" y="">java.io.ObjectOutputStream.PutFieldImpl</node>
+            <node x="" y="">java.io.FileReader</node>
+            <node x="" y="">java.io.ObjectInputFilter.FilterInfo</node>
+            <node x="" y="">java.io.FilePermissionCollection</node>
+            <node x="" y="">java.io.ObjectStreamConstants</node>
+            <node x="" y="">java.io.InputStream</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="765.0" y="408.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Controller">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Controller</OriginalElement>
+          <nodes>
+            <node x="0.0" y="148.0">Controller.CardsSetup</node>
+            <node x="0.0" y="0.0">Controller.GameController</node>
+            <node x="0.0" y="74.0">Controller.PlayersSetup</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-722.0" y="85.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Model</OriginalElement>
+          <nodes>
+            <node x="" y="">Model.CardModel.Card</node>
+            <node x="" y="">Model.CardModel.Cards</node>
+            <node x="" y="">Model.ObserverModel.Observer</node>
+            <node x="" y="">Model.CardModel.CardsPlayedPerRound</node>
+            <node x="" y="">Model.CardModel.CardsPlayedPerGame</node>
+            <node x="" y="">Model.CardModel.CardsToDeal</node>
+            <node x="" y="">Model.ObserverModel.Observable</node>
+            <node x="" y="">Model.CardModel.CardsWon</node>
+            <node x="" y="">Model.CardModel.SortHelper</node>
+            <node x="" y="">Model.CardModel.Suit</node>
+            <node x="" y="">Model.CardModel.Rank</node>
+            <node x="" y="">Model.CardModel.CardsOnHand</node>
+            <node x="" y="">Model.PlayerModel.Player</node>
+            <node x="" y="">Model.CardModel.CardsAllowedToPlay</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="151.5" y="54.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/doppelkopf">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>doppelkopf</OriginalElement>
+          <nodes>
+            <node x="" y="">doppelkopf.Controller.PlayersSetup</node>
+            <node x="" y="">doppelkopf.Controller.GameController</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsPlayedPerRound</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsPlayedPerGame</node>
+            <node x="" y="">doppelkopf.Model.CardModel.Cards</node>
+            <node x="" y="">doppelkopf.Model.CardModel.Rank</node>
+            <node x="" y="">doppelkopf.Model.CardModel.Suit</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsWon</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsAllowedToPlay</node>
+            <node x="" y="">doppelkopf.Model.CardModel.Card</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsOnHand</node>
+            <node x="" y="">doppelkopf.Model.CardModel.CardsToDeal</node>
+            <node x="" y="">doppelkopf.Controller.CardsSetup</node>
+            <node x="" y="">doppelkopf.MainTest</node>
+            <node x="" y="">doppelkopf.Model.ObserverModel.Observable</node>
+            <node x="" y="">doppelkopf.Model.ObserverModel.Observer</node>
+            <node x="" y="">doppelkopf.Model.PlayerModel.Player</node>
+            <node x="" y="">doppelkopf.Model.CardModel.SortHelper</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="957.5" y="1155.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Constructors</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Package doppelkopf.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Suit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/Cards.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
+        <state relative-caret-position="620">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
+            <element signature="e#0#3780#0" expanded="true" />
             <element signature="method#Cards#1;class#Cards#0" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
             <element signature="method#addAll#0;class#Cards#0" />
             <element signature="method#clear#0;class#Cards#0" />
             <element signature="method#filterTrumpf#0;class#Cards#0" />
@@ -860,31 +1014,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/PlayerModel/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerRound.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="-56">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/CardModel/CardsAllowedToPlay.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        <state relative-caret-position="620">
+          <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#1461#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/GameController.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsToDeal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state relative-caret-position="-544">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="75" column="38" lean-forward="true" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1783#1784#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="e#2101#2102#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#1659#1660#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="182" column="29" lean-forward="true" selection-start-line="182" selection-start-column="29" selection-end-line="182" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="method#Card#0;class#Card#0" />
+            <element signature="method#setPoint#0;class#Card#0" />
+            <element signature="method#rankToUnicode#0;class#Card#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+            <element signature="e#2324#2325#0" expanded="true" />
           </folding>
         </state>
       </provider>
