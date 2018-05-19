@@ -1,15 +1,15 @@
-/*
-    Card Deck creating all cards needed in game and deal to players.
-
-    Attribute:
-
-    Important Methods:
-        init():     Initialize all cards needed and shuffle
-        deal():     Deal cards to all players
-        shuffle():  shuffle
-        reset():    clear Deck then prepare for new game
-
+/**
+ *     Card Deck creating all cards needed in game and deal to players.
+ *
+ *     Attribute:
+ *
+ *     Important Methods:
+ *         init():     Initialize all cards needed and shuffle
+ *         deal():     Deal cards to all players
+ *         shuffle():  Shuffle
+ *         reset():    Clear Deck then prepare for new game
  */
+
 
 package doppelkopf.Model.CardModel;
 
@@ -24,7 +24,9 @@ public class CardsToDeal extends Cards{
         setPlayers(players);
     }
 
-    // Initialize all cards needed and shuffle
+    /**
+     * Initialize all cards needed and shuffle
+     */
     public void init(){
         // Prepare all possible Suits and Ranks
         Suit suits[] = Suit.values();
@@ -58,12 +60,16 @@ public class CardsToDeal extends Cards{
         }
     }
 
-    // shuffle
+    /**
+     * Shuffle
+     */
     public void shuffle(){
         Collections.shuffle(this.getCards());
     }
 
-    // clear Deck then prepare for new game
+    /**
+     * Clear Deck then prepare for new game
+     */
     public void reset(){
         clear();
         init();

@@ -1,3 +1,28 @@
+/**
+ * Game controller manages the game
+ * Can create players, all cards needed
+ * and coordinates the rounds
+ *
+ * Attributes:
+ *      numbRound:      number of round
+ *      playerSetup:    holding setup references to all players
+ *      cardsSetup:     holding setup references to all kinds of cards
+ *      sc:             take input from user
+ *
+ * Important methods:
+ *      gameInit()          Setup players and cards
+ *      startGame()         Start a game
+ *      resetGame()         Prepare for new game
+ *      endGame()           End a game
+ *      startRound()        Start a round
+ *      startRoundSeeding() Start a auto seeding round, used for DEMO purpose
+ *      whoWinsTheRound()   Determines who wins the round, given the CardsPlayedPerRound sorted
+ *      displayAllHand()
+ *      disCarPlaPerRound()
+ *      displayEachPlayersCardsWon()
+ *      displayEachPlayerPoints()
+ */
+
 package doppelkopf.Controller;
 
 import doppelkopf.Model.CardModel.Card;
@@ -42,11 +67,17 @@ public class GameController {
         this.cardsSetup = cardsSetup;
     }
 
+    /**
+     * Setup players and cards
+     */
     public void gameInit(){
         this.playersSetup = new PlayersSetup();
         this.cardsSetup = new CardsSetup(this.playersSetup);
     }
 
+    /**
+     * Start a game
+     */
     public void startGame(){
         this.cardsSetup.initCardSetup();
         for(int i = 0; i<10; i++){
@@ -60,21 +91,26 @@ public class GameController {
         displayEachPlayerPoints();
 
 
-
-//        for(Card card : playersSetup.getPlayers().get(0).getCardsOnHand().getCards()){
-//            System.out.println(card.getBelongsToPlayer());
-//        }
     }
 
+    /**
+     * Prepare for new game
+     */
     public void resetGame(){
         this.cardsSetup.getCardsToDeal().reset();
         this.numbRound = 0;
     }
 
+    /**
+     * End a game
+     */
     public void endGame(){
 
     }
 
+    /**
+     * Start a round
+     */
     public void startRound(){
         // each player takes turn to play
         for(int i = 0; i<4; i++){
@@ -106,6 +142,9 @@ public class GameController {
 
     }
 
+    /**
+     * Start a auto seeding round, used for DEMO purpose
+     */
     public void startRoundSeeding(){
         // each player takes turn to play
         for(int i = 0; i<4; i++){
@@ -160,22 +199,32 @@ public class GameController {
 
     }
 
+    /**
+     * Determines who wins the round, given the CardsPlayedPerRound sorted
+     * @param cardsPlayedPerRound
+     * @return
+     */
     public Player whoWinsTheRound(CardsPlayedPerRound cardsPlayedPerRound){
 
         return cardsPlayedPerRound.getCards().get(0).getBelongsToPlayer();
     }
 
-
+    /**
+     * Display hands of every player
+     */
     public void displayAllHands(){
         for(Player player : this.playersSetup.getPlayers()){
             System.out.println(player + ": " + player.getCardsOnHand());
         }
     }
 
+    /**
+     * Display cards played on table per round
+     */
     public void displayCardsPlayedPerRound(){
-//        System.out.println("Cards played per Round: " + cardsSetup.getCardsPlayedPerRound());
-
+        // Sort by strength
         SortHelper.sortByStrength(cardsSetup.getCardsPlayedPerRound());
+
         System.out.print("Cards played in round: ");
         for(Card card : cardsSetup.getCardsPlayedPerRound().getCards()){
             System.out.print(card + ":" + card.getBelongsToPlayer() + " ");
@@ -183,6 +232,9 @@ public class GameController {
         System.out.println();
     }
 
+    /**
+     * Display each players cards won
+     */
     public void displayEachPlayersCardsWon(){
         for(Player player : this.playersSetup.getPlayers()){
             System.out.print(player + " collected: ");
@@ -197,14 +249,13 @@ public class GameController {
         System.out.println();
     }
 
+    /**
+     * Display each player Points
+     */
     public void displayEachPlayerPoints(){
         for(Player player : this.playersSetup.getPlayers()){
             System.out.println(player + " achieved: " + player.calcPointsWonPerGame() + " points");
         }
         System.out.println();
     }
-
-
-
-
 }

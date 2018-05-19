@@ -1,3 +1,23 @@
+/**
+ * Class for each player who takes part in the game
+ *
+ * Attribute:
+ *      name:                name
+ *      password:            password
+ *      cardsOnHand:         cards on hand
+ *      cardsWon:            cards were collected
+ *      cardsPlayedPerRound: cards played on table each round
+ *      CardsAllowedToPlay  cards allowed to play(bedienen)
+ *      pointsWonPerGame    all points of each game
+ *
+ *  Important methods:
+ *      playACard():            Play a chosen card
+ *      playARandomCard():      Play a random card, used for DEMO
+ *      setWhatCardToPlay():    Check and determine what cards on Hand are allowed to play, depending on the first card was played
+ *      calcPointsWonPerGame(): Calculation of points won per game
+ *
+ */
+
 package doppelkopf.Model.PlayerModel;
 
 import doppelkopf.Model.CardModel.*;
@@ -91,11 +111,20 @@ public class Player implements Observer {
 
     }
 
+    /**
+     * Play a chosen card
+     * @param index
+     * @return
+     */
     public Card playACard(int index){
         Card card = this.cardsOnHand.remove(index);
         return card;
     }
 
+    /**
+     * Play a random card, used for DEMO
+     * @return
+     */
     public Card playARandomCard(){
         Card card = null;
 
@@ -108,8 +137,11 @@ public class Player implements Observer {
         return card;
     }
 
-    // check and determine what cards on Hand are allowed to play
-    // depending on the first card was played
+    /**
+     * Check and determine what cards on Hand are allowed to play
+     * depending on the first card was played
+     * @param firstCardPlayed
+     */
     public void setWhatCardToPlay(Card firstCardPlayed){
         ArrayList<Card> cardsToPlayReturn = new ArrayList<>();
 
@@ -170,6 +202,10 @@ public class Player implements Observer {
         }
     }   // end of checkWhatCardToPlay()
 
+    /**
+     * Calculation of points won per game
+     * @return
+     */
     public int calcPointsWonPerGame(){
         int sum = 0;
         for(Card card : this.cardsWon.getCards()){

@@ -1,3 +1,9 @@
+/**
+ * Storing list of allowed to play cards
+ * which were checked in setWhatCardToPlay() in Player Class
+ *
+ */
+
 package doppelkopf.Model.CardModel;
 
 public class CardsAllowedToPlay extends Cards{
@@ -9,7 +15,6 @@ public class CardsAllowedToPlay extends Cards{
             Card card = this.getCards().get(i);
             result += String.format("%d_", i) + card + " ";
         }
-
 
         return result;
     }

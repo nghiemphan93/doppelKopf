@@ -1,15 +1,15 @@
-/*
-    Setup all kinds of cards needed for a game (Deck, Hand, Cards won...)
-
-    Atribute:
-            playerSetup:    holding setup infor of 4 players
-            cardsToDeal:    create deck init
-            cardsWons:      4 card lists storing STICH for each player
-            cardsOnHands:   list of 4 card Hands for each players
-
-    Important methods:
-            initCardSetup()     initialize all types of cards and deal to players
-
+/**
+*     Setup all kinds of cards needed for a game (Deck, Hand, Cards won...)
+*
+*  Atribute:
+*     playerSetup:          holding setup infor of 4 players
+*     cardsToDeal:          create deck init
+*     cardsWons:            4 card lists storing STICH for each player
+*     cardsOnHands:         list of 4 card Hands for each players
+*     cardsPlayedPerRound:  cards played on table per round
+*
+*  Important methods:
+*     initCardSetup()     Initialize all types of cards and deal to players
  */
 
 package doppelkopf.Controller;
@@ -34,12 +34,18 @@ public class CardsSetup {
         this.cardsPlayedPerRound = new CardsPlayedPerRound();
     }
 
+    /**
+     * Initialize all types of cards and deal to players
+     */
     public void initCardSetup(){
         this.playerSetup.initSeeding();
+
+        // Setup all cards needed
         cardsToDeal.init();
+        // Deal to players
         cardsToDeal.deal();
 
-        // init sorted by strength
+        // init sort each Hand by strength
         for(Player player : this.playerSetup.getPlayers()){
             SortHelper.sortByStrength(player.getCardsOnHand());
         }

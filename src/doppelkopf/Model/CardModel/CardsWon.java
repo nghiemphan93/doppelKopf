@@ -1,12 +1,12 @@
-/*
-    All the cards a player won in a game
+/**
+ *     All the cards a player won in a game
+ *
+ *     Attribute:
+ *
+ *
+ *     Important Methods:
+ */
 
-    Attribute:
-
-
-    Important Methods:
-
-*/
 
 package doppelkopf.Model.CardModel;
 

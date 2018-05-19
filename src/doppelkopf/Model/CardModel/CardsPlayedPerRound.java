@@ -1,15 +1,16 @@
-/*
-    Cards played on table which all players can see
+/**
+ *     Cards played on table in each round which all players can see
+ *
+ *     Attribute:
+ *         playerSubscribers:  holding references of all players
+ *
+ *     Important Methods:
+ *         register():     subscribe players to get notification when a new card was played
+ *         unregister():   unsubscibe player => no more notification
+ *         pushNotify():   notify all players who subscribed that a new card was played
+ *         add():           every time  a card was added, every player will be notified
+ */
 
-    Attribute:
-        playerSubscribers:  holding references of all players
-
-    Important Methods:
-        register():     subscribe players to get notification when a new card was played
-        unregister():   unsubscibe player => no more notification
-        pushNotify():   notify all players who subscribed that a new card was played
-
-*/
 
 package doppelkopf.Model.CardModel;
 
@@ -42,6 +43,11 @@ public class CardsPlayedPerRound extends Cards implements Observable {
         }
     }
 
+    /**
+     * Every time  a card was added, every player will be notified
+     * @param card
+     * @return
+     */
     @Override
     public Card add(Card card) {
         pushNotify();

@@ -1,59 +1,77 @@
-/*
-    The single Card to play in game
+/**
+ * The single Card to play in game
+ *
+ *     Attribute:
+ *         Suit            = PIK | KARO | HERZ | KREUZ
+ *         Rank            = ZEHN | BUBE | DAME | KOENIG | ASS
+ *         POINT           = 10   |   2  |  3   |  4    |  11
+ *         STRENGTH        see below, determined by setStrength()
+ *         FEHL or TRUMPF  is determined in setFehlAndTrumpf()
+ *         belongsToPlayer from what player does the card come
+ *         isFehl          is Fehl
+ *         isTrumpf        is Trumpf
+ *
+ *     Important Methods:
+ *         setPoint():             check and set Point automatically according to Rank
+ *         setFehlAndTrumpf():     set status FEHL | TRUMPF for each card
+ *         setPoint():             Check and set Point according to Rank
+ *         setStrength():          determine the strength of each card compared to others
+ *         suitToUnicode():        Return UNICODE Symbol for SUIT
+ *         rankToUnicode():        Return UNICODE Symbol for RANK
+ *         display():              getSuit() + " " + getRank()
+ *
+ *      These are the cards sorted by strength
+ *      Each card has a code representing the strength "__"
+ *      The first letter is the group order:
+ *                                  1 2 3 4 5 6 7
+ *                                  123 are FEHL
+ *                                  4567 are TRUMPF
+ *      The second letter is the order in group:
+ *                                  A B C D
+ *                                  A < B < C < D
+ *
+ *                     ♥10 TRUMPF 7 strong 10 points
+ *                     ♥10 TRUMPF 7 strong 10 points
+ *                     ♣Q TRUMPF 6D strong 3 points
+ *                     ♣Q TRUMPF 6D strong 3 points
+ *                     ♠Q TRUMPF 6C strong 3 points
+ *                     ♠Q TRUMPF 6C strong 3 points
+ *                     ♥Q TRUMPF 6B strong 3 points
+ *                     ♥Q TRUMPF 6B strong 3 points
+ *                     ♦Q TRUMPF 6A strong 3 points
+ *                     ♦Q TRUMPF 6A strong 3 points
+ *                     ♣J TRUMPF 5D strong 2 points
+ *                     ♣J TRUMPF 5D strong 2 points
+ *                     ♠J TRUMPF 5C strong 2 points
+ *                     ♠J TRUMPF 5C strong 2 points
+ *                     ♥J TRUMPF 5B strong 2 points
+ *                     ♥J TRUMPF 5B strong 2 points
+ *                     ♦J TRUMPF 5A strong 2 points
+ *                     ♦J TRUMPF 5A strong 2 points
+ *                     ♦A TRUMPF 4C strong 11 points
+ *                     ♦A TRUMPF 4C strong 11 points
+ *                     ♦10 TRUMPF 4B strong 10 points
+ *                     ♦10 TRUMPF 4B strong 10 points
+ *                     ♦K TRUMPF 4A strong 4 points
+ *                     ♦K TRUMPF 4A strong 4 points
+ *                     ♥A FEHL 3C strong 11 points
+ *                     ♥A FEHL 3C strong 11 points
+ *                     ♥K FEHL 3A strong 4 points
+ *                     ♥K FEHL 3A strong 4 points
+ *                     ♠A FEHL 2C strong 11 points
+ *                     ♠A FEHL 2C strong 11 points
+ *                     ♠10 FEHL 2B strong 10 points
+ *                     ♠10 FEHL 2B strong 10 points
+ *                     ♠K FEHL 2A strong 4 points
+ *                     ♠K FEHL 2A strong 4 points
+ *                     ♣A FEHL 1C strong 11 points
+ *                     ♣A FEHL 1C strong 11 points
+ *                     ♣10 FEHL 1B strong 10 points
+ *                     ♣10 FEHL 1B strong 10 points
+ *                     ♣K FEHL 1A strong 4 points
+ *                     ♣K FEHL 1A strong 4 points
+ */
 
-    Attribute:
-        Suit            = PIK | KARO | HERZ | KREUZ
-        Rank            = ZEHN | BUBE | DAME | KOENIG | ASS
-        POINT           = 10   |   2  |  3   |  4    |  11
-        STRENGTH        see below, determined by setStrength()
-        FEHL or TRUMPF  is determined in setFehlAndTrumpf()
-
-    Important Methods:
-        setPoint():             check and set Point automatically according to Rank
-        setFehlAndTrumpf():     check and set isFehl + isTrumpf
-        setStrength():          determine the strength of each card compared to others
-                These are the cards sorted by strength
-                    ♥10 TRUMPF 7 strong 10 points
-                    ♥10 TRUMPF 7 strong 10 points
-                    ♣Q TRUMPF 6D strong 3 points
-                    ♣Q TRUMPF 6D strong 3 points
-                    ♠Q TRUMPF 6C strong 3 points
-                    ♠Q TRUMPF 6C strong 3 points
-                    ♥Q TRUMPF 6B strong 3 points
-                    ♥Q TRUMPF 6B strong 3 points
-                    ♦Q TRUMPF 6A strong 3 points
-                    ♦Q TRUMPF 6A strong 3 points
-                    ♣J TRUMPF 5D strong 2 points
-                    ♣J TRUMPF 5D strong 2 points
-                    ♠J TRUMPF 5C strong 2 points
-                    ♠J TRUMPF 5C strong 2 points
-                    ♥J TRUMPF 5B strong 2 points
-                    ♥J TRUMPF 5B strong 2 points
-                    ♦J TRUMPF 5A strong 2 points
-                    ♦J TRUMPF 5A strong 2 points
-                    ♦A TRUMPF 4C strong 11 points
-                    ♦A TRUMPF 4C strong 11 points
-                    ♦10 TRUMPF 4B strong 10 points
-                    ♦10 TRUMPF 4B strong 10 points
-                    ♦K TRUMPF 4A strong 4 points
-                    ♦K TRUMPF 4A strong 4 points
-                    ♥A FEHL 3C strong 11 points
-                    ♥A FEHL 3C strong 11 points
-                    ♥K FEHL 3A strong 4 points
-                    ♥K FEHL 3A strong 4 points
-                    ♠A FEHL 2C strong 11 points
-                    ♠A FEHL 2C strong 11 points
-                    ♠10 FEHL 2B strong 10 points
-                    ♠10 FEHL 2B strong 10 points
-                    ♠K FEHL 2A strong 4 points
-                    ♠K FEHL 2A strong 4 points
-                    ♣A FEHL 1C strong 11 points
-                    ♣A FEHL 1C strong 11 points
-                    ♣10 FEHL 1B strong 10 points
-                    ♣10 FEHL 1B strong 10 points
-                    ♣K FEHL 1A strong 4 points
-                    ♣K FEHL 1A strong 4 points
-*/
 
 
 package doppelkopf.Model.CardModel;
@@ -94,7 +112,9 @@ public class Card {
         isTrumpf = trumpf;
     }
 
-    // check and set isFehl + isTrumpf in Constructor
+    /**
+     * Set status FEHL | TRUMPF for each card
+     */
     public void setFehlAndTrumpf(){
         switch (getSuit() + " " + getRank()){
             case "KREUZ ASS":
@@ -150,7 +170,9 @@ public class Card {
         return strength;
     }
 
-    // determine the strength of each card compared to others
+    /**
+     * Determine the strength of each card compared to others
+     */
     public void setStrength() {
         if(isFehl){
             // Set Strength for FEHL
@@ -189,7 +211,9 @@ public class Card {
         }
     }
 
-    // help method for setStrength
+    /**
+     * Help method for setStrength
+     */
     public void setStrengthHelperDameBuben(){
         switch (suit){
             case KARO:
@@ -207,7 +231,9 @@ public class Card {
         }
     }
 
-    // help method for setStrength
+    /**
+     * Help method for setStrength
+     */
     public void setStrengthHelperAssZehnKoenig(String firstLetter){
         strength = firstLetter;
         switch (rank){
@@ -227,7 +253,10 @@ public class Card {
         return point;
     }
 
-    // Check and set Point according to Rank
+    /**
+     * Check and set Point according to Rank
+     */
+
     public void setPoint() {
         switch (this.rank){
             case ZEHN:
@@ -248,6 +277,10 @@ public class Card {
         }
     }
 
+    /**
+     * Return UNICODE Symbol for SUIT
+     * @return
+     */
     public String suitToUnicode(){
         String result = "";
         switch (getSuit()){
@@ -268,6 +301,10 @@ public class Card {
         return result;
     }
 
+    /**
+     * Return UNICODE Symbol for RANK
+     * @return
+     */
     public String rankToUnicode(){
         String result = "";
         switch (getRank()){

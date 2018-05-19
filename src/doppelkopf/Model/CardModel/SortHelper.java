@@ -1,16 +1,16 @@
-/*
-    Help interface for sorting
-
-    Attribute:
-
-    Important Methods:
-        sortBySuit()
-        sortByRank()
-        sortByFehl()
-        sortByTrumpf()
-        sortByStrength()
-        sortByPoint()
-*/
+/**
+ *     Help interface for sorting all cards classes
+ *
+ *     Attribute:
+ *
+ *     Important Methods:
+ *         sortBySuit()
+ *         sortByRank()
+ *         sortByFehl()
+ *         sortByTrumpf()
+ *         sortByStrength()
+ *         sortByPoint()
+ */
 
 package doppelkopf.Model.CardModel;
 

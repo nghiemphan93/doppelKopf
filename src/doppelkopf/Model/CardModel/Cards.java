@@ -1,18 +1,17 @@
-/*
+/**
+ * Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon, CardsAllowedToPlay
+ *
+ * Attribute:
+ *     cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
+ *     numCards:   number of cards at particular moment
+ *     players:    keeping references to Players
+ *
+ * Important Methods:
+ *     add, addAll, remove, clear:     manipulate elements in the collection
+ *     filterFehl:     Filter all the FEHL in the card list
+ *     filterTrumpf:   filter all the TRUMPF in the collection
+ */
 
-Base Card Collection for CardsOnHand, CardsPlayedPerRound, CardsToDeal, CardsWon.
-Attribute:
-    cards:      Collection storing all cards depending on purpose (deck, hand, Stich, cards won...)
-    numCards:   number of cards at particular moment
-    players:    keeping references to Players
-
-Important Methods:
-    add, addAll, remove, clear:     manipulate elements in the collection
-    filterFehl:     filter all the FEHL in the collection
-    filterTrumpf:   filter all the TRUMPF in the collection
-
-
-*/
 
 package doppelkopf.Model.CardModel;
 
@@ -88,7 +87,9 @@ public abstract class Cards{
         this.players = players;
     }
 
-    // filter all the FEHL in the card list
+    /**
+     * Filter all the FEHL in the card list
+     */
     public ArrayList<Card> filterFehl(){
         ArrayList<Card> resultList = new ArrayList<>();
 
@@ -102,7 +103,9 @@ public abstract class Cards{
         return resultList;
     }
 
-    // Filter all the TRUMPF in the card list
+    /**
+     * Filter all the TRUMPF in the card list
+     */
     public ArrayList<Card> filterTrumpf(){
         ArrayList<Card> resultList = new ArrayList<>();
 
@@ -116,7 +119,9 @@ public abstract class Cards{
         return resultList;
     }
 
-    //print out all Cards to Console
+    /**
+     * Print out all Cards to Console
+     */
     public void display(){
         Iterator<Card> iterator = this.cards.iterator();
         while (iterator.hasNext()){
@@ -124,27 +129,6 @@ public abstract class Cards{
         }
         System.out.println();
     }
-
-//    @Override
-//    public String toString() {
-//        String result = "";
-//        String fehlOrTrumpf = "";
-//
-//        SortHelper.sortByStrength(this);
-//        for(Card card : cards){
-//            if(card.isFehl()){
-//                fehlOrTrumpf = "FEHL";
-//            }else{
-//                fehlOrTrumpf = "TRUMPF";
-//            }
-//
-//            result += String.format("%s %s %s strong %d points : ",
-//                                    card, fehlOrTrumpf, card.getStrength(), card.getPoint());
-//        }
-//
-//        return result;
-//    }
-
 
     @Override
     public String toString() {

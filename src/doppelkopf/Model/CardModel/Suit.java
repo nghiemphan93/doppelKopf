@@ -1,3 +1,10 @@
+/**
+ *
+ *  Enum type for all Suit
+ *  is used for each Card
+ *
+ */
+
 package doppelkopf.Model.CardModel;
 
 public enum Suit { // Farbe

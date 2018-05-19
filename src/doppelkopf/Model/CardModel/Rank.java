@@ -1,3 +1,8 @@
+/**
+ * Enum type for all Rank
+ * is used for each Card
+ */
+
 package doppelkopf.Model.CardModel;
 
 public enum Rank {
