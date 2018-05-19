@@ -16,3 +16,5 @@
 
 ## Fehlstich 
 - Fehlstich bedeutet, dass mit einer Fehlkarte begonnen wurde
+
+
