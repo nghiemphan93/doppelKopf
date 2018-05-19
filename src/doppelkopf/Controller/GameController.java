@@ -21,6 +21,7 @@
  *      disCarPlaPerRound()
  *      displayEachPlayersCardsWon()
  *      displayEachPlayerPoints()
+ *      sumUpAndDisplayTeam     Calculate points of each team then display them accordingly
  */
 
 package doppelkopf.Controller;
@@ -84,14 +85,14 @@ public class GameController {
 
         for(int i = 0; i<10; i++){
             System.out.println("==================================================================");
-            System.out.println("ROUND " + i+1);
+            System.out.println("ROUND " + (i+1));
             System.out.println("==================================================================");
             startRoundSeeding();
         }
 
         displayEachPlayersCardsWon();
         displayEachPlayerPoints();
-        displayTeam();
+        sumUpPointAnddisplayTwoTeam();
 
 
     }
@@ -262,12 +263,16 @@ public class GameController {
         System.out.println();
     }
 
-    public void displayTeam(){
-        // walk through every player
-        // determine which 2 have KREUZ QUEEN and which not
+
+    /**
+     * Calculate points of each team then display them accordingly
+     */
+    public void sumUpPointAnddisplayTwoTeam(){
+        // determine which players have KREUZ QUEEN and which not
         ArrayList<Player> teamKreuzQueen = new ArrayList<>();
         ArrayList<Player> teamNoKreuzQueen = new ArrayList<>();
 
+        // walk through every player
         for(Player player : this.playersSetup.getPlayers()){
             if(player.hasKreuzQueen()){
                 // if the player has KREUZ QUEEN
@@ -279,13 +284,44 @@ public class GameController {
         }
 
         // calculate points of each team
-        int pointTeamKreuzQueen = teamKreuzQueen.get(0).getPointsWonPerGame() + teamKreuzQueen.get(1).getPointsWonPerGame();
-        int pointTeamNoKreuzQueen = teamKreuzQueen.get(0).getPointsWonPerGame() + teamKreuzQueen.get(1).getPointsWonPerGame();
+        // Team Kreuz Queen
+        int pointTeamKreuzQueen = 0;
+        for(int i = 0; i< teamKreuzQueen.size(); i++){
+            pointTeamKreuzQueen += teamKreuzQueen.get(i).getPointsWonPerGame();
+        }
+
+        // Team No Kreuz Queen
+        int pointTeamNoKreuzQueen = 0;
+        for(int i = 0; i< teamNoKreuzQueen.size(); i++){
+            pointTeamNoKreuzQueen += teamNoKreuzQueen.get(i).getPointsWonPerGame();
+        }
+
+
 
         // display 2 teams and points of each team
-        System.out.println("Team Kreuz Queen: " + teamKreuzQueen.get(0) + " and " + teamKreuzQueen.get(1) + " with " + pointTeamKreuzQueen + " points");
+        // Team Kreuz Queen
+        switch (teamKreuzQueen.size()){
+            case 1:
+                System.out.println("Team Kreuz Queen: " + teamKreuzQueen.get(0) + " with " + pointTeamKreuzQueen + " points");
+                break;
+            case 2:
+                System.out.println("Team Kreuz Queen: " + teamKreuzQueen.get(0) + " and " + teamKreuzQueen.get(1) + " with " + pointTeamKreuzQueen + " points");
+                break;
+        }
 
-        System.out.println("Team No Kreuz Queen: " + teamNoKreuzQueen.get(0) + " and " + teamNoKreuzQueen.get(1) + " with " + pointTeamNoKreuzQueen + " points");
-    }
-    //huihui
+        // Team No Kreuz Queen
+        switch (teamNoKreuzQueen.size()){
+            case 1:
+                System.out.println("Team No Kreuz Queen: " + teamNoKreuzQueen.get(0) + " with " + pointTeamKreuzQueen + " points");
+                break;
+            case 2:
+                System.out.println("Team No Kreuz Queen: " + teamNoKreuzQueen.get(0) + " and " + teamNoKreuzQueen.get(1) + " with " + pointTeamNoKreuzQueen + " points");
+                break;
+            case 3:
+                System.out.println("Team No Kreuz Queen: " + teamNoKreuzQueen.get(0) + ", " + teamNoKreuzQueen.get(1) + " and " + teamNoKreuzQueen.get(2)+ " with " + pointTeamNoKreuzQueen + " points");
+                break;
+        }
+
+
+    }   // end of sumUpPointAnddisplayTwoTeam
 }

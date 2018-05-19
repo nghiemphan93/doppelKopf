@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/CardsSetup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/PlayersSetup.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/Card$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/Card.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/Cards.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/CardsAllowedToPlay.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/CardsOnHand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/CardsPlayedPerRound.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/CardsToDeal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/CardsWon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/Rank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/SortHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/CardModel/Suit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/ObserverModel/Observable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/ObserverModel/Observer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/PlayerModel/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doppelkopf/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,8 +24,29 @@
       <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2548">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="62">
+              <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4627">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -48,8 +54,8 @@
       <file leaf-file-name="CardsSetup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="643">
+              <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -57,8 +63,11 @@
       <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="214">
+              <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,11 +120,9 @@
         <option value="$PROJECT_DIR$/src/MainTest.java" />
         <option value="$PROJECT_DIR$/src/Model/PlayerModel/Player.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" />
-        <option value="$PROJECT_DIR$/src/doppelkopf/MainTest.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsOnHand.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" />
-        <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsAllowedToPlay.java" />
@@ -130,6 +137,8 @@
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/MainTest.java" />
+        <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
       </list>
     </option>
@@ -163,38 +172,61 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="doppelkopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="doppelkopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="doppelkopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="doppelkopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="CardModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="PlayerModel" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,48 +330,51 @@
       <workItem from="1526652733410" duration="1007000" />
       <workItem from="1526673300252" duration="14045000" />
       <workItem from="1526731166777" duration="1262000" />
+      <workItem from="1526760752435" duration="1580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57875000" />
+    <option name="totallyTimeSpent" value="59455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32816902" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.67464787" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32840723" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32840723" />
+      <window_info active="true" anchor="right" id="Run" order="10" visible="true" weight="0.353125" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16927083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16914062" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Find" order="2" visible="true" weight="0.28725702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info id="Nl-Palette" order="2" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Properties" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Nl-Palette" order="2" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -546,20 +581,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Team.java" />
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-224">
@@ -571,42 +593,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/View/RoundView.java" />
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/View/GameView.java" />
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="62">
+          <caret line="65" column="27" lean-forward="true" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state relative-caret-position="1">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        <state relative-caret-position="-4627">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/View/RoundView.java" />
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/View/GameView.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        <state relative-caret-position="643">
+          <caret line="105" column="17" lean-forward="true" selection-start-line="105" selection-start-column="17" selection-end-line="105" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="214">
+          <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

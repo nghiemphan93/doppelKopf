@@ -77,29 +77,10 @@ public class MainTest {
     }
 
     public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//
-//        String temp = sc.next();
-//
-//        System.out.println(temp);
-
-
-//        Player player = gameController.getPlayersSetup().getPlayers().get(0);
-//        CardsOnHand cards = player.getCardsOnHand();
 
         GameController gameController = new GameController();
         gameController.gameInit();
         gameController.startGame();
-
-
-
-
-
-
-
-
-
-
 
     }
 }
