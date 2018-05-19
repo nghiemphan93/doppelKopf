@@ -214,7 +214,7 @@ public class GameController {
 
             // add the card to CardsPlayedPerRound
             cardsSetup.getCardsPlayedPerRound().add(card);
-        }
+        }   // end of for
 
         // display all player's hand + Cards played per round
         displayAllHands();
@@ -236,13 +236,21 @@ public class GameController {
 
         // rearrange the order of players for next round
         // winner of the last round begins the next round
+        for(int i = 0; i < this.playersSetup.getPlayers().size(); i++){
+            Player player = this.playersSetup.getPlayers().get(0);
 
-        // remove the winner from the player list
-        this.playersSetup.getPlayers().remove(roundWinner);
+            if(player.toString().compareTo(roundWinner.toString()) == 0){
+                // if the first position is the round winner, stop
+                break;
+            }else{
+                // add the first player to the end of the players list
+                this.playersSetup.getPlayers().add(player);
 
-        // add the winner to the first position in the players list
-        this.playersSetup.getPlayers().add(0, roundWinner);
+                // remove the first player from the player list
+                this.playersSetup.getPlayers().remove(0);
 
+            }
+        }
     }
 
     public void endRound(){

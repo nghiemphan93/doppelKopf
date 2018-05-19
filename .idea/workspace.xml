@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="added which players have KREUZ QUEEN&#10;separate 2 teams&#10;calculate points of each team then display to console">
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -60,8 +59,8 @@
       <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="266" column="48" selection-start-line="266" selection-start-column="48" selection-end-line="266" selection-end-column="48" />
+            <state relative-caret-position="410">
+              <caret line="245" column="57" selection-start-line="245" selection-start-column="57" selection-end-line="245" selection-end-column="57" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -327,12 +326,12 @@
       <workItem from="1526652733410" duration="1007000" />
       <workItem from="1526673300252" duration="14045000" />
       <workItem from="1526731166777" duration="1262000" />
-      <workItem from="1526760752435" duration="3877000" />
+      <workItem from="1526760752435" duration="6243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61752000" />
+    <option name="totallyTimeSpent" value="64118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -348,7 +347,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32840723" />
-      <window_info active="true" anchor="right" id="Run" order="10" visible="true" weight="0.4046875" />
+      <window_info active="true" anchor="right" id="Run" order="10" visible="true" weight="0.45" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -632,8 +631,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="266" column="48" selection-start-line="266" selection-start-column="48" selection-end-line="266" selection-end-column="48" />
+        <state relative-caret-position="410">
+          <caret line="245" column="57" selection-start-line="245" selection-start-column="57" selection-end-line="245" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
