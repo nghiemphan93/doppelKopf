@@ -9,7 +9,8 @@
 *     cardsPlayedPerRound:  cards played on table per round
 *
 *  Important methods:
-*     initCardSetup()     Initialize all types of cards and deal to players
+*     initCardSetup()               Initialize all types of cards and deal to players
+ *    checkPlayerHasKreuzQueen()     Walk through every player and check if the player has Kreuz Queen
  */
 
 package doppelkopf.Controller;
@@ -90,4 +91,22 @@ public class CardsSetup {
     public void setCardsPlayedPerRound(CardsPlayedPerRound cardsPlayedPerRound) {
         this.cardsPlayedPerRound = cardsPlayedPerRound;
     }
+
+    /**
+     * Walk through every player and check if the player has Kreuz Queen
+     */
+    public void checkPlayerHasKreuzQueen(){
+        // check every player
+        for(Player player : this.getPlayerSetup().getPlayers()){
+            // check every card on hand
+            for(Card card : player.getCardsOnHand().getCards()){
+                if(card.display().compareTo("KREUZ DAMEN") == 0){
+                    player.setHasKreuzQueen(true);
+                    break;
+                }
+
+            }
+            System.out.println(player + " " + player.hasKreuzQueen());
+        }
+    }   // end of checkPlayerHasKreuzQueen
 }

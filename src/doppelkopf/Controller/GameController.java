@@ -80,6 +80,8 @@ public class GameController {
      */
     public void startGame(){
         this.cardsSetup.initCardSetup();
+        this.cardsSetup.checkPlayerHasKreuzQueen();
+
         for(int i = 0; i<10; i++){
             System.out.println("==================================================================");
             System.out.println("ROUND " + i+1);
@@ -89,6 +91,7 @@ public class GameController {
 
         displayEachPlayersCardsWon();
         displayEachPlayerPoints();
+        displayTeam();
 
 
     }
@@ -258,4 +261,31 @@ public class GameController {
         }
         System.out.println();
     }
+
+    public void displayTeam(){
+        // walk through every player
+        // determine which 2 have KREUZ QUEEN and which not
+        ArrayList<Player> teamKreuzQueen = new ArrayList<>();
+        ArrayList<Player> teamNoKreuzQueen = new ArrayList<>();
+
+        for(Player player : this.playersSetup.getPlayers()){
+            if(player.hasKreuzQueen()){
+                // if the player has KREUZ QUEEN
+                teamKreuzQueen.add(player);
+            }else{
+                // if no KREUZ QUEEN
+                teamNoKreuzQueen.add(player);
+            }
+        }
+
+        // calculate points of each team
+        int pointTeamKreuzQueen = teamKreuzQueen.get(0).getPointsWonPerGame() + teamKreuzQueen.get(1).getPointsWonPerGame();
+        int pointTeamNoKreuzQueen = teamKreuzQueen.get(0).getPointsWonPerGame() + teamKreuzQueen.get(1).getPointsWonPerGame();
+
+        // display 2 teams and points of each team
+        System.out.println("Team Kreuz Queen: " + teamKreuzQueen.get(0) + " and " + teamKreuzQueen.get(1) + " with " + pointTeamKreuzQueen + " points");
+
+        System.out.println("Team No Kreuz Queen: " + teamNoKreuzQueen.get(0) + " and " + teamNoKreuzQueen.get(1) + " with " + pointTeamNoKreuzQueen + " points");
+    }
+    //huihui
 }

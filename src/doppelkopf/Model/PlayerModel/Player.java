@@ -2,13 +2,14 @@
  * Class for each player who takes part in the game
  *
  * Attribute:
- *      name:                name
- *      password:            password
- *      cardsOnHand:         cards on hand
- *      cardsWon:            cards were collected
- *      cardsPlayedPerRound: cards played on table each round
- *      CardsAllowedToPlay  cards allowed to play(bedienen)
- *      pointsWonPerGame    all points of each game
+ *      name:                 name
+ *      password:             password
+ *      cardsOnHand:          cards on hand
+ *      cardsWon:             cards were collected
+ *      cardsPlayedPerRound:  cards played on table each round
+ *      CardsAllowedToPlay    cards allowed to play(bedienen)
+ *      pointsWonPerGame      all points of each game
+ *      hasKreuzQueen :       if the player has the Kreuz Queen or not, used to determine
  *
  *  Important methods:
  *      playACard():            Play a chosen card
@@ -35,6 +36,7 @@ public class Player implements Observer {
     private Observable cardsPlayedPerRound;
     private CardsAllowedToPlay cardsAllowedToPlay;
     private int pointsWonPerGame = 0;
+    private boolean hasKreuzQueen = false;
 
     public Player(String name, String password) {
         this.name = name;
@@ -43,6 +45,14 @@ public class Player implements Observer {
         this.cardsWon = new CardsWon();
         this.cardsPlayedPerRound = new CardsPlayedPerRound();
         this.cardsAllowedToPlay = new CardsAllowedToPlay();
+    }
+
+    public boolean hasKreuzQueen() {
+        return hasKreuzQueen;
+    }
+
+    public void setHasKreuzQueen(boolean hasKreuzQueen) {
+        this.hasKreuzQueen = hasKreuzQueen;
     }
 
     public String getName() {
