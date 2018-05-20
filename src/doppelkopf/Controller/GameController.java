@@ -6,7 +6,7 @@
  * Attributes:
  *      numbRound:          the current round
  *      playerSetup:        holding setup references to all players
- *      cardsSetup:         holding setup references to all kinds of cards
+ *      cardsSetupBuilder:         holding setup references to all kinds of cards
  *      sc:                 take input from user
  *      teamKreuzQueen:     list holding all team Kreuz Queen members
  *      teamNoKreuzQueen:   list holding all team No Kreuz Queen members
@@ -56,8 +56,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GameController {
     private int numbRound;
-    private PlayersSetup playersSetup;
-    private CardsSetup cardsSetup;
+    private PlayersSetupBuilder playersSetupBuilder;
+    private CardsSetupBuilder cardsSetupBuilder;
     private Scanner sc;
     private ArrayList<Player> teamKreuzQueen;
     private ArrayList<Player> teamNoKreuzQueen;
@@ -79,20 +79,20 @@ public class GameController {
         this.numbRound = numbRound;
     }
 
-    public PlayersSetup getPlayersSetup() {
-        return playersSetup;
+    public PlayersSetupBuilder getPlayersSetupBuilder() {
+        return playersSetupBuilder;
     }
 
-    public void setPlayersSetup(PlayersSetup playersSetup) {
-        this.playersSetup = playersSetup;
+    public void setPlayersSetupBuilder(PlayersSetupBuilder playersSetupBuilder) {
+        this.playersSetupBuilder = playersSetupBuilder;
     }
 
-    public CardsSetup getCardsSetup() {
-        return cardsSetup;
+    public CardsSetupBuilder getCardsSetupBuilder() {
+        return cardsSetupBuilder;
     }
 
-    public void setCardsSetup(CardsSetup cardsSetup) {
-        this.cardsSetup = cardsSetup;
+    public void setCardsSetupBuilder(CardsSetupBuilder cardsSetupBuilder) {
+        this.cardsSetupBuilder = cardsSetupBuilder;
     }
 
     /**
@@ -100,8 +100,8 @@ public class GameController {
      */
     public void gameInit(){
         this.numbRound = 0;
-        this.playersSetup = new PlayersSetup();
-        this.cardsSetup = new CardsSetup(this.playersSetup);
+        this.playersSetupBuilder = new PlayersSetupBuilder();
+        this.cardsSetupBuilder = new CardsSetupBuilder(this.playersSetupBuilder);
         this.teamKreuzQueen = new ArrayList<>();
         this.teamNoKreuzQueen = new ArrayList<>();
         this.whoHasTwoKreuzQueen = whoHasTwoKreuzQueen();
@@ -127,14 +127,14 @@ public class GameController {
 
 
             // create all cards needed then deal to players
-            this.cardsSetup.initCardSetup();
+            this.cardsSetupBuilder.initCardSetup();
 
             //  prepare which players are allowed to guess for Bazinga
-            this.playersGuessBazinga.addAll(this.playersSetup.getPlayers());
+            this.playersGuessBazinga.addAll(this.playersSetupBuilder.getPlayers());
             this.playersGuessBazinga.add(null);
 
             // set who has Kreuz Queen, who not
-            this.cardsSetup.checkPlayerHasKreuzQueen();
+            this.cardsSetupBuilder.checkPlayerHasKreuzQueen();
 
             // separate two teams
             // set the one who has all 2 Kreuz Queen in case there's actually someone
@@ -235,7 +235,7 @@ public class GameController {
     public void startRound(){
         // each player takes turn to play
         for(int i = 0; i<4; i++){
-            Player player = playersSetup.getPlayers().get(i);
+            Player player = playersSetupBuilder.getPlayers().get(i);
 
 
             // display the cards of the player
@@ -254,7 +254,7 @@ public class GameController {
             System.out.println();
 
             // add the card to CardsPlayedPerRound
-            cardsSetup.getCardsPlayedPerRound().add(card);
+            cardsSetupBuilder.getCardsPlayedPerRound().add(card);
         }
 
         displayAllHands();
@@ -268,14 +268,14 @@ public class GameController {
     public void startRoundSeeding(){
         // each player takes turn to play
         for(int i = 0; i<4; i++){
-            Player player = playersSetup.getPlayers().get(i);
+            Player player = playersSetupBuilder.getPlayers().get(i);
 
             // if 1. Player => CardsAllowedToPlay = CardsOnHand
             if(i == 0){
                 player.getCardsAllowedToPlay().clear();
                 player.getCardsAllowedToPlay().addAll(player.getCardsOnHand().getCards());
             }else{
-                player.setWhatCardToPlay(cardsSetup.getCardsPlayedPerRound().getCards().get(0));
+                player.setWhatCardToPlay(cardsSetupBuilder.getCardsPlayedPerRound().getCards().get(0));
             }
 
             // display the CardsOnHand of the player
@@ -292,7 +292,7 @@ public class GameController {
             System.out.println();
 
             // add the card to CardsPlayedPerRound
-            cardsSetup.getCardsPlayedPerRound().add(card);
+            cardsSetupBuilder.getCardsPlayedPerRound().add(card);
         }   // end of for
 
         // display all player's hand + Cards played per round
@@ -301,8 +301,8 @@ public class GameController {
 
         // display who wins the round
         System.out.println();
-        Player roundWinner = whoWinsTheRound(cardsSetup.getCardsPlayedPerRound());
-        ArrayList<Card> cardsPerRound = cardsSetup.getCardsPlayedPerRound().getCards();
+        Player roundWinner = whoWinsTheRound(cardsSetupBuilder.getCardsPlayedPerRound());
+        ArrayList<Card> cardsPerRound = cardsSetupBuilder.getCardsPlayedPerRound().getCards();
 
         System.out.println(roundWinner + " wins the round with " + cardsPerRound.get(0));
 
@@ -310,25 +310,25 @@ public class GameController {
         this.rounds.add(roundWinner);
         // add the first card played in round next to the winner
         // to determine if the player won a FEHL Stich or Trumpf Stich
-        this.rounds.add(this.cardsSetup.getCardsPlayedPerRound().getCards().get(0));
+        this.rounds.add(this.cardsSetupBuilder.getCardsPlayedPerRound().getCards().get(0));
 
         // add the won cards to the player's CardsWon
         roundWinner.getCardsWon().getCards().addAll(cardsPerRound);
 
         // rearrange the order of players for next round
         // winner of the last round begins the next round
-        for(int i = 0; i < this.playersSetup.getPlayers().size(); i++){
-            Player player = this.playersSetup.getPlayers().get(0);
+        for(int i = 0; i < this.playersSetupBuilder.getPlayers().size(); i++){
+            Player player = this.playersSetupBuilder.getPlayers().get(0);
 
             if(player.toString().compareTo(roundWinner.toString()) == 0){
                 // if the first position is the round winner, stop
                 break;
             }else{
                 // add the first player to the end of the players list
-                this.playersSetup.getPlayers().add(player);
+                this.playersSetupBuilder.getPlayers().add(player);
 
                 // remove the first player from the player list
-                this.playersSetup.getPlayers().remove(0);
+                this.playersSetupBuilder.getPlayers().remove(0);
             }
         }
 
@@ -354,7 +354,7 @@ public class GameController {
 
 
         // clear the CardsPlayedPerRound
-        cardsSetup.getCardsPlayedPerRound().clear();
+        cardsSetupBuilder.getCardsPlayedPerRound().clear();
         System.out.println();
     }
 
@@ -376,7 +376,7 @@ public class GameController {
      * Display hands of every player
      */
     public void displayAllHands(){
-        for(Player player : this.playersSetup.getPlayers()){
+        for(Player player : this.playersSetupBuilder.getPlayers()){
             System.out.println(player + "'s hand: " + player.getCardsOnHand());
         }
     }
@@ -386,10 +386,10 @@ public class GameController {
      */
     public void displayCardsPlayedPerRound(){
         // Sort by strength
-        SortHelper.sortByStrength(cardsSetup.getCardsPlayedPerRound());
+        SortHelper.sortByStrength(cardsSetupBuilder.getCardsPlayedPerRound());
 
         System.out.print("Cards played in round: ");
-        for(Card card : cardsSetup.getCardsPlayedPerRound().getCards()){
+        for(Card card : cardsSetupBuilder.getCardsPlayedPerRound().getCards()){
             System.out.print(card + ":" + card.getBelongsToPlayer() + " ");
         }
         System.out.println();
@@ -399,7 +399,7 @@ public class GameController {
      * Display each players cards won
      */
     public void displayEachPlayersCardsWon(){
-        for(Player player : this.playersSetup.getPlayers()){
+        for(Player player : this.playersSetupBuilder.getPlayers()){
             System.out.print(player + " collected: ");
 
             for(Card card : player.getCardsWon().getCards()){
@@ -416,7 +416,7 @@ public class GameController {
      * Display each player Points
      */
     public void displayEachPlayerPoints(){
-        for(Player player : this.playersSetup.getPlayers()){
+        for(Player player : this.playersSetupBuilder.getPlayers()){
             System.out.println(player + " achieved: " + player.calcPointsWonPerGame() + " points");
         }
         System.out.println();
@@ -430,7 +430,7 @@ public class GameController {
      */
     public Player whoHasTwoKreuzQueen(){
         // walk through every player
-        for(Player player : this.playersSetup.getPlayers()){
+        for(Player player : this.playersSetupBuilder.getPlayers()){
             if(player.hasKreuzQueen()){
                 // if the player has KREUZ QUEEN
                 this.teamKreuzQueen.add(player);
@@ -563,7 +563,7 @@ public class GameController {
         int[] suitNumb = new int[4];
 
         // count the times each Suit appears
-        for (Card card : this.cardsSetup.getCardsPlayedPerRound().getCards()) {
+        for (Card card : this.cardsSetupBuilder.getCardsPlayedPerRound().getCards()) {
             switch (card.getSuit()) {
                 case "HERZ":
                     suitNumb[0]++;

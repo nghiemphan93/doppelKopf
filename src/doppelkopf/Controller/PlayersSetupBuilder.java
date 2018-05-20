@@ -17,14 +17,14 @@ import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.ArrayList;
 
-public class PlayersSetup {
+public class PlayersSetupBuilder {
     private ArrayList<Player> players;
 
-    public PlayersSetup(ArrayList<Player> players) {
+    public PlayersSetupBuilder(ArrayList<Player> players) {
         this.players = players;
     }
 
-    public PlayersSetup() {
+    public PlayersSetupBuilder() {
         this.players = new ArrayList<>();
     }
 

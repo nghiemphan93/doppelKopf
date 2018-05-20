@@ -20,15 +20,15 @@ import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.ArrayList;
 
-public class CardsSetup {
-    private PlayersSetup playerSetup;
+public class CardsSetupBuilder {
+    private PlayersSetupBuilder playerSetup;
     private CardsToDeal cardsToDeal;
     private ArrayList<CardsWon> cardsWons;
     private ArrayList<CardsOnHand> cardsOnHands;
     private CardsPlayedPerRound cardsPlayedPerRound;
 
-    public CardsSetup(PlayersSetup playersSetup){
-        this.playerSetup = playersSetup;
+    public CardsSetupBuilder(PlayersSetupBuilder playersSetupBuilder){
+        this.playerSetup = playersSetupBuilder;
         this.cardsToDeal = new CardsToDeal(playerSetup.getPlayers());
         this.cardsWons = new ArrayList<>();
         this.cardsOnHands = new ArrayList<>();
@@ -52,7 +52,7 @@ public class CardsSetup {
         }
     }
 
-    public PlayersSetup getPlayerSetup() {
+    public PlayersSetupBuilder getPlayerSetup() {
         return playerSetup;
     }
 
@@ -80,7 +80,7 @@ public class CardsSetup {
         this.cardsOnHands = cardsOnHands;
     }
 
-    public void setPlayerSetup(PlayersSetup playerSetup) {
+    public void setPlayerSetup(PlayersSetupBuilder playerSetup) {
         this.playerSetup = playerSetup;
     }
 

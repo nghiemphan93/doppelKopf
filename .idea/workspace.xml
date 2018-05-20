@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="added which players have KREUZ QUEEN&#10;separate 2 teams&#10;calculate points of each team then display to console">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/CardsSetup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/CardsSetup.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/PlayerModel/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Model/PlayerModel/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetupBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/CardsPlayedPerRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Model/ObserverModel/Observer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetupBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,8 +65,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CardsSetup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+      <file leaf-file-name="CardsSetupBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetupBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2356">
               <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
@@ -86,8 +77,8 @@
       <file leaf-file-name="GameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+            <state relative-caret-position="372">
+              <caret line="26" column="62" lean-forward="true" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
               <folding>
                 <element signature="method#startRound#0;class#GameController#0" />
               </folding>
@@ -95,8 +86,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayersSetup.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
+      <file leaf-file-name="PlayersSetupBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetupBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="279">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
@@ -366,12 +357,12 @@
       <workItem from="1526673300252" duration="14045000" />
       <workItem from="1526731166777" duration="1262000" />
       <workItem from="1526760752435" duration="20822000" />
-      <workItem from="1526826955669" duration="424000" />
+      <workItem from="1526826955669" duration="1085000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79121000" />
+    <option name="totallyTimeSpent" value="79782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -387,12 +378,13 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32840723" />
-      <window_info active="true" anchor="right" id="Run" order="10" visible="true" weight="0.42421874" />
+      <window_info anchor="right" id="Run" order="10" weight="0.42421874" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16914062" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16914062" />
       <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.28725702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
@@ -406,7 +398,6 @@
       <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.28725702" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +441,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetupBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="38" lean-forward="true" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
@@ -474,7 +465,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetupBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
@@ -603,7 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/PlayersSetupBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
@@ -613,7 +604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetupBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2356">
           <caret line="110" column="31" selection-start-line="110" selection-start-column="31" selection-end-line="110" selection-end-column="31" />
@@ -713,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+        <state relative-caret-position="372">
+          <caret line="26" column="62" lean-forward="true" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
           <folding>
             <element signature="method#startRound#0;class#GameController#0" />
           </folding>
