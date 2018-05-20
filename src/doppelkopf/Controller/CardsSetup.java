@@ -106,6 +106,9 @@ public class CardsSetup {
                 }
 
             }
+
+            // debug
+            System.out.println(player + " has Kreuz Queen: " + player.hasKreuzQueen());
         }
     }   // end of checkPlayerHasKreuzQueen
 }

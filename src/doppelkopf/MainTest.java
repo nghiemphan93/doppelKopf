@@ -2,6 +2,7 @@ package doppelkopf;
 
 import doppelkopf.Controller.GameController;
 import doppelkopf.Model.CardModel.*;
+import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.*;
 
@@ -81,6 +82,7 @@ public class MainTest {
         GameController gameController = new GameController();
         gameController.gameInit();
         gameController.startGame();
+
 
     }
 }
