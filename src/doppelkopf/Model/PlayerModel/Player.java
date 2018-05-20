@@ -10,33 +10,39 @@
  *      CardsAllowedToPlay    cards allowed to play(bedienen)
  *      pointsWonPerGame      all points of each game
  *      hasKreuzQueen :       if the player has the Kreuz Queen or not, used to determine
+ *      specialPoints:        special points won by Bazinga
+ *      allowedToGuessBazinga:  true/false representing allowed to guess Bazinga or not
  *
  *  Important methods:
  *      playACard():            Play a chosen card
  *      playARandomCard():      Play a random card, used for DEMO
  *      setWhatCardToPlay():    Check and determine what cards on Hand are allowed to play, depending on the first card was played
  *      calcPointsWonPerGame(): Calculation of points won per game
+ *      guessBazinga():         Attempt to guess Bazinga
+ *                              Allowed to guess only once per Game
+ *                              if correct, receives 10 Special Points
+ *                              if not, loses 5 Points
  *
  */
 
 package doppelkopf.Model.PlayerModel;
 
 import doppelkopf.Model.CardModel.*;
-import doppelkopf.Model.ObserverModel.Observable;
-import doppelkopf.Model.ObserverModel.Observer;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Player implements Observer {
+public class Player{
     private String name;
     private String password;
     private CardsOnHand cardsOnHand;
     private CardsWon cardsWon;
-    private Observable cardsPlayedPerRound;
+    private CardsPlayedPerRound cardsPlayedPerRound;
     private CardsAllowedToPlay cardsAllowedToPlay;
     private int pointsWonPerGame = 0;
     private boolean hasKreuzQueen = false;
+    private int specialPoints = 0;
+    private boolean allowedToGuessBazinga = true;
 
     public Player(String name, String password) {
         this.name = name;
@@ -45,6 +51,22 @@ public class Player implements Observer {
         this.cardsWon = new CardsWon();
         this.cardsPlayedPerRound = new CardsPlayedPerRound();
         this.cardsAllowedToPlay = new CardsAllowedToPlay();
+    }
+
+    public boolean isAllowedToGuessBazinga() {
+        return allowedToGuessBazinga;
+    }
+
+    public void setAllowedToGuessBazinga(boolean allowedToGuessBazinga) {
+        this.allowedToGuessBazinga = allowedToGuessBazinga;
+    }
+
+    public int getSpecialPoints() {
+        return specialPoints;
+    }
+
+    public void setSpecialPoints(int specialPoints) {
+        this.specialPoints = specialPoints;
     }
 
     public boolean hasKreuzQueen() {
@@ -87,11 +109,11 @@ public class Player implements Observer {
         this.cardsWon = cardsWon;
     }
 
-    public Observable getCardsPlayedPerRound() {
+    public CardsPlayedPerRound getCardsPlayedPerRound() {
         return cardsPlayedPerRound;
     }
 
-    public void setCardsPlayedPerRound(Observable cardsPlayedPerRound) {
+    public void setCardsPlayedPerRound(CardsPlayedPerRound cardsPlayedPerRound) {
         this.cardsPlayedPerRound = cardsPlayedPerRound;
     }
 
@@ -116,10 +138,6 @@ public class Player implements Observer {
         return this.name.toUpperCase();
     }
 
-    @Override
-    public void update() {
-
-    }
 
     /**
      * Play a chosen card
@@ -221,9 +239,27 @@ public class Player implements Observer {
         for(Card card : this.cardsWon.getCards()){
             sum += card.getPoint();
         }
+
+        // add bonus points
+        sum += this.specialPoints;
+
         setPointsWonPerGame(sum);
         return sum;
     }
 
-
+    /**
+     * Attempt to guess Bazinga
+     * Allowed to guess only once per Game
+     * if correct, receives 10 Special Points
+     * if not, loses 5 Points
+     * @return
+     */
+    public boolean guessBazinga(){
+        if(this.allowedToGuessBazinga == true){
+            this.allowedToGuessBazinga = false;
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

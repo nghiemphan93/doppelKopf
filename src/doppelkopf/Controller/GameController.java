@@ -37,6 +37,10 @@
  *                              Otherwise, player A will play alone vs other 3
  *                              return NULL
  *       displayTwoTeamResults()    display final results which team wins and points
+ *       checkBazinga()         Check and return true/ false if the round has Bazinga or not respectively
+ *       checkPlayerGuessBazinga()  Check if guess of some player for Bazinga was correct
+ *                                  Give 10 bonus points or take 5 points away if it's correct or not respectively
+ *        whoGuessBazingaSeeding()  Simulate each round there's some one or no one who wants to guess for Bazinga
  */
 
 package doppelkopf.Controller;
@@ -48,6 +52,7 @@ import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class GameController {
     private int numbRound;
@@ -60,6 +65,7 @@ public class GameController {
     private ArrayList rounds;
     private int pointTeamKreuzQueen;
     private int pointTeamNoKreuzQueen;
+    private ArrayList<Player> playersGuessBazinga;
 
     public GameController() {
         this.sc = new Scanner(System.in);
@@ -102,6 +108,8 @@ public class GameController {
         this.rounds = new ArrayList<>();
         this.pointTeamKreuzQueen = 0;
         this.pointTeamNoKreuzQueen = 0;
+        this.playersGuessBazinga = new ArrayList<>();
+
     }
 
     /**
@@ -120,6 +128,10 @@ public class GameController {
 
             // create all cards needed then deal to players
             this.cardsSetup.initCardSetup();
+
+            //  prepare which players are allowed to guess for Bazinga
+            this.playersGuessBazinga.addAll(this.playersSetup.getPlayers());
+            this.playersGuessBazinga.add(null);
 
             // set who has Kreuz Queen, who not
             this.cardsSetup.checkPlayerHasKreuzQueen();
@@ -178,6 +190,7 @@ public class GameController {
 
             // type "y" to play another game
             // "n" to stop
+            System.out.println();
             System.out.println("Please enter \"y\" or \"Y\" to play another game: ");
             System.out.print("Please enter \"n\" or \"N\" to stop: ");
 
@@ -287,6 +300,7 @@ public class GameController {
         displayCardsPlayedPerRound();
 
         // display who wins the round
+        System.out.println();
         Player roundWinner = whoWinsTheRound(cardsSetup.getCardsPlayedPerRound());
         ArrayList<Card> cardsPerRound = cardsSetup.getCardsPlayedPerRound().getCards();
 
@@ -300,11 +314,6 @@ public class GameController {
 
         // add the won cards to the player's CardsWon
         roundWinner.getCardsWon().getCards().addAll(cardsPerRound);
-
-
-        // clear the CardsPlayedPerRound
-        cardsSetup.getCardsPlayedPerRound().clear();
-        System.out.println();
 
         // rearrange the order of players for next round
         // winner of the last round begins the next round
@@ -320,9 +329,33 @@ public class GameController {
 
                 // remove the first player from the player list
                 this.playersSetup.getPlayers().remove(0);
-
             }
         }
+
+
+        // debug simulate Bazinga guess
+        System.out.println();
+        Player whoGuessBazinga = whoGuessBazingaSeeding();
+        if(whoGuessBazinga != null){
+            System.out.println(whoGuessBazinga + " guesses for Bazinga");
+        }
+
+        // check if guess for Bazinga was correct
+        if(whoGuessBazinga != null){
+            if(checkPlayerGuessBazinga(whoGuessBazinga, checkBazinga())){
+                System.out.println("Guess for Bazinga was correct");
+                System.out.println(whoGuessBazinga + " receives 10 bonus points");
+            }else{
+                System.out.println("Sorry, guess for Bazinga was not correct");
+                System.out.println(whoGuessBazinga + " loses 5 points");
+            }
+        }
+
+
+
+        // clear the CardsPlayedPerRound
+        cardsSetup.getCardsPlayedPerRound().clear();
+        System.out.println();
     }
 
     public void endRound(){
@@ -519,5 +552,87 @@ public class GameController {
      */
     public int whichTeamWon(){
         return this.pointTeamKreuzQueen - this.pointTeamNoKreuzQueen;
+    }
+
+    /**
+     * Check and return true/ false if the round has Bazinga or not respectively
+     * @return
+     */
+    public boolean checkBazinga() {
+        // initialize an array holding how many times each Suit appears in the round
+        int[] suitNumb = new int[4];
+
+        // count the times each Suit appears
+        for (Card card : this.cardsSetup.getCardsPlayedPerRound().getCards()) {
+            switch (card.getSuit()) {
+                case "HERZ":
+                    suitNumb[0]++;
+                    break;
+                case "KARO":
+                    suitNumb[1]++;
+                    break;
+                case "PICK":
+                    suitNumb[2]++;
+                    break;
+                case "KREUZ":
+                    suitNumb[3]++;
+                    break;
+            }   // end of switch
+        }   // enf of for
+
+
+        // count how many times the number "2" appears in the suitNumb array
+        // if the number "2" appears exactly twice => Bazinga
+        int frequencyOfTwo = 0;
+        for(int i = 0; i < suitNumb.length; i++){
+            if(suitNumb[i] == 2){
+                frequencyOfTwo++;
+            }
+        }   // end of for
+
+        // return result
+        if(frequencyOfTwo == 2){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
+     * Simulate each round there's some one or no one who wants to guess for Bazinga
+     *
+     * @return
+     */
+    public Player whoGuessBazingaSeeding(){
+        // randomly pick the position of player who tries to guess for Bazinga of the current round
+        // the positions are in the list playersGuessBazinga
+        // last position means no player wanna guess for Bazinga this round
+        // after each guess, the player who guessed will be removed => no longer can guess next time
+        int numbPlayersGuessBazinga = ThreadLocalRandom.current().nextInt(0, this.playersGuessBazinga.size());
+
+        Player playerToReturn = this.playersGuessBazinga.get(numbPlayersGuessBazinga);
+        if(playerToReturn != null){
+            playerToReturn.guessBazinga();
+            this.playersGuessBazinga.remove(playerToReturn);
+        }
+
+        return playerToReturn;
+    }
+
+    /**
+     * Check if guess of some player for Bazinga was correct
+     * Give 10 bonus points or take 5 points away if it's correct or not respectively
+     * @param whoGuessBazinga
+     * @param checkBazinga
+     * @return
+     */
+    public boolean checkPlayerGuessBazinga(Player whoGuessBazinga, boolean checkBazinga){
+        if(checkBazinga){
+            whoGuessBazinga.setSpecialPoints(10);
+            return true;
+        }else{
+            whoGuessBazinga.setSpecialPoints(-5);
+            return false;
+        }
     }
 }

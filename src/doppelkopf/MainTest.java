@@ -5,6 +5,7 @@ import doppelkopf.Model.CardModel.*;
 import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MainTest {
 //    public static ArrayList<String> init(){
@@ -82,6 +83,14 @@ public class MainTest {
         GameController gameController = new GameController();
         gameController.gameInit();
         gameController.startGame();
+
+
+//        for(int i = 0; i<50; i++){
+//            int playerWannaGuess = ThreadLocalRandom.current().nextInt(0, 5);
+//            System.out.println(playerWannaGuess);
+//        }
+
+
 
 
     }
