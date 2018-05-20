@@ -17,7 +17,7 @@
  *
  *
  * Important methods:
- *      gameInit()              Setup players and cards
+ *      initGame()              Setup players and cards
  *      startGame()             Start a game
  *      resetGame()             Prepare for new game
  *      endGame()               End a game
@@ -45,6 +45,7 @@
 
 package doppelkopf.Controller;
 
+import doppelkopf.Base.Doppelkopf;
 import doppelkopf.Model.CardModel.Card;
 import doppelkopf.Model.CardModel.CardsPlayedPerRound;
 import doppelkopf.Model.CardModel.SortHelper;
@@ -54,7 +55,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class GameController {
+public class GameController extends Doppelkopf {
     private int numbRound;
     private PlayersSetupBuilder playersSetupBuilder;
     private CardsSetupBuilder cardsSetupBuilder;
@@ -98,7 +99,8 @@ public class GameController {
     /**
      * Setup players and cards
      */
-    public void gameInit(){
+    @Override
+     public void initGame(){
         this.numbRound = 0;
         this.playersSetupBuilder = new PlayersSetupBuilder();
         this.cardsSetupBuilder = new CardsSetupBuilder(this.playersSetupBuilder);
@@ -115,6 +117,7 @@ public class GameController {
     /**
      * Start a game
      */
+    @Override
     public void startGame(){
         boolean anotherGame = true;
 
@@ -218,13 +221,15 @@ public class GameController {
     /**
      * Prepare for new game
      */
+    @Override
     public void resetGame(){
-        gameInit();
+        initGame();
     }
 
     /**
      * End a game
      */
+    @Override
     public void endGame(){
 
     }

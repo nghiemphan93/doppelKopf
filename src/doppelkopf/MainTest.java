@@ -1,11 +1,10 @@
 package doppelkopf;
 
+import doppelkopf.Base.Doppelkopf;
 import doppelkopf.Controller.GameController;
 import doppelkopf.Model.CardModel.*;
-import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.*;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class MainTest {
 //    public static ArrayList<String> init(){
@@ -80,9 +79,11 @@ public class MainTest {
 
     public static void main(String[] args) {
 
-        GameController gameController = new GameController();
-        gameController.gameInit();
-        gameController.startGame();
+       // GameController gameController = new GameController();
+       // gameController.initGame();
+       // gameController.startGame();
+        Doppelkopf game = new GameController();
+        game.play();
 
 
 //        for(int i = 0; i<50; i++){
