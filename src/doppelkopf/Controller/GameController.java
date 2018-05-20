@@ -44,7 +44,7 @@ import doppelkopf.Base.Doppelkopf;
 import doppelkopf.Model.CardModel.Card;
 import doppelkopf.Model.CardModel.CardsPlayedPerRound;
 import doppelkopf.Model.PlayerModel.Player;
-import doppelkopf.View.Console;
+import doppelkopf.View.ConsoleView;
 
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
@@ -60,7 +60,7 @@ public class GameController extends Doppelkopf {
     private int pointTeamKreuzQueen;
     private int pointTeamNoKreuzQueen;
     private ArrayList<Player> playersGuessBazinga;
-    private Console console;
+    private ConsoleView console;
 
     public GameController() {
     }
@@ -122,11 +122,11 @@ public class GameController extends Doppelkopf {
         this.playersGuessBazinga = playersGuessBazinga;
     }
 
-    public Console getConsole() {
+    public ConsoleView getConsole() {
         return console;
     }
 
-    public void setConsole(Console console) {
+    public void setConsole(ConsoleView console) {
         this.console = console;
     }
 
@@ -169,7 +169,7 @@ public class GameController extends Doppelkopf {
         this.pointTeamKreuzQueen = 0;
         this.pointTeamNoKreuzQueen = 0;
         this.playersGuessBazinga = new ArrayList<>();
-        this.console = new Console();
+        this.console = new ConsoleView();
     }
 
     /**
