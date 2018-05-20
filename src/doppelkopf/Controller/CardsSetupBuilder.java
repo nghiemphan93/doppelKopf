@@ -1,15 +1,15 @@
 /**
-*     Setup all kinds of cards needed for a game (Deck, Hand, Cards won...)
-*
-*  Atribute:
-*     playerSetup:          holding setup infor of 4 players
-*     cardsToDeal:          create deck init
-*     cardsWons:            4 card lists storing STICH for each player
-*     cardsOnHands:         list of 4 card Hands for each players
-*     cardsPlayedPerRound:  cards played on table per round
-*
-*  Important methods:
-*     initCardSetup()               Initialize all types of cards and deal to players
+ *     Setup all kinds of cards needed for a game (Deck, Hand, Cards won...)
+ *
+ *  Atribute:
+ *     playerSetup:          holding setup infor of 4 players
+ *     cardsToDeal:          create deck init
+ *     cardsWons:            4 card lists storing STICH for each player
+ *     cardsOnHands:         list of 4 card Hands for each players
+ *     cardsPlayedPerRound:  cards played on table per round
+ *
+ *  Important methods:
+ *     initCardSetup()               Initialize all types of cards and deal to players
  *    checkPlayerHasKreuzQueen()     Walk through every player and check if the player has Kreuz Queen
  */
 
