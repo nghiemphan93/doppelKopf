@@ -1,12 +1,10 @@
 package doppelkopf.View;
 
+public class RoundView {
 
-public class StartView {
-
-
-    public void showStart(){
+    public void showNumberOfRounds(int numbRound) {
         System.out.println("==================================================================");
-        System.out.println("GAME STARTED ");
+        System.out.println("ROUND " + numbRound);
         System.out.println("==================================================================");
     }
 }

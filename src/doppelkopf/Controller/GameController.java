@@ -50,6 +50,10 @@ import doppelkopf.Model.CardModel.Card;
 import doppelkopf.Model.CardModel.CardsPlayedPerRound;
 import doppelkopf.Model.CardModel.SortHelper;
 import doppelkopf.Model.PlayerModel.Player;
+import doppelkopf.View.EndView;
+import doppelkopf.View.HochzeitView;
+import doppelkopf.View.RoundView;
+import doppelkopf.View.StartView;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -68,8 +72,18 @@ public class GameController extends Doppelkopf {
     private int pointTeamNoKreuzQueen;
     private ArrayList<Player> playersGuessBazinga;
 
+    //Views
+    private StartView startView;
+    private EndView endView;
+    private HochzeitView hochzeitView;
+    private RoundView roundView;
+
     public GameController() {
         this.sc = new Scanner(System.in);
+        startView = new StartView();
+        endView = new EndView();
+        hochzeitView = new HochzeitView();
+        roundView = new RoundView();
     }
 
     public int getNumbRound() {
@@ -123,11 +137,10 @@ public class GameController extends Doppelkopf {
 
 
         while(anotherGame){
-            // game start
-            System.out.println("==================================================================");
-            System.out.println("GAME STARTED ");
-            System.out.println("==================================================================");
-
+            /**
+             * Render: GAME START
+             */
+            startView.showStart();
 
             // create all cards needed then deal to players
             this.cardsSetupBuilder.initCardSetup();
@@ -152,32 +165,31 @@ public class GameController extends Doppelkopf {
                 if(this.numbRound == 4 && this.whoHasTwoKreuzQueen != null){
                     Player dreamPartner = checkHochzeit();
                     if(dreamPartner != null){
-                        // display to screen new partner
-                        System.out.println("--------HOCHZEIT--------");
-                        System.out.println(dreamPartner + " plays with " + this.whoHasTwoKreuzQueen);
+                        /**
+                         * display to screen new partner
+                         */
+                        hochzeitView.showPartner(dreamPartner, this.whoHasTwoKreuzQueen);
                     }else{
-                        // display to screen who plays alone
-                        System.out.println("--------HOCHZEIT--------");
-                        System.out.println(this.whoHasTwoKreuzQueen + " plays alone");
+                        /**
+                         * display to screen who plays alone
+                         */
+                        hochzeitView.showPlayAlone(this.whoHasTwoKreuzQueen);
                     }
                 }
 
-
-                System.out.println("==================================================================");
-                System.out.println("ROUND " + this.numbRound);
-                System.out.println("==================================================================");
+                /**
+                 * display number of each round
+                 */
+               roundView.showNumberOfRounds(this.numbRound);
 
                 // simulate a round
                 startRoundSeeding();
             }
 
-            // game ended
-            System.out.println("==================================================================");
-            System.out.println("GAME ENDED ");
-            System.out.println("==================================================================");
+            endView.showEnd();
 
             // debug
-            System.out.println("Players won the round next to: " + rounds);
+            endView.showPlayersWonRounds(rounds);
 
             // display all cards every player has collected
             displayEachPlayersCardsWon();
