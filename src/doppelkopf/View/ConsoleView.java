@@ -1,5 +1,5 @@
 /**
- * Show all infor on the Console
+ * Show all infor on the ConsoleView
  *
  * Attribute:
  *  sc:                 take input from user
@@ -38,11 +38,11 @@ import doppelkopf.Model.PlayerModel.Player;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Console {
+public class ConsoleView {
     private Scanner sc;
 
 
-    public Console(){
+    public ConsoleView(){
         this.sc = new Scanner(System.in);
     }
 

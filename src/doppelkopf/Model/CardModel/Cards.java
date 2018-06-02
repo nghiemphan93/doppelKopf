@@ -120,7 +120,7 @@ public abstract class Cards{
     }
 
     /**
-     * Print out all Cards to Console
+     * Print out all Cards to ConsoleView
      */
     public void display(){
         Iterator<Card> iterator = this.cards.iterator();
