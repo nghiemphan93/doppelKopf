@@ -4,7 +4,7 @@
     <list default="true" id="252c0266-7a1f-4df6-bbc0-02f54a485cec" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/Controller/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/View/Console.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DoppelKopf(neu)/doppelkopf/MainTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Card.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+            <state relative-caret-position="486">
+              <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -85,11 +85,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Doppelkopf.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/doppelkopf/Base/Doppelkopf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+      <file leaf-file-name="doppelkopf.uml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/doppelkopf.uml">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>doppelkopf</OriginalElement>
+              <nodes>
+                <node x="0.0" y="189.0">doppelkopf.Controller.GameController</node>
+                <node x="0.0" y="1224.0">doppelkopf.Model.CardModel.CardsPlayedPerRound</node>
+                <node x="271.0" y="836.0">doppelkopf.Model.CardModel.Cards</node>
+                <node x="1075.0" y="1342.0">doppelkopf.Model.CardModel.Rank</node>
+                <node x="90.0" y="0.0">doppelkopf.Base.Doppelkopf</node>
+                <node x="1273.0" y="1342.0">doppelkopf.Model.CardModel.Suit</node>
+                <node x="185.0" y="1224.0">doppelkopf.Model.CardModel.CardsWon</node>
+                <node x="308.0" y="1213.0">doppelkopf.Model.CardModel.CardsAllowedToPlay</node>
+                <node x="1202.0" y="836.0">doppelkopf.Model.CardModel.Card</node>
+                <node x="644.0" y="1190.5">doppelkopf.Model.CardModel.CardsOnHand</node>
+                <node x="485.0" y="1180.0">doppelkopf.Model.CardModel.CardsToDeal</node>
+                <node x="821.0" y="1342.0">doppelkopf.MainTest</node>
+                <node x="589.0" y="1342.0">doppelkopf.Controller.PlayersSetupBuilder</node>
+                <node x="869.0" y="836.0">doppelkopf.Model.PlayerModel.Player</node>
+                <node x="384.0" y="0.0">doppelkopf.View.ConsoleView</node>
+                <node x="333.0" y="1342.0">doppelkopf.Model.CardModel.SortHelper</node>
+                <node x="0.0" y="1342.0">doppelkopf.Controller.CardsSetupBuilder</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="doppelkopf.Model.CardModel.CardsAllowedToPlay" target="doppelkopf.Model.CardModel.Cards">
+                  <point x="0.0" y="-25.5" />
+                  <point x="0.0" y="147.0" />
+                </edge>
+                <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Base.Doppelkopf">
+                  <point x="0.0" y="-301.0" />
+                  <point x="0.0" y="69.5" />
+                </edge>
+                <edge source="doppelkopf.Model.CardModel.CardsWon" target="doppelkopf.Model.CardModel.Cards">
+                  <point x="0.0" y="-14.5" />
+                  <point x="236.5" y="1160.0" />
+                  <point x="340.3" y="1160.0" />
+                  <point x="-46.19999999999999" y="147.0" />
+                </edge>
+                <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Cards">
+                  <point x="0.0" y="-58.5" />
+                  <point x="554.5" y="1160.0" />
+                  <point x="432.7" y="1160.0" />
+                  <point x="46.19999999999999" y="147.0" />
+                </edge>
+                <edge source="doppelkopf.Model.CardModel.CardsPlayedPerRound" target="doppelkopf.Model.CardModel.Cards">
+                  <point x="0.0" y="-14.5" />
+                  <point x="82.5" y="1150.0" />
+                  <point x="294.1" y="1150.0" />
+                  <point x="-92.39999999999998" y="147.0" />
+                </edge>
+                <edge source="doppelkopf.Model.CardModel.CardsOnHand" target="doppelkopf.Model.CardModel.Cards">
+                  <point x="0.0" y="-48.0" />
+                  <point x="734.0" y="1150.0" />
+                  <point x="478.9" y="1150.0" />
+                  <point x="92.39999999999998" y="147.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.8" x="777.6785714285717" y="500.625" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Methods</Category>
+                <Category>Properties</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -257,57 +320,12 @@
             <path>
               <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Doppelkopf-Database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="CardModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="PlayerModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -437,7 +455,7 @@
       <workItem from="1527960807380" duration="368000" />
       <workItem from="1528029744169" duration="748000" />
       <workItem from="1528030523925" duration="540000" />
-      <workItem from="1528031092521" duration="5469000" />
+      <workItem from="1528031092521" duration="5773000" />
     </task>
     <task id="LOCAL-00001" summary="added which players have KREUZ QUEEN&#10;separate 2 teams&#10;calculate points of each team then display to console">
       <created>1527960929833</created>
@@ -453,14 +471,22 @@
       <option name="project" value="LOCAL" />
       <updated>1527961116798</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added Database&#10;used TINYINT instead of Boolean: 1 -&gt; true, 0 -&gt; false">
+      <created>1528043128785</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1528043128786</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96797000" />
+    <option name="totallyTimeSpent" value="97101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.0" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -533,7 +559,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added which players have KREUZ QUEEN&#10;separate 2 teams&#10;calculate points of each team then display to console" />
     <MESSAGE value="delete some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete some stuff" />
+    <MESSAGE value="added Database&#10;used TINYINT instead of Boolean: 1 -&gt; true, 0 -&gt; false" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Database&#10;used TINYINT instead of Boolean: 1 -&gt; true, 0 -&gt; false" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -545,7 +572,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/RoundController.java" />
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -829,11 +855,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+        <state relative-caret-position="486">
+          <caret line="91" column="25" lean-forward="true" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doppelkopf.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>doppelkopf</OriginalElement>
+          <nodes>
+            <node x="0.0" y="189.0">doppelkopf.Controller.GameController</node>
+            <node x="0.0" y="1224.0">doppelkopf.Model.CardModel.CardsPlayedPerRound</node>
+            <node x="271.0" y="836.0">doppelkopf.Model.CardModel.Cards</node>
+            <node x="1075.0" y="1342.0">doppelkopf.Model.CardModel.Rank</node>
+            <node x="90.0" y="0.0">doppelkopf.Base.Doppelkopf</node>
+            <node x="1273.0" y="1342.0">doppelkopf.Model.CardModel.Suit</node>
+            <node x="185.0" y="1224.0">doppelkopf.Model.CardModel.CardsWon</node>
+            <node x="308.0" y="1213.0">doppelkopf.Model.CardModel.CardsAllowedToPlay</node>
+            <node x="1202.0" y="836.0">doppelkopf.Model.CardModel.Card</node>
+            <node x="644.0" y="1190.5">doppelkopf.Model.CardModel.CardsOnHand</node>
+            <node x="485.0" y="1180.0">doppelkopf.Model.CardModel.CardsToDeal</node>
+            <node x="821.0" y="1342.0">doppelkopf.MainTest</node>
+            <node x="589.0" y="1342.0">doppelkopf.Controller.PlayersSetupBuilder</node>
+            <node x="869.0" y="836.0">doppelkopf.Model.PlayerModel.Player</node>
+            <node x="384.0" y="0.0">doppelkopf.View.ConsoleView</node>
+            <node x="333.0" y="1342.0">doppelkopf.Model.CardModel.SortHelper</node>
+            <node x="0.0" y="1342.0">doppelkopf.Controller.CardsSetupBuilder</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="doppelkopf.Model.CardModel.CardsAllowedToPlay" target="doppelkopf.Model.CardModel.Cards">
+              <point x="0.0" y="-25.5" />
+              <point x="0.0" y="147.0" />
+            </edge>
+            <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Base.Doppelkopf">
+              <point x="0.0" y="-301.0" />
+              <point x="0.0" y="69.5" />
+            </edge>
+            <edge source="doppelkopf.Model.CardModel.CardsWon" target="doppelkopf.Model.CardModel.Cards">
+              <point x="0.0" y="-14.5" />
+              <point x="236.5" y="1160.0" />
+              <point x="340.3" y="1160.0" />
+              <point x="-46.19999999999999" y="147.0" />
+            </edge>
+            <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Cards">
+              <point x="0.0" y="-58.5" />
+              <point x="554.5" y="1160.0" />
+              <point x="432.7" y="1160.0" />
+              <point x="46.19999999999999" y="147.0" />
+            </edge>
+            <edge source="doppelkopf.Model.CardModel.CardsPlayedPerRound" target="doppelkopf.Model.CardModel.Cards">
+              <point x="0.0" y="-14.5" />
+              <point x="82.5" y="1150.0" />
+              <point x="294.1" y="1150.0" />
+              <point x="-92.39999999999998" y="147.0" />
+            </edge>
+            <edge source="doppelkopf.Model.CardModel.CardsOnHand" target="doppelkopf.Model.CardModel.Cards">
+              <point x="0.0" y="-48.0" />
+              <point x="734.0" y="1150.0" />
+              <point x="478.9" y="1150.0" />
+              <point x="92.39999999999998" y="147.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8" x="777.6785714285717" y="500.625" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>

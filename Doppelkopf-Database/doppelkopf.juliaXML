@@ -1,0 +1,347 @@
+<juliaProjekt juliaProjektHoehe="3000.0" juliaProjektName="DoppelKopf" juliaProjektSpeicherOrtBild="D:\Dropbox\ILIAS\4. Semester\DB2\Vorlesungen und Praktika\00 Materialien zum Praktikum" juliaProjektWeite="3000.0" juliaProjektZoomAnzahl="0">
+    <juliaProjektEntitaeten>
+        <juliaEntitaet juliaEntitaetName="Player" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="38.38359375" juliaXKoordinate="640.0" juliaYKoordinate="374.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.5" juliaWeite="65.40820312500003" juliaXKoordinate="710.0" juliaYKoordinate="288.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="name" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="45.5078125" juliaXKoordinate="651.0" juliaYKoordinate="277.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="pass" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="39.343750000000036" juliaXKoordinate="607.0" juliaYKoordinate="291.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="created_at" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="70.65625000000004" juliaXKoordinate="529.0" juliaYKoordinate="304.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+        <juliaEntitaet juliaEntitaetName="Card" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="29.728125000000002" juliaXKoordinate="625.0" juliaYKoordinate="71.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="card_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="55.47460937500003" juliaXKoordinate="510.0" juliaYKoordinate="56.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="suit" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="34.855468750000036" juliaXKoordinate="590.0" juliaYKoordinate="4.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="rank" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="39.033203125000036" juliaXKoordinate="631.0" juliaYKoordinate="0.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="point" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="43.849609375" juliaXKoordinate="739.0" juliaYKoordinate="39.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="strength" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="60.32031250000003" juliaXKoordinate="680.0" juliaYKoordinate="1.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="fehlOrNot" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.5" juliaWeite="69.52148437500004" juliaXKoordinate="708.0" juliaYKoordinate="95.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="imageURL" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="69.75976562500007" juliaXKoordinate="752.0" juliaYKoordinate="2.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="name" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="45.5078125" juliaXKoordinate="536.0" juliaYKoordinate="17.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+        <juliaEntitaet juliaEntitaetName="CardsPlayed" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="77.6953125" juliaXKoordinate="279.0" juliaYKoordinate="235.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="cardsPlayed_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="95.44726562500006" juliaXKoordinate="199.99999999999994" juliaYKoordinate="170.99999999999997"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="64.908203125" juliaXKoordinate="314.0" juliaYKoordinate="143.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="card_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="55.47460937500003" juliaXKoordinate="195.0" juliaYKoordinate="232.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+        <juliaEntitaet juliaEntitaetName="Game" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="37.13906250000002" juliaXKoordinate="888.0" juliaYKoordinate="523.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="game_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="62.37109375000003" juliaXKoordinate="957.0" juliaYKoordinate="505.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player1" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="54.78906250000003" juliaXKoordinate="995.0" juliaYKoordinate="545.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player2" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="54.78906250000003" juliaXKoordinate="986.0" juliaYKoordinate="589.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player3" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="54.78906250000003" juliaXKoordinate="954.0" juliaYKoordinate="621.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player4" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="54.78906250000003" juliaXKoordinate="892.0" juliaYKoordinate="633.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="played_at" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="66.36718750000003" juliaXKoordinate="817.0" juliaYKoordinate="639.0000000000001"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+        <juliaEntitaet juliaEntitaetName="GamesPlayed" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="85.10625000000005" juliaXKoordinate="389.0" juliaYKoordinate="555.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="gamesPlayed_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="102.34375" juliaXKoordinate="235.99999999999991" juliaYKoordinate="482.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="64.908203125" juliaXKoordinate="189.0" juliaYKoordinate="520.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="game_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="62.37109375000003" juliaXKoordinate="159.9999999999999" juliaYKoordinate="568.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="wonOrNot" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.5" juliaWeite="72.28710937500004" juliaXKoordinate="460.0" juliaYKoordinate="639.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="pointsWonInGame" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.75" juliaWeite="115.65625" juliaXKoordinate="330.99999999999994" juliaYKoordinate="648.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="hadKreuzQueen" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="100.76757812500009" juliaXKoordinate="198.9999999999999" juliaYKoordinate="656.0000000000001"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="partnerInGame" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.5" juliaWeite="96.07031250000006" juliaXKoordinate="236.99999999999986" juliaYKoordinate="599.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+        <juliaEntitaet juliaEntitaetName="CardsCollected" juliaEntitaetSchwach="false">
+            <juliaKomponente>
+                <juliaGrafischeKomponente juliaHoehe="20.400000000000006" juliaWeite="95.23828125" juliaXKoordinate="979.0" juliaYKoordinate="142.0"/>
+                <juliaKinder>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="cardsCollected_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="true">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="110.06640625000006" juliaXKoordinate="1101.0" juliaYKoordinate="118.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="player_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="64.908203125" juliaXKoordinate="1095.0" juliaYKoordinate="200.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                    <juliaAttribut juliaAttributBerechnet="false" juliaAttributBezeichnung="card_ID" juliaAttributMultiValue="false" juliaAttributPrimaerschluessel="false">
+                        <juliaKomponente>
+                            <juliaGrafischeKomponente juliaHoehe="33.000000000000014" juliaWeite="55.47460937500003" juliaXKoordinate="1124.0" juliaYKoordinate="156.0"/>
+                            <juliaKinder/>
+                        </juliaKomponente>
+                    </juliaAttribut>
+                </juliaKinder>
+            </juliaKomponente>
+        </juliaEntitaet>
+    </juliaProjektEntitaeten>
+    <juliaProjektBeziehungen>
+        <juliaBeziehung juliaBeziehungVerb="wasPlayed">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Game" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="GamesPlayed" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="109.50000000000006" juliaXKoordinate="636.0" juliaYKoordinate="621.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="played">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Player" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="GamesPlayed" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="70.4296875" juliaXKoordinate="486.0" juliaYKoordinate="425.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="played">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="CardsPlayed" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Player" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="70.4296875" juliaXKoordinate="350.0" juliaYKoordinate="318.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="wasPlayed">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Card" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="CardsPlayed" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="109.50000000000006" juliaXKoordinate="413.0" juliaYKoordinate="116.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="plays">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="Game" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Player" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="53.92968750000003" juliaXKoordinate="763.0" juliaYKoordinate="412.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="collected">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Player" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="CardsCollected" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="95.2265625" juliaXKoordinate="898.0" juliaYKoordinate="307.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+        <juliaBeziehung juliaBeziehungVerb="wasCollected">
+            <juliaTeilnehmerDerBeziehung>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="true" juliaBeziehungsteilnehmerEntitaet="CardsCollected" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+                <juliaBeziehungsVerbinder juliaBeziehungsVerbinderSchwach="false" juliaBeziehungsVerbinderZeigeKonnektivitaet="false">
+                    <juliaBeziehungsteilnehmer juliaBeziehungsteilnehmerBeziehungstyp="false" juliaBeziehungsteilnehmerEntitaet="Card" juliaBeziehungsteilnehmerKardinalitaet="true">
+                        <juliaKonnektivitaet juliaKonnektivitaetMax="1" juliaKonnektivitaetMin="1"/>
+                    </juliaBeziehungsteilnehmer>
+                </juliaBeziehungsVerbinder>
+            </juliaTeilnehmerDerBeziehung>
+            <juliaGrafischeKomponente juliaHoehe="40.000000000000036" juliaWeite="138.73828125000014" juliaXKoordinate="816.0" juliaYKoordinate="66.0"/>
+            <juliaAttributeUndKommentareDerBeziehung/>
+        </juliaBeziehung>
+    </juliaProjektBeziehungen>
+    <juliaProjektKommentare/>
+</juliaProjekt>
