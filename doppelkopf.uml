@@ -3,362 +3,60 @@
   <ID>JAVA</ID>
   <OriginalElement>doppelkopf</OriginalElement>
   <nodes>
-    <node x="374.51461017315967" y="2612.0">doppelkopf.Controller.GameController</node>
-    <node x="125.5" y="405.0">doppelkopf.Model.CardModel.CardsPlayedPerRound</node>
-    <node x="860.5029694805196" y="0.0">doppelkopf.Model.CardModel.Cards</node>
-    <node x="1465.9354166666667" y="690.0">doppelkopf.Model.CardModel.Rank</node>
-    <node x="0.0" y="2186.5">doppelkopf.Base.Doppelkopf</node>
-    <node x="1276.9354166666667" y="690.0">doppelkopf.Model.CardModel.Suit</node>
-    <node x="609.1892125541128" y="405.0">doppelkopf.Model.CardModel.CardsWon</node>
-    <node x="1037.116693506493" y="1039.0">doppelkopf.Model.CardModel.Card</node>
-    <node x="754.1892125541128" y="394.0">doppelkopf.Model.CardModel.CardsAllowedToPlay</node>
-    <node x="731.6833601731596" y="1543.0">doppelkopf.Model.CardModel.CardsOnHand</node>
-    <node x="1134.991693506493" y="1731.0">doppelkopf.Model.CardModel.CardsToDeal</node>
-    <node x="1258.0358034632038" y="3264.0">doppelkopf.MainTest</node>
-    <node x="316.59794350649304" y="1730.5">doppelkopf.Controller.PlayersSetupBuilder</node>
-    <node x="958.691693506493" y="2010.0">doppelkopf.View.ConsoleView</node>
-    <node x="549.5108034632038" y="525.0">doppelkopf.Model.PlayerModel.Player</node>
-    <node x="545.597943506493" y="2164.0">doppelkopf.Controller.CardsSetupBuilder</node>
-    <node x="1570.0217194805196" y="1709.0">doppelkopf.Model.CardModel.SortHelper</node>
+    <node x="0.0" y="189.0">doppelkopf.Controller.GameController</node>
+    <node x="0.0" y="1224.0">doppelkopf.Model.CardModel.CardsPlayedPerRound</node>
+    <node x="271.0" y="836.0">doppelkopf.Model.CardModel.Cards</node>
+    <node x="1075.0" y="1342.0">doppelkopf.Model.CardModel.Rank</node>
+    <node x="90.0" y="0.0">doppelkopf.Base.Doppelkopf</node>
+    <node x="1273.0" y="1342.0">doppelkopf.Model.CardModel.Suit</node>
+    <node x="185.0" y="1224.0">doppelkopf.Model.CardModel.CardsWon</node>
+    <node x="308.0" y="1213.0">doppelkopf.Model.CardModel.CardsAllowedToPlay</node>
+    <node x="1202.0" y="836.0">doppelkopf.Model.CardModel.Card</node>
+    <node x="644.0" y="1190.5">doppelkopf.Model.CardModel.CardsOnHand</node>
+    <node x="485.0" y="1180.0">doppelkopf.Model.CardModel.CardsToDeal</node>
+    <node x="821.0" y="1342.0">doppelkopf.MainTest</node>
+    <node x="589.0" y="1342.0">doppelkopf.Controller.PlayersSetupBuilder</node>
+    <node x="869.0" y="836.0">doppelkopf.Model.PlayerModel.Player</node>
+    <node x="384.0" y="0.0">doppelkopf.View.ConsoleView</node>
+    <node x="333.0" y="1342.0">doppelkopf.Model.CardModel.SortHelper</node>
+    <node x="0.0" y="1342.0">doppelkopf.Controller.CardsSetupBuilder</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Rank">
-      <point x="33.55555555555566" y="-58.5" />
-      <point x="1244.0472490620486" y="1669.0" />
-      <point x="1610.3462201298705" y="1669.0" />
-      <point x="1610.3462201298705" y="1019.0" />
-      <point x="1606.76875" y="1019.0" />
-      <point x="56.33333333333326" y="37.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Model.CardModel.CardsPlayedPerRound">
-      <point x="-156.8125" y="-301.0" />
-      <point x="410.70211017315967" y="2582.0" />
-      <point x="184.5" y="2582.0" />
-      <point x="184.5" y="505.0" />
-      <point x="138.6428571428571" y="505.0" />
-      <point x="-78.85714285714289" y="14.5" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Controller.CardsSetupBuilder">
-      <point x="60.3125" y="-301.0" />
-      <point x="627.8271101731597" y="2542.0" />
-      <point x="817.2646101731597" y="2542.0" />
-      <point x="108.66666666666663" y="92.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Controller.PlayersSetupBuilder">
-      <point x="-60.3125" y="-301.0" />
-      <point x="507.20211017315967" y="2542.0" />
-      <point x="378.997943506493" y="2542.0" />
-      <point x="-41.60000000000002" y="59.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsAllowedToPlay" target="doppelkopf.Model.CardModel.Card">
-      <point x="64.875" y="25.5" />
-      <point x="905.5642125541128" y="505.0" />
-      <point x="919.3483034632038" y="505.0" />
-      <point x="919.3483034632038" y="949.0" />
-      <point x="1140.366693506493" y="949.0" />
-      <point x="-44.25" y="-202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.Cards" target="doppelkopf.Model.CardModel.Card">
-      <point x="31.875" y="147.0" />
-      <point x="1019.8779694805196" y="354.0" />
-      <point x="1179.116693506493" y="354.0" />
-      <point x="1179.116693506493" y="1019.0" />
-      <point x="1169.866693506493" y="1019.0" />
-      <point x="-14.75" y="-202.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Controller.PlayersSetupBuilder">
-      <point x="-43.46666666666664" y="-92.0" />
-      <point x="665.1312768398263" y="1930.0" />
-      <point x="462.197943506493" y="1930.0" />
-      <point x="41.599999999999966" y="59.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-33.55555555555543" y="-58.5" />
-      <point x="1176.9361379509376" y="1669.0" />
-      <point x="940.1833601731596" y="1669.0" />
-      <point x="940.1833601731596" y="989.0" />
-      <point x="799.4441367965371" y="989.0" />
-      <point x="86.93333333333328" y="202.0" />
-    </edge>
     <edge source="doppelkopf.Model.CardModel.CardsAllowedToPlay" target="doppelkopf.Model.CardModel.Cards">
       <point x="0.0" y="-25.5" />
-      <point x="840.6892125541128" y="374.0" />
-      <point x="956.1279694805196" y="374.0" />
-      <point x="-31.875" y="147.0" />
-    </edge>
-    <edge source="doppelkopf.View.ConsoleView" target="doppelkopf.Model.CardModel.SortHelper">
-      <point x="139.66666666666674" y="-246.0" />
-      <point x="1307.8583601731598" y="1980.0" />
-      <point x="1689.5217194805196" y="1980.0" />
-      <point x="0.0" y="80.5" />
-    </edge>
-    <edge source="doppelkopf.MainTest" target="doppelkopf.Model.CardModel.SortHelper">
-      <point x="95.83333333333326" y="-47.5" />
-      <point x="1468.869136796537" y="3244.0" />
-      <point x="1637.5128867965373" y="3244.0" />
-      <point x="1637.5128867965373" y="1990.0" />
-      <point x="1769.1883861471863" y="1990.0" />
-      <point x="79.66666666666674" y="80.5" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.CardsPlayedPerRound">
-      <point x="-108.66666666666663" y="-92.0" />
-      <point x="599.9312768398264" y="1960.0" />
-      <point x="217.5" y="1960.0" />
-      <point x="0.0" y="14.5" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Model.CardModel.Card">
-      <point x="180.9375" y="-301.0" />
-      <point x="748.4521101731597" y="2592.0" />
-      <point x="1453.2227484126977" y="2592.0" />
-      <point x="1453.2227484126977" y="1513.0" />
-      <point x="1276.804193506493" y="1513.0" />
-      <point x="92.1875" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.Card" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-132.75" y="-202.0" />
-      <point x="1051.866693506493" y="979.0" />
-      <point x="821.1774701298705" y="979.0" />
-      <point x="108.66666666666663" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.Card">
-      <point x="65.19999999999993" y="-92.0" />
-      <point x="773.797943506493" y="1920.0" />
-      <point x="1114.0526095238088" y="1920.0" />
-      <point x="1114.0526095238088" y="1523.0" />
-      <point x="1129.304193506493" y="1523.0" />
-      <point x="-55.3125" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.CardsOnHand">
-      <point x="21.73333333333335" y="-92.0" />
-      <point x="730.3312768398264" y="1900.0" />
-      <point x="775.6833601731596" y="1900.0" />
-      <point x="775.6833601731596" y="1689.0" />
-      <point x="756.4333601731596" y="1689.0" />
-      <point x="-74.25" y="48.0" />
-    </edge>
-    <edge source="doppelkopf.View.ConsoleView" target="doppelkopf.Model.CardModel.Card">
-      <point x="0.0" y="-246.0" />
-      <point x="1168.191693506493" y="1960.0" />
-      <point x="1311.3358034632038" y="1960.0" />
-      <point x="1311.3358034632038" y="1523.0" />
-      <point x="1239.929193506493" y="1523.0" />
-      <point x="55.3125" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.MainTest" target="doppelkopf.Base.Doppelkopf">
-      <point x="-95.83333333333326" y="-47.5" />
-      <point x="1277.2024701298706" y="3244.0" />
-      <point x="43.5" y="3244.0" />
-      <point x="-43.5" y="69.5" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.Card" target="doppelkopf.Model.CardModel.Suit">
-      <point x="73.75" y="-202.0" />
-      <point x="1258.366693506493" y="999.0" />
-      <point x="1361.4354166666667" y="999.0" />
-      <point x="0.0" y="37.0" />
+      <point x="0.0" y="147.0" />
     </edge>
     <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Base.Doppelkopf">
-      <point x="-180.9375" y="-301.0" />
-      <point x="386.57711017315967" y="2592.0" />
-      <point x="130.5" y="2592.0" />
-      <point x="43.5" y="69.5" />
+      <point x="0.0" y="-301.0" />
+      <point x="0.0" y="69.5" />
     </edge>
     <edge source="doppelkopf.Model.CardModel.CardsWon" target="doppelkopf.Model.CardModel.Cards">
       <point x="0.0" y="-14.5" />
-      <point x="665.6892125541128" y="344.0" />
-      <point x="892.3779694805196" y="344.0" />
-      <point x="-95.625" y="147.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.SortHelper" target="doppelkopf.Model.CardModel.Cards">
-      <point x="0.0" y="-80.5" />
-      <point x="1689.5217194805196" y="314.0" />
-      <point x="1104.8779694805196" y="314.0" />
-      <point x="116.875" y="147.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Suit">
-      <point x="16.77777777777783" y="-58.5" />
-      <point x="1227.2694712842708" y="1659.0" />
-      <point x="1495.5526095238088" y="1659.0" />
-      <point x="1495.5526095238088" y="999.0" />
-      <point x="1417.76875" y="999.0" />
-      <point x="56.33333333333326" y="37.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsOnHand" target="doppelkopf.Model.CardModel.Card">
-      <point x="84.85714285714289" y="-48.0" />
-      <point x="915.5405030303025" y="1523.0" />
-      <point x="1092.429193506493" y="1523.0" />
-      <point x="-92.1875" y="202.0" />
+      <point x="236.5" y="1160.0" />
+      <point x="340.3" y="1160.0" />
+      <point x="-46.19999999999999" y="147.0" />
     </edge>
     <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Cards">
-      <point x="67.11111111111109" y="-58.5" />
-      <point x="1277.602804617604" y="1689.0" />
-      <point x="1678.5217194805196" y="1689.0" />
-      <point x="1678.5217194805196" y="324.0" />
-      <point x="1083.6279694805196" y="324.0" />
-      <point x="95.625" y="147.0" />
-    </edge>
-    <edge source="doppelkopf.MainTest" target="doppelkopf.Model.CardModel.Card">
-      <point x="57.5" y="-47.5" />
-      <point x="1430.5358034632038" y="3234.0" />
-      <point x="1464.2227484126977" y="3234.0" />
-      <point x="1464.2227484126977" y="1503.0" />
-      <point x="1313.679193506493" y="1503.0" />
-      <point x="129.0625" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="0.0" y="-92.0" />
-      <point x="708.597943506493" y="1910.0" />
-      <point x="664.0" y="1910.0" />
-      <point x="664.0" y="1019.0" />
-      <point x="690.7774701298705" y="1019.0" />
-      <point x="-21.73333333333335" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.PlayerModel.Player" target="doppelkopf.Model.CardModel.CardsPlayedPerRound">
-      <point x="-118.5454545454545" y="-202.0" />
-      <point x="593.9653489177493" y="475.0" />
-      <point x="270.07142857142856" y="475.0" />
-      <point x="52.571428571428584" y="14.5" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-132.6875" y="-301.0" />
-      <point x="434.82711017315967" y="2572.0" />
-      <point x="295.09794350649304" y="2572.0" />
-      <point x="295.09794350649304" y="959.0" />
-      <point x="560.3774701298705" y="959.0" />
-      <point x="-152.13333333333333" y="202.0" />
+      <point x="0.0" y="-58.5" />
+      <point x="554.5" y="1160.0" />
+      <point x="432.7" y="1160.0" />
+      <point x="46.19999999999999" y="147.0" />
     </edge>
     <edge source="doppelkopf.Model.CardModel.CardsPlayedPerRound" target="doppelkopf.Model.CardModel.Cards">
       <point x="0.0" y="-14.5" />
-      <point x="217.5" y="334.0" />
-      <point x="871.1279694805196" y="334.0" />
-      <point x="-116.875" y="147.0" />
+      <point x="82.5" y="1150.0" />
+      <point x="294.1" y="1150.0" />
+      <point x="-92.39999999999998" y="147.0" />
     </edge>
     <edge source="doppelkopf.Model.CardModel.CardsOnHand" target="doppelkopf.Model.CardModel.Cards">
       <point x="0.0" y="-48.0" />
-      <point x="830.6833601731596" y="1493.0" />
-      <point x="1015.616693506493" y="1493.0" />
-      <point x="1015.616693506493" y="374.0" />
-      <point x="977.3779694805196" y="374.0" />
-      <point x="-10.625" y="147.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.PlayersSetupBuilder" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-69.33333333333331" y="-59.0" />
-      <point x="351.2646101731597" y="1689.0" />
-      <point x="363.34794350649304" y="1689.0" />
-      <point x="363.34794350649304" y="979.0" />
-      <point x="603.8441367965372" y="979.0" />
-      <point x="-108.66666666666666" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.View.ConsoleView" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-139.66666666666663" y="-246.0" />
-      <point x="1028.5250268398263" y="1890.0" />
-      <point x="721.1833601731596" y="1890.0" />
-      <point x="721.1833601731596" y="1019.0" />
-      <point x="712.5108034632038" y="1019.0" />
-      <point x="0.0" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.Card">
-      <point x="-16.77777777777783" y="-58.5" />
-      <point x="1193.7139157287152" y="1659.0" />
-      <point x="1167.491693506493" y="1659.0" />
-      <point x="1167.491693506493" y="1523.0" />
-      <point x="1166.179193506493" y="1523.0" />
-      <point x="-18.4375" y="202.0" />
-    </edge>
-    <edge source="doppelkopf.MainTest" target="doppelkopf.Controller.GameController">
-      <point x="-57.5" y="-47.5" />
-      <point x="1315.5358034632038" y="3234.0" />
-      <point x="567.5146101731597" y="3234.0" />
-      <point x="0.0" y="301.0" />
-    </edge>
-    <edge source="doppelkopf.Model.PlayerModel.Player" target="doppelkopf.Model.CardModel.CardsAllowedToPlay">
-      <point x="88.90909090909088" y="-202.0" />
-      <point x="801.4198943722947" y="485.0" />
-      <point x="775.8142125541128" y="485.0" />
-      <point x="-64.875" y="25.5" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.Cards" target="doppelkopf.Model.PlayerModel.Player">
-      <point x="-53.125" y="147.0" />
-      <point x="934.8779694805196" y="364.0" />
-      <point x="743.6892125541128" y="364.0" />
-      <point x="743.6892125541128" y="495.0" />
-      <point x="771.7835307359311" y="495.0" />
-      <point x="59.27272727272725" y="-202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.PlayerModel.Player" target="doppelkopf.Model.CardModel.Card">
-      <point x="152.13333333333333" y="202.0" />
-      <point x="864.6441367965372" y="959.0" />
-      <point x="1110.866693506493" y="959.0" />
-      <point x="-73.75" y="-202.0" />
-    </edge>
-    <edge source="doppelkopf.Model.PlayerModel.Player" target="doppelkopf.Model.CardModel.CardsWon">
-      <point x="-59.27272727272725" y="-202.0" />
-      <point x="653.2380761904766" y="505.0" />
-      <point x="665.6892125541128" y="505.0" />
-      <point x="0.0" y="14.5" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.CardsWon">
-      <point x="-65.19999999999993" y="-92.0" />
-      <point x="643.3979435064931" y="1940.0" />
-      <point x="278.91461017315964" y="1940.0" />
-      <point x="278.91461017315964" y="505.0" />
-      <point x="643.0892125541129" y="505.0" />
-      <point x="-22.600000000000023" y="14.5" />
-    </edge>
-    <edge source="doppelkopf.View.ConsoleView" target="doppelkopf.Controller.GameController">
-      <point x="157.125" y="246.0" />
-      <point x="1325.316693506493" y="2582.0" />
-      <point x="724.3271101731597" y="2582.0" />
-      <point x="156.8125" y="-301.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.SortHelper">
-      <point x="152.13333333333333" y="-92.0" />
-      <point x="860.7312768398264" y="1970.0" />
-      <point x="1609.8550528138528" y="1970.0" />
-      <point x="-79.66666666666674" y="80.5" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.Card" target="doppelkopf.Model.CardModel.Rank">
-      <point x="132.75" y="-202.0" />
-      <point x="1317.366693506493" y="1019.0" />
-      <point x="1550.4354166666667" y="1019.0" />
-      <point x="0.0" y="37.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.GameController" target="doppelkopf.View.ConsoleView">
-      <point x="108.5625" y="-301.0" />
-      <point x="676.0771101731597" y="2562.0" />
-      <point x="1115.816693506493" y="2562.0" />
-      <point x="-52.375" y="246.0" />
-    </edge>
-    <edge source="doppelkopf.Model.CardModel.CardsToDeal" target="doppelkopf.Model.CardModel.CardsOnHand">
-      <point x="-50.33333333333326" y="-58.5" />
-      <point x="1160.1583601731597" y="1679.0" />
-      <point x="904.9333601731596" y="1679.0" />
-      <point x="74.25" y="48.0" />
-    </edge>
-    <edge source="doppelkopf.Controller.CardsSetupBuilder" target="doppelkopf.Model.CardModel.CardsToDeal">
-      <point x="108.66666666666663" y="-92.0" />
-      <point x="817.2646101731597" y="1940.0" />
-      <point x="1180.291693506493" y="1940.0" />
-      <point x="-30.200000000000045" y="58.5" />
-    </edge>
-    <edge source="doppelkopf.MainTest" target="doppelkopf.Model.CardModel.CardsToDeal">
-      <point x="-19.166666666666742" y="-47.5" />
-      <point x="1353.869136796537" y="3234.0" />
-      <point x="1388.191693506493" y="3234.0" />
-      <point x="1388.191693506493" y="1950.0" />
-      <point x="1240.691693506493" y="1950.0" />
-      <point x="30.200000000000045" y="58.5" />
-    </edge>
-    <edge source="doppelkopf.Model.PlayerModel.Player" target="doppelkopf.Model.CardModel.CardsOnHand">
-      <point x="65.19999999999993" y="202.0" />
-      <point x="777.7108034632038" y="999.0" />
-      <point x="841.6833601731596" y="999.0" />
-      <point x="841.6833601731596" y="1483.0" />
-      <point x="802.3976458874454" y="1483.0" />
-      <point x="-28.285714285714334" y="-48.0" />
+      <point x="734.0" y="1150.0" />
+      <point x="478.9" y="1150.0" />
+      <point x="92.39999999999998" y="147.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.7000000000000001" x="858.9999999999998" y="764.4285714285713" />
+  <settings layout="Hierarchic Group" zoom="0.8" x="777.6785714285717" y="500.625" />
   <SelectedNodes />
   <Categories>
     <Category>Methods</Category>
