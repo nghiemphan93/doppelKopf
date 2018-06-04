@@ -100,7 +100,7 @@ public class CardsSetupBuilder {
         for(Player player : this.getPlayerSetup().getPlayers()){
             // check every card on hand
             for(Card card : player.getCardsOnHand().getCards()){
-                if(card.display().compareTo("KREUZ DAMEN") == 0){
+                if(card.getName().compareTo("KREUZ DAMEN") == 0){
                     player.setHasKreuzQueen(true);
                     break;
                 }

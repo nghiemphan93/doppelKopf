@@ -43,6 +43,8 @@ public class Player{
     private boolean hasKreuzQueen = false;
     private int specialPoints = 0;
     private boolean allowedToGuessBazinga = true;
+    private boolean gameWon;
+    private Player partner;
 
     public Player(String name, String password) {
         this.name = name;
@@ -51,6 +53,8 @@ public class Player{
         this.cardsWon = new CardsWon();
         this.cardsPlayedPerRound = new CardsPlayedPerRound();
         this.cardsAllowedToPlay = new CardsAllowedToPlay();
+        this.gameWon = false;
+        this.partner = null;
     }
 
     public boolean isAllowedToGuessBazinga() {
@@ -131,6 +135,22 @@ public class Player{
 
     public void setPointsWonPerGame(int pointsWonPerGame) {
         this.pointsWonPerGame = pointsWonPerGame;
+    }
+
+    public Player getPartner() {
+        return partner;
+    }
+
+    public void setPartner(Player partner) {
+        this.partner = partner;
+    }
+
+    public boolean isGameWon() {
+        return gameWon;
+    }
+
+    public void setGameWon(boolean gameWon) {
+        this.gameWon = gameWon;
     }
 
     @Override

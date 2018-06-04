@@ -18,7 +18,7 @@
  *         setStrength():          determine the strength of each card compared to others
  *         suitToUnicode():        Return UNICODE Symbol for SUIT
  *         rankToUnicode():        Return UNICODE Symbol for RANK
- *         display():              getSuit() + " " + getRank()
+ *         getName():              getSuit() + " " + getRank()
  *
  *      These are the cards sorted by strength
  *      Each card has a code representing the strength "__"
@@ -333,7 +333,7 @@ public class Card {
         return suitToUnicode() + rankToUnicode();
     }
 
-    public String display() {
+    public String getName() {
         return getSuit() + " " + getRank();
     }
 }

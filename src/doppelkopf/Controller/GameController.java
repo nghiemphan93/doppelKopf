@@ -36,6 +36,14 @@
  *       checkPlayerGuessBazinga()  Check if guess of some player for Bazinga was correct
  *                                  Give 10 bonus points or take 5 points away if it's correct or not respectively
  *        whoGuessBazingaSeeding()  Simulate each round there's some one or no one who wants to guess for Bazinga
+ *        saveAllCardsToDatabase()  Create all cards to store in database
+ *        whichTeamWon()        Decides which team won
+ *                              If
+ *                              return >0 => Team Kreuz Queen won
+ *                              return <0 => Team No Kreuz Queen won
+ *                              return 0 =>  Draw, no team wins
+ *       setGameWonEachPlayer()  Set the property gameWon to true or false accordingly to every player
+ *
  */
 
 package doppelkopf.Controller;
@@ -43,6 +51,7 @@ package doppelkopf.Controller;
 import doppelkopf.Base.Doppelkopf;
 import doppelkopf.Model.CardModel.Card;
 import doppelkopf.Model.CardModel.CardsPlayedPerRound;
+import doppelkopf.Model.CardModel.CardsToDeal;
 import doppelkopf.Model.PlayerModel.Player;
 import doppelkopf.View.ConsoleView;
 
@@ -61,6 +70,8 @@ public class GameController extends Doppelkopf {
     private int pointTeamNoKreuzQueen;
     private ArrayList<Player> playersGuessBazinga;
     private ConsoleView console;
+    private CRUD crud;
+    private int game_ID = 0;
 
     public GameController() {
     }
@@ -153,6 +164,22 @@ public class GameController extends Doppelkopf {
     public void setCardsSetupBuilder(CardsSetupBuilder cardsSetupBuilder) {
         this.cardsSetupBuilder = cardsSetupBuilder;
     }
+
+    public CRUD getCrud() {
+        return crud;
+    }
+
+    public void setCrud(CRUD crud) {
+        this.crud = crud;
+    }
+
+    public int getGame_ID() {
+        return game_ID;
+    }
+
+    public void setGame_ID(int game_ID) {
+        this.game_ID = game_ID;
+    }
     //endregion
 
     /**
@@ -161,6 +188,7 @@ public class GameController extends Doppelkopf {
     public void initGame(){
         this.numbRound = 0;
         this.playersSetupBuilder = new PlayersSetupBuilder();
+//        this.playersSetupBuilder.initSeeding();
         this.cardsSetupBuilder = new CardsSetupBuilder(this.playersSetupBuilder);
         this.teamKreuzQueen = new ArrayList<>();
         this.teamNoKreuzQueen = new ArrayList<>();
@@ -170,6 +198,8 @@ public class GameController extends Doppelkopf {
         this.pointTeamNoKreuzQueen = 0;
         this.playersGuessBazinga = new ArrayList<>();
         this.console = new ConsoleView();
+        this.crud = new CRUD();
+        this.game_ID = 0;
     }
 
     /**
@@ -186,6 +216,11 @@ public class GameController extends Doppelkopf {
 
             // create all cards needed then deal to players
             this.cardsSetupBuilder.initCardSetup();
+
+            // increase game_ID
+            this.game_ID = this.crud.insertNewGame(this.playersSetupBuilder.getPlayers());
+
+            System.out.println(this.game_ID);
 
             //  prepare which players are allowed to guess for Bazinga
             this.playersGuessBazinga.addAll(this.playersSetupBuilder.getPlayers());
@@ -207,30 +242,28 @@ public class GameController extends Doppelkopf {
                 if(this.numbRound == 4 && this.whoHasTwoKreuzQueen != null){
                     Player dreamPartner = checkHochzeit();
                     if(dreamPartner != null){
-                        // display to screen new partner
+                        // getName to screen new partner
                         console.displayHochzeitNewPartner(dreamPartner, this);
                     }else{
-                        // display to screen who plays alone
+                        // getName to screen who plays alone
                         console.displayHochzeitAlone(this);
                     }
                 }
 
-
-                // display current round
+                // show the current round title
                 console.displayCurrentRound(this);
 
                 // simulate a round
                 startRoundSeeding();
             }
 
-            // game endet
+            // game ended
             console.gameEnded();
-
 
             // debug
             console.displayWhoWonWhichRound(this);
 
-            // display all cards every player has collected
+            // getName all cards every player has collected
             console.displayEachPlayersCardsWon(this);
 
             // all points of each players
@@ -241,6 +274,23 @@ public class GameController extends Doppelkopf {
 
             // which team wins
             console.displayTwoTeamResults(this);
+
+            // set game won for each player
+            setGameWonEachPlayer();
+
+            // insert stuff to database
+            // insert all cards won for each player
+            for(Player player : this.playersSetupBuilder.getPlayers()){
+                this.crud.insertCardsCollected(player, player.getCardsWon().getCards());
+            }
+
+            // insert the game was played to history of each player
+            // first setPartner
+            setPartner();
+            for(Player player : this.playersSetupBuilder.getPlayers()){
+                this.crud.insertGamePlayed(player, player.getPartner(), this.game_ID);
+            }
+
 
             // type "y" to play another game
             // "n" to stop
@@ -301,25 +351,28 @@ public class GameController extends Doppelkopf {
                 player.setWhatCardToPlay(cardsSetupBuilder.getCardsPlayedPerRound().getCards().get(0));
             }
 
-            // display the CardsOnHand of the player
+            // getName the CardsOnHand of the player
             console.displayCardsOnHandOfPlayer(player);
 
-            // display the CardsAllowedToPlay of the player
+            // getName the CardsAllowedToPlay of the player
             console.displayCardsAllowedToPlayOfPlayer(player);
 
             // show what card has been played
             Card card = player.playARandomCard();
             console.displayWhatCardHasBeenPlayed(player, card);
 
+            // save the just played card to CardsPlayed in Database
+            this.crud.insertCardPlayed(player, card);
+
             // add the card to CardsPlayedPerRound
             cardsSetupBuilder.getCardsPlayedPerRound().add(card);
         }   // end of for
 
-        // display all player's hand + Cards played per round
+        // getName all player's hand + Cards played per round
         console.displayAllHands(this);
         console.displayCardsPlayedPerRound(this);
 
-        // display who wins the round
+        // getName who wins the round
         Player roundWinner = whoWinsTheRound(cardsSetupBuilder.getCardsPlayedPerRound());
         ArrayList<Card> cardsPerRound = cardsSetupBuilder.getCardsPlayedPerRound().getCards();
         console.displayWhoWinsTheRound(roundWinner, cardsPerRound);
@@ -412,7 +465,7 @@ public class GameController extends Doppelkopf {
     }
 
     /**
-     * Calculate points of each team then display them accordingly
+     * Calculate points of each team then getName them accordingly
      */
     public void sumUpPointTwoTeams(){
         // calculate points of each team
@@ -420,12 +473,14 @@ public class GameController extends Doppelkopf {
         this.pointTeamKreuzQueen = 0;
         for(int i = 0; i< this.teamKreuzQueen.size(); i++){
             this.pointTeamKreuzQueen += this.teamKreuzQueen.get(i).getPointsWonPerGame();
+            System.out.println(this.teamKreuzQueen.get(i) + " " + this.teamKreuzQueen.get(i).getPointsWonPerGame());
         }
 
         // Team No Kreuz Queen
         this.pointTeamNoKreuzQueen = 0;
         for(int i = 0; i< this.teamNoKreuzQueen.size(); i++){
             this.pointTeamNoKreuzQueen += this.teamNoKreuzQueen.get(i).getPointsWonPerGame();
+            System.out.println(this.teamNoKreuzQueen.get(i) + " " + this.teamNoKreuzQueen.get(i).getPointsWonPerGame());
         }
 
     }   // end of sumUpPointTwoTeams
@@ -473,6 +528,25 @@ public class GameController extends Doppelkopf {
     public int whichTeamWon(){
         return this.pointTeamKreuzQueen - this.pointTeamNoKreuzQueen;
     }
+
+    /**
+     * Set the property gameWon to true or false accordingly to every player
+     */
+    public void setGameWonEachPlayer(){
+        if(whichTeamWon() > 0){
+            for (Player player: this.getTeamKreuzQueen()){
+                int index = this.playersSetupBuilder.getPlayers().indexOf(player);
+                this.playersSetupBuilder.getPlayers().get(index).setGameWon(true);
+            }
+        }else{
+            if(whichTeamWon() < 0){
+                for (Player player: this.getTeamNoKreuzQueen()){
+                    int index = this.playersSetupBuilder.getPlayers().indexOf(player);
+                    this.playersSetupBuilder.getPlayers().get(index).setGameWon(true);
+                }
+            }
+        }
+    }   // end of setGameWonEachPlayer
 
     /**
      * Check and return true/ false if the round has Bazinga or not respectively
@@ -553,6 +627,22 @@ public class GameController extends Doppelkopf {
         }else{
             whoGuessBazinga.setSpecialPoints(-5);
             return false;
+        }
+    }
+
+    /**
+     * Set partner for each player
+     */
+    public void setPartner(){
+        // assume that there's always 2 vs 2 teams
+        if(this.teamNoKreuzQueen.size() == this.teamKreuzQueen.size()){
+            // for team Kreuz Queen
+            this.teamKreuzQueen.get(0).setPartner(this.teamKreuzQueen.get(1));
+            this.teamKreuzQueen.get(1).setPartner(this.teamKreuzQueen.get(0));
+
+            // for team No Kreuz Queen
+            this.teamNoKreuzQueen.get(0).setPartner(this.teamNoKreuzQueen.get(1));
+            this.teamNoKreuzQueen.get(1).setPartner(this.teamNoKreuzQueen.get(0));
         }
     }
 }

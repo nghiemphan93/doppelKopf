@@ -6,11 +6,11 @@
  *
  *
  * Important methods:
- *  displayAllHand()                display all cards of all hands
- *  disCarPlaPerRound()             display all cards played in the current round
- *  displayEachPlayersCardsWon()    display all cards each player won so far
- *  displayEachPlayerPoints()       display all points of each player
- *  displayTwoTeamResults()         display final results which team wins and points
+ *  displayAllHand()                getName all cards of all hands
+ *  disCarPlaPerRound()             getName all cards played in the current round
+ *  displayEachPlayersCardsWon()    getName all cards each player won so far
+ *  displayEachPlayerPoints()       getName all points of each player
+ *  displayTwoTeamResults()         getName final results which team wins and points
  *  gameStartText()                 Game Start Text
  *  gameEnded()                     Game End Text
  *  displayWhoWonWhichRound()       Display who won which round
@@ -113,7 +113,7 @@ public class ConsoleView {
      * @param gameController
      */
     public void displayTwoTeamResults(GameController gameController){
-        // display 2 teams and points of each team
+        // getName 2 teams and points of each team
         // Team Kreuz Queen
         switch (gameController.getTeamKreuzQueen().size()){
             case 1:
