@@ -32,11 +32,15 @@ public class MainTest {
 //    }
 
     public static void main(String[] args) {
-        GameController game = new GameController();
-        game.initGame();
-        game.startGame();
+//        GameController game = new GameController();
+//        game.initGame();
+//        game.startGame();
 
-
+        CRUD crud = new CRUD();
+        CardsToDeal cardsToDeal = new CardsToDeal(null);
+        cardsToDeal.init();
+        ArrayList<Card> cards = cardsToDeal.getCards();
+        crud.insertAllCardsToDatabase(cards);
 
 
 //        Card card = new Card(Suit.HERZ, Rank.KOENIG);
