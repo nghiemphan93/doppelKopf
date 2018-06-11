@@ -24,6 +24,7 @@ public class CardsToDeal extends Cards{
         setPlayers(players);
     }
 
+    //region Important methods
     /**
      * Initialize all cards needed and shuffle
      */
@@ -45,7 +46,9 @@ public class CardsToDeal extends Cards{
         shuffle();
     }
 
-    // Deal cards to all players
+    /**
+     * Deal cards to all players
+     */
     public void deal(){
         // Prepare a Hand for every player
         CardsOnHand cardsToDeal = new CardsOnHand();
@@ -74,6 +77,7 @@ public class CardsToDeal extends Cards{
         clear();
         init();
     }
+    //endregion
 
 }
 

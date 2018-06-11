@@ -2,8 +2,8 @@
  *     Hand of each player
  *
  *     Attribute:
- *         fehl:       Collection holding all FEHL
- *         strumpf:    Collection holding all STRUMPF
+ *         fehl:       List holding all FEHL
+ *         strumpf:    List holding all STRUMPF
  *
  *     Important Methods:
  */
@@ -13,19 +13,12 @@ package doppelkopf.Model.CardModel;
 import java.util.ArrayList;
 
 public class CardsOnHand extends Cards {
+    //region Attributes
     private ArrayList<Card> fehl = filterFehl();
     private ArrayList<Card> trumpf = filterTrumpf();
+    //endregion
 
-    public ArrayList<Card> getFehl() {
-        return fehl;
-    }
-
-    public ArrayList<Card> getTrumpf() {
-        return trumpf;
-    }
-
-
-
+    //region Methods
     @Override
     public String toString() {
         String result = "";
@@ -36,5 +29,16 @@ public class CardsOnHand extends Cards {
         }
         return result;
     }
+    //endregion
+
+    //region Getter Setter
+    public ArrayList<Card> getFehl() {
+        return fehl;
+    }
+
+    public ArrayList<Card> getTrumpf() {
+        return trumpf;
+    }
+    //endregion
 
 }

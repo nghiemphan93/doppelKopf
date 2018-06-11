@@ -2,7 +2,7 @@
  * Initialize players for a game
  *
  * Attribute:
- *     players:    holding reference to all players
+ *     players:        hold reference to all players
  *
  * Important Methods:
  *     init()          prepare sign up for 4 real players
@@ -17,17 +17,22 @@ import doppelkopf.Model.PlayerModel.Player;
 
 import java.util.ArrayList;
 
-public class PlayersSetupBuilder {
+public class PlayersSetupFactory {
+    //region Attributes
     private ArrayList<Player> players;
+    //endregion
 
-    public PlayersSetupBuilder(ArrayList<Player> players) {
+    //region Constructors
+    public PlayersSetupFactory(ArrayList<Player> players) {
         this.players = players;
     }
 
-    public PlayersSetupBuilder() {
+    public PlayersSetupFactory() {
         this.players = new ArrayList<>();
     }
+    //endregion
 
+    //region Important methods
     /**
      * Prepare sign up for 4 real players
      */
@@ -57,8 +62,11 @@ public class PlayersSetupBuilder {
     public void addPlayer(Player player){
         this.players.add(player);
     }
+    //endregion
 
+    //region Getter Setter
     public ArrayList<Player> getPlayers() {
         return players;
     }
+    //endregion
 }

@@ -1,12 +1,13 @@
 /**
- * Storing list of allowed to play cards
- * which were checked in setWhatCardToPlay() in Player Class
+ * Store the list of allowed to play cards
+ *  which were checked in setWhatCardToPlay() in Class Player
  *
  */
 
 package doppelkopf.Model.CardModel;
 
 public class CardsAllowedToPlay extends Cards{
+    //region Methods
     @Override
     public String toString() {
         String result = "";
@@ -18,4 +19,5 @@ public class CardsAllowedToPlay extends Cards{
 
         return result;
     }
+    //endregion
 }

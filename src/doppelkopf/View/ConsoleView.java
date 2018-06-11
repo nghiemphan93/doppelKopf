@@ -6,26 +6,26 @@
  *
  *
  * Important methods:
- *  displayAllHand()                getName all cards of all hands
- *  disCarPlaPerRound()             getName all cards played in the current round
- *  displayEachPlayersCardsWon()    getName all cards each player won so far
- *  displayEachPlayerPoints()       getName all points of each player
- *  displayTwoTeamResults()         getName final results which team wins and points
- *  gameStartText()                 Game Start Text
- *  gameEnded()                     Game End Text
- *  displayWhoWonWhichRound()       Display who won which round
- *  displayWhatCardHasBeenPlayed()  Display what Card has been played
- *  displayWhoWinsTheRound()        Display who wins the round
- *  displayWhoGuessBazinga()        Display who guess Bazinga
- *  displayGuessBazingaCorrect()    Display guess Bazinga was correct
- *  displayGuessBazingaFalse()      Display guess Bazinga was false
- *  displayCardsOnHandOfPlayer()    Display Cards on Hand of the player
- *  displayCardsAllowedToPlayOfPlayer() Display cards allowed to play of the player
- *  displayHochzeitNewPartner()     Display the new Partner in case Hochzeit
- *  displayHochzeitAlone()          Display play alone in case Hochzeit
- *  displayCurrentRound()           Display the current round
- *  displayInstrucAnotherGameOrStop()   Display instruction to play another game or stop
- *  displayEnterCommandAgain()      Instruction to enter command again
+ *      displayAllHand()                getName all cards of all hands
+ *      disCarPlaPerRound()             getName all cards played in the current round
+ *      displayEachPlayersCardsWon()    getName all cards each player won so far
+ *      displayEachPlayerPoints()       getName all points of each player
+ *      displayTwoTeamResults()         getName final results which team wins and points
+ *      gameStartText()                 Game Start Text
+ *      gameEnded()                     Game End Text
+ *      displayWhoWonWhichRound()       Display who won which round
+ *      displayWhatCardHasBeenPlayed()  Display what Card has been played
+ *      displayWhoWinsTheRound()        Display who wins the round
+ *      displayWhoGuessBazinga()        Display who guess Bazinga
+ *      displayGuessBazingaCorrect()    Display guess Bazinga was correct
+ *      displayGuessBazingaFalse()      Display guess Bazinga was false
+ *      displayCardsOnHandOfPlayer()    Display Cards on Hand of the player
+ *      displayCardsAllowedToPlayOfPlayer() Display cards allowed to play of the player
+ *      displayHochzeitNewPartner()     Display the new Partner in case Hochzeit
+ *      displayHochzeitAlone()          Display play alone in case Hochzeit
+ *      displayCurrentRound()           Display the current round
+ *      displayInstrucAnotherGameOrStop()   Display instruction to play another game or stop
+ *      displayEnterCommandAgain()      Instruction to enter command again
  */
 
 package doppelkopf.View;
@@ -39,27 +39,17 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsoleView {
+    //region Attributes
     private Scanner sc;
-
-
-    public ConsoleView(){
-        this.sc = new Scanner(System.in);
-    }
-
-    public Scanner getSc() {
-        return sc;
-    }
-
-    public void setSc(Scanner sc) {
-        this.sc = sc;
-    }
-
+    //endregion
+    
+    //region Important methods
     /**
      * Display hands of every player
      * @param gameController
      */
     public void displayAllHands(GameController gameController){
-        for(Player player : gameController.getPlayersSetupBuilder().getPlayers()){
+        for(Player player : gameController.getPlayersSetupFactory().getPlayers()){
             System.out.println(player + "'s hand: " + player.getCardsOnHand());
         }
     }
@@ -70,10 +60,10 @@ public class ConsoleView {
      */
     public void displayCardsPlayedPerRound(GameController gameController){
         // Sort by strength
-        SortHelper.sortByStrength(gameController.getCardsSetupBuilder().getCardsPlayedPerRound());
+        SortHelper.sortByStrength(gameController.getCardsSetupFactory().getCardsPlayedPerRound());
 
         System.out.print("Cards played in round: ");
-        for(Card card : gameController.getCardsSetupBuilder().getCardsPlayedPerRound().getCards()){
+        for(Card card : gameController.getCardsSetupFactory().getCardsPlayedPerRound().getCards()){
             System.out.print(card + ":" + card.getBelongsToPlayer() + " ");
         }
         System.out.println();
@@ -84,7 +74,7 @@ public class ConsoleView {
      * @param gameController
      */
     public void displayEachPlayersCardsWon(GameController gameController){
-        for(Player player : gameController.getPlayersSetupBuilder().getPlayers()){
+        for(Player player : gameController.getPlayersSetupFactory().getPlayers()){
             System.out.print(player + " collected: ");
 
             for(Card card : player.getCardsWon().getCards()){
@@ -102,7 +92,7 @@ public class ConsoleView {
      * @param gameController
      */
     public void displayEachPlayerPoints(GameController gameController){
-        for(Player player : gameController.getPlayersSetupBuilder().getPlayers()){
+        for(Player player : gameController.getPlayersSetupFactory().getPlayers()){
             System.out.println(player + " achieved: " + player.calcPointsWonPerGame() + " points");
         }
         System.out.println();
@@ -290,4 +280,19 @@ public class ConsoleView {
     public void displayEnterCommandAgain() {
         System.out.print("Please enter the command again: ");
     }
+    //endregion
+
+    //region Getter Setter
+    public ConsoleView(){
+        this.sc = new Scanner(System.in);
+    }
+
+    public Scanner getSc() {
+        return sc;
+    }
+
+    public void setSc(Scanner sc) {
+        this.sc = sc;
+    }
+    //endregion
 }

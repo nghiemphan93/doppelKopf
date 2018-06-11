@@ -26,9 +26,7 @@ public enum Suit { // Farbe
         return text;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Enum#toString()
-     */
+
     @Override
     public String toString() {
         return String.format("%s", text);

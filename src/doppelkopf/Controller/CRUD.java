@@ -1,3 +1,25 @@
+/**
+ * Connection to mySql
+ *
+ * Attributes:
+ *      connection:
+ *      preparedStatement:
+ *      resultSet:
+ *      dbUrl:      "jdbc:mysql://localhost:3306/doppelkopf?useSSL=false"
+ *      user:       "student"
+ *      pass:       "student"
+ *
+ * Important methods:
+ *      insertAllCardsToDatabase(): Insert all new cards to database
+ *      insertCardPlayed():         Insert card played in a round to database
+ *      insertCardsCollected():     Insert cards collected in one game to database
+ *      selectCardID():             Return card_ID from database given the card object
+ *      selectPlayerID():           Return player_ID from database given the player object
+ *      insertNewGame():            Insert new game to database, return the game_ID
+ *      insertGamePlayed():         Insert a all information of the game played by one player to database
+ *                                  including: hadKreuzQueen, pointsWonInGame, wonOrNot, player_ID, partnerInGame_ID, game_ID
+ */
+
 package doppelkopf.Controller;
 
 import doppelkopf.Model.CardModel.Card;
@@ -7,13 +29,16 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class CRUD {
+    //region Attributes
     private Connection connection = null;
     private PreparedStatement preparedStatement = null;
     private ResultSet resultSet = null;
     String dbUrl = "jdbc:mysql://localhost:3306/doppelkopf?useSSL=false";
     String user = "student";
     String pass = "student";
+    //endregion
 
+    //region Important methods
     /**
      * Insert all new cards to database
      * @param listCards
@@ -417,5 +442,6 @@ public class CRUD {
                 }
             }
         }
-    }   // end of methode
+    }   // end of insertGamePlayed
+    //endregion
 }

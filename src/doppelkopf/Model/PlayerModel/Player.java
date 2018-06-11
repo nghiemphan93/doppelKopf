@@ -2,16 +2,18 @@
  * Class for each player who takes part in the game
  *
  * Attribute:
- *      name:                 name
- *      password:             password
- *      cardsOnHand:          cards on hand
- *      cardsWon:             cards were collected
- *      cardsPlayedPerRound:  cards played on table each round
- *      CardsAllowedToPlay    cards allowed to play(bedienen)
- *      pointsWonPerGame      all points of each game
- *      hasKreuzQueen :       if the player has the Kreuz Queen or not, used to determine
- *      specialPoints:        special points won by Bazinga
+ *      name:                   name
+ *      password:               password
+ *      cardsOnHand:            cards on hand
+ *      cardsWon:               cards were collected
+ *      cardsPlayedPerRound:    cards played on table each round
+ *      cardsAllowedToPlay      cards allowed to play(bedienen)
+ *      pointsWonPerGame        all points of each game
+ *      hasKreuzQueen :         if the player has the Kreuz Queen or not, used to determine
+ *      specialPoints:          special points won by Bazinga
  *      allowedToGuessBazinga:  true/false representing allowed to guess Bazinga or not
+ *      gameWon:                won the game or not
+ *      partner:                who was the partner in the game
  *
  *  Important methods:
  *      playACard():            Play a chosen card
@@ -33,6 +35,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Player{
+    //region Attributes
     private String name;
     private String password;
     private CardsOnHand cardsOnHand;
@@ -45,7 +48,9 @@ public class Player{
     private boolean allowedToGuessBazinga = true;
     private boolean gameWon;
     private Player partner;
+    //endregion
 
+    //region Constructor
     public Player(String name, String password) {
         this.name = name;
         this.password = password;
@@ -56,109 +61,9 @@ public class Player{
         this.gameWon = false;
         this.partner = null;
     }
+    //endregion
 
-    public boolean isAllowedToGuessBazinga() {
-        return allowedToGuessBazinga;
-    }
-
-    public void setAllowedToGuessBazinga(boolean allowedToGuessBazinga) {
-        this.allowedToGuessBazinga = allowedToGuessBazinga;
-    }
-
-    public int getSpecialPoints() {
-        return specialPoints;
-    }
-
-    public void setSpecialPoints(int specialPoints) {
-        this.specialPoints = specialPoints;
-    }
-
-    public boolean hasKreuzQueen() {
-        return hasKreuzQueen;
-    }
-
-    public void setHasKreuzQueen(boolean hasKreuzQueen) {
-        this.hasKreuzQueen = hasKreuzQueen;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public CardsOnHand getCardsOnHand() {
-        return cardsOnHand;
-    }
-
-    public void setCardsOnHand(CardsOnHand cardsOnHand) {
-        this.cardsOnHand = cardsOnHand;
-    }
-
-    public CardsWon getCardsWon() {
-        return cardsWon;
-    }
-
-    public void setCardsWon(CardsWon cardsWon) {
-        this.cardsWon = cardsWon;
-    }
-
-    public CardsPlayedPerRound getCardsPlayedPerRound() {
-        return cardsPlayedPerRound;
-    }
-
-    public void setCardsPlayedPerRound(CardsPlayedPerRound cardsPlayedPerRound) {
-        this.cardsPlayedPerRound = cardsPlayedPerRound;
-    }
-
-    public CardsAllowedToPlay getCardsAllowedToPlay() {
-        return cardsAllowedToPlay;
-    }
-
-    public void setCardsAllowedToPlay(CardsAllowedToPlay cardsAllowedToPlay) {
-        this.cardsAllowedToPlay = cardsAllowedToPlay;
-    }
-
-    public int getPointsWonPerGame() {
-        return pointsWonPerGame;
-    }
-
-    public void setPointsWonPerGame(int pointsWonPerGame) {
-        this.pointsWonPerGame = pointsWonPerGame;
-    }
-
-    public Player getPartner() {
-        return partner;
-    }
-
-    public void setPartner(Player partner) {
-        this.partner = partner;
-    }
-
-    public boolean isGameWon() {
-        return gameWon;
-    }
-
-    public void setGameWon(boolean gameWon) {
-        this.gameWon = gameWon;
-    }
-
-    @Override
-    public String toString() {
-        return this.name.toUpperCase();
-    }
-
-
+    //region Important methods
     /**
      * Play a chosen card
      * @param index
@@ -281,5 +186,109 @@ public class Player{
         }else{
             return false;
         }
+    }   // end of guessBazinga
+    //endregion
+
+    //region Getter Setter
+    public boolean isAllowedToGuessBazinga() {
+        return allowedToGuessBazinga;
     }
+
+    public void setAllowedToGuessBazinga(boolean allowedToGuessBazinga) {
+        this.allowedToGuessBazinga = allowedToGuessBazinga;
+    }
+
+    public int getSpecialPoints() {
+        return specialPoints;
+    }
+
+    public void setSpecialPoints(int specialPoints) {
+        this.specialPoints = specialPoints;
+    }
+
+    public boolean hasKreuzQueen() {
+        return hasKreuzQueen;
+    }
+
+    public void setHasKreuzQueen(boolean hasKreuzQueen) {
+        this.hasKreuzQueen = hasKreuzQueen;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public CardsOnHand getCardsOnHand() {
+        return cardsOnHand;
+    }
+
+    public void setCardsOnHand(CardsOnHand cardsOnHand) {
+        this.cardsOnHand = cardsOnHand;
+    }
+
+    public CardsWon getCardsWon() {
+        return cardsWon;
+    }
+
+    public void setCardsWon(CardsWon cardsWon) {
+        this.cardsWon = cardsWon;
+    }
+
+    public CardsPlayedPerRound getCardsPlayedPerRound() {
+        return cardsPlayedPerRound;
+    }
+
+    public void setCardsPlayedPerRound(CardsPlayedPerRound cardsPlayedPerRound) {
+        this.cardsPlayedPerRound = cardsPlayedPerRound;
+    }
+
+    public CardsAllowedToPlay getCardsAllowedToPlay() {
+        return cardsAllowedToPlay;
+    }
+
+    public void setCardsAllowedToPlay(CardsAllowedToPlay cardsAllowedToPlay) {
+        this.cardsAllowedToPlay = cardsAllowedToPlay;
+    }
+
+    public int getPointsWonPerGame() {
+        return pointsWonPerGame;
+    }
+
+    public void setPointsWonPerGame(int pointsWonPerGame) {
+        this.pointsWonPerGame = pointsWonPerGame;
+    }
+
+    public Player getPartner() {
+        return partner;
+    }
+
+    public void setPartner(Player partner) {
+        this.partner = partner;
+    }
+
+    public boolean isGameWon() {
+        return gameWon;
+    }
+
+    public void setGameWon(boolean gameWon) {
+        this.gameWon = gameWon;
+    }
+
+    @Override
+    public String toString() {
+        return this.name.toUpperCase();
+    }
+    //endregion
 }

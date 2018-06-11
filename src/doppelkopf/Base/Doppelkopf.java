@@ -1,10 +1,8 @@
 package doppelkopf.Base;
 
 /**
- * Doppelkopf Strategy Template Pattern
- * Now we can say what
+ * Doppelkopf Base Template Pattern
  *
- * https://www.tutorialspoint.com/design_pattern/template_pattern.htm
  *
  */
 public abstract class Doppelkopf {

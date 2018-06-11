@@ -12,16 +12,15 @@
  *         isTrumpf        is Trumpf
  *
  *     Important Methods:
- *         setPoint():             check and set Point automatically according to Rank
- *         setFehlAndTrumpf():     set status FEHL | TRUMPF for each card
- *         setPoint():             Check and set Point according to Rank
- *         setStrength():          determine the strength of each card compared to others
- *         suitToUnicode():        Return UNICODE Symbol for SUIT
- *         rankToUnicode():        Return UNICODE Symbol for RANK
- *         getName():              getSuit() + " " + getRank()
+ *         setFehlAndTrumpf():              set status FEHL | TRUMPF for each card
+ *         setStrength():                   determine the strength of each card compared to others
+ *         setPoint():                      Check and set Point according to Rank
+ *         suitToUnicode():                 Return UNICODE Symbol for SUIT
+ *         rankToUnicode():                 Return UNICODE Symbol for RANK
+ *         getName():                       Name of the card including Suit and Rank
  *
  *      These are the cards sorted by strength
- *      Each card has a code representing the strength "__"
+ *      Each card has a 2-letter code representing the strength for example: "5A"
  *      The first letter is the group order:
  *                                  1 2 3 4 5 6 7
  *                                  123 are FEHL
@@ -79,6 +78,7 @@ package doppelkopf.Model.CardModel;
 import doppelkopf.Model.PlayerModel.Player;
 
 public class Card {
+    //region Attributes
     private Suit suit;         // PIK, KARO, HERZ, KREUZ
     private Rank rank;         // ZEHN, BUBE, DAME, KOENIG, ASS
     private String imageURL;
@@ -87,7 +87,9 @@ public class Card {
     private int point;
     private boolean isFehl;
     private boolean isTrumpf;
+    //endregion
 
+    //region Constructor
     public Card(Suit suit, Rank rank) {
         this.suit = suit;
         this.rank = rank;
@@ -95,23 +97,9 @@ public class Card {
         setPoint();
         setStrength();
     }
+    //endregion
 
-    public boolean isFehl() {
-        return isFehl;
-    }
-
-    public void setFehl(boolean fehl) {
-        isFehl = fehl;
-    }
-
-    public boolean isTrumpf() {
-        return isTrumpf;
-    }
-
-    public void setTrumpf(boolean trumpf) {
-        isTrumpf = trumpf;
-    }
-
+    //region Important methods
     /**
      * Set status FEHL | TRUMPF for each card
      */
@@ -132,42 +120,6 @@ public class Card {
                 this.setTrumpf(true);
                 this.setFehl(false);
         }   // end of switch
-    }
-
-    public String getSuit() {
-        return suit.toString();
-    }
-
-    public void setSuit(Suit suit) {
-        this.suit = suit;
-    }
-
-    public String getRank() {
-        return rank.toString();
-    }
-
-    public void setRank(Rank rank) {
-        this.rank = rank;
-    }
-
-    public String getImageURL() {
-        return imageURL;
-    }
-
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-    }
-
-    public Player getBelongsToPlayer() {
-        return belongsToPlayer;
-    }
-
-    public void setBelongsToPlayer(Player belongsToPlayer) {
-        this.belongsToPlayer = belongsToPlayer;
-    }
-
-    public String getStrength() {
-        return strength;
     }
 
     /**
@@ -249,10 +201,6 @@ public class Card {
         }
     }
 
-    public int getPoint() {
-        return point;
-    }
-
     /**
      * Check and set Point according to Rank
      */
@@ -328,12 +276,75 @@ public class Card {
         return result;
     }
 
+    /**
+     * Name of the card including Suit and Rank
+     * @return
+     */
+    public String getName() {
+        return getSuit() + " " + getRank();
+    }
+
     @Override
     public String toString() {
         return suitToUnicode() + rankToUnicode();
     }
+    //endregion
 
-    public String getName() {
-        return getSuit() + " " + getRank();
+    //region Getter Setter
+    public boolean isFehl() {
+        return isFehl;
     }
+
+    public void setFehl(boolean fehl) {
+        isFehl = fehl;
+    }
+
+    public boolean isTrumpf() {
+        return isTrumpf;
+    }
+
+    public void setTrumpf(boolean trumpf) {
+        isTrumpf = trumpf;
+    }
+
+    public String getSuit() {
+        return suit.toString();
+    }
+
+    public void setSuit(Suit suit) {
+        this.suit = suit;
+    }
+
+    public String getRank() {
+        return rank.toString();
+    }
+
+    public void setRank(Rank rank) {
+        this.rank = rank;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public Player getBelongsToPlayer() {
+        return belongsToPlayer;
+    }
+
+    public void setBelongsToPlayer(Player belongsToPlayer) {
+        this.belongsToPlayer = belongsToPlayer;
+    }
+
+    public String getStrength() {
+        return strength;
+    }
+
+    public int getPoint() {
+        return point;
+    }
+    //endregion
 }
