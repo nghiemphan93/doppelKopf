@@ -38,11 +38,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/doppelkopf/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="405">
+                <caret line="15" column="84" lean-forward="true" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -105,7 +117,6 @@
         <option value="$PROJECT_DIR$/src/JdbcDemo/CRUD.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Controller/CardsSetupBuilder.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Card.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Model/CardModel/Cards.java" />
@@ -127,6 +138,7 @@
         <option value="$PROJECT_DIR$/src/doppelkopf/Base/Doppelkopf.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
         <option value="$PROJECT_DIR$/src/doppelkopf/Controller/GameController.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -146,11 +158,11 @@
     <packageJsonPaths />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1086" />
-    <option name="y" value="-811" />
-    <option name="width" value="1091" />
-    <option name="height" value="1770" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="2576" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -172,6 +184,11 @@
             <path>
               <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
+              <item name="Database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,35 +196,6 @@
               <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-              <item name="CardModel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="doppelKopf" type="b2602c69:ProjectViewProjectNode" />
-              <item name="doppelKopf" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="doppelkopf" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -223,7 +211,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -363,7 +351,7 @@
       <workItem from="1528653885076" duration="1146000" />
       <workItem from="1528733752661" duration="823000" />
       <workItem from="1528740405162" duration="2963000" />
-      <workItem from="1528744754358" duration="3322000" />
+      <workItem from="1528744754358" duration="6094000" />
     </task>
     <task id="LOCAL-00001" summary="added which players have KREUZ QUEEN&#10;separate 2 teams&#10;calculate points of each team then display to console">
       <created>1527960929833</created>
@@ -404,7 +392,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135789000" />
+    <option name="totallyTimeSpent" value="138561000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -416,7 +404,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1086" y="-811" width="1091" height="1770" extended-state="0" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="PlantUML" order="3" weight="0.0" />
@@ -440,7 +428,7 @@
       <window_info anchor="right" id="Run" order="10" sideWeight="0.49858356" weight="0.47817653" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.11074197" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.45980126" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19398642" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10930048" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.2855392" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -786,16 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="486">
-            <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/doppelkopf/Model/PlayerModel/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1101,6 +1079,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="405">
+            <caret line="15" column="84" lean-forward="true" selection-start-line="15" selection-start-column="84" selection-end-line="15" selection-end-column="84" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
