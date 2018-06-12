@@ -1,10 +1,11 @@
-package doppelkopf.Base;
 
 /**
  * Doppelkopf Base Template Pattern
  *
  *
  */
+
+package doppelkopf.Base;
 public abstract class Doppelkopf {
     public abstract void initGame();
     public abstract void startGame();

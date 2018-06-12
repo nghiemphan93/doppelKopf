@@ -50,7 +50,7 @@ public class CRUD {
 
             // create statement
             preparedStatement = connection.prepareStatement(
-                    "INSERT INTO `CARD` (`name`, `suit`, `rank`, `strength`, `point`, `FehlOrNot`) VALUES (?,?,?,?,?,?)");
+                    "INSERT INTO `Card` (`name`, `suit`, `rank`, `strength`, `point`, `FehlOrNot`) VALUES (?,?,?,?,?,?)");
 
             // insert a new employee
             System.out.println("Saving all cards to database");
@@ -115,7 +115,7 @@ public class CRUD {
 
             // create statement
             String generatedColumns[] = { "ID" };
-            preparedStatement = connection.prepareStatement("INSERT INTO `cardsplayed`(`player_id`, `card_id`) VALUES (?,?)", generatedColumns);
+            preparedStatement = connection.prepareStatement("INSERT INTO `CardsPlayed`(`player_id`, `card_id`) VALUES (?,?)", generatedColumns);
 
             // set parameters
             preparedStatement.setInt(1, player_ID);
@@ -174,7 +174,7 @@ public class CRUD {
                 connection = DriverManager.getConnection(dbUrl, user, pass);
                 // create statement
                 String generatedColumns[] = { "ID" };
-                preparedStatement = connection.prepareStatement("INSERT INTO `cardscollected`(`player_id`, `card_id`) VALUES (?,?)", generatedColumns);
+                preparedStatement = connection.prepareStatement("INSERT INTO `CardsCollected`(`player_id`, `card_id`) VALUES (?,?)", generatedColumns);
 
                 // set parameters
                 preparedStatement.setInt(1, player_ID);
@@ -204,7 +204,7 @@ public class CRUD {
             connection = DriverManager.getConnection(dbUrl, user, pass);
 
             // create statement
-            String formatedStatment = String.format("SELECT `card_ID` FROM `card` WHERE `name` = '%s'", card.getName());
+            String formatedStatment = String.format("SELECT `card_ID` FROM `Card` WHERE `name` = '%s'", card.getName());
             preparedStatement = connection.prepareStatement(formatedStatment);
 
             // execute statement
@@ -257,7 +257,7 @@ public class CRUD {
             connection = DriverManager.getConnection(dbUrl, user, pass);
 
             // create statement
-            String formatedStatment = String.format("SELECT `player_ID` FROM `player` WHERE `name` = '%s'", player.getName());
+            String formatedStatment = String.format("SELECT `player_ID` FROM `Player` WHERE `name` = '%s'", player.getName());
             preparedStatement = connection.prepareStatement(formatedStatment);
 
 
@@ -317,7 +317,7 @@ public class CRUD {
 
             // create statement
             String generatedColumns[] = { "ID" };
-            preparedStatement = connection.prepareStatement("INSERT INTO `game`(`player1_ID`, `player2_ID`, `player3_ID`, `player4_ID`) VALUES (?,?,?,?)", generatedColumns);
+            preparedStatement = connection.prepareStatement("INSERT INTO `Game`(`player1_ID`, `player2_ID`, `player3_ID`, `player4_ID`) VALUES (?,?,?,?)", generatedColumns);
 
             // set parameters
             preparedStatement.setInt(1, players_ID.get(0));
@@ -379,7 +379,7 @@ public class CRUD {
 
             // create statement
             String generatedColumns[] = { "ID" };
-            preparedStatement = connection.prepareStatement("INSERT INTO `gamesplayed` (`hadKreuzQueen`, `pointsWonInGame`, `wonOrNot`, `player_ID`, `partnerInGame_ID`, `game_ID`) VALUES (?,?,?,?,?,?)", generatedColumns);
+            preparedStatement = connection.prepareStatement("INSERT INTO `GamesPlayed` (`hadKreuzQueen`, `pointsWonInGame`, `wonOrNot`, `player_ID`, `partnerInGame_ID`, `game_ID`) VALUES (?,?,?,?,?,?)", generatedColumns);
 
             // set parameters
             // hadKreuzQueen
